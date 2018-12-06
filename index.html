@@ -19,20 +19,24 @@
 </head>
 <body>
     <div id="map"></div>
+    <div id="filter">
+        <form>
+            <input type="button" value="click" id="click">
+        </form>
+    </div>
 
     <!-- Leaflet.js -->
     <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
     integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
     crossorigin=""></script>
+    <!-- Leaflet-heat js -->
     <script src="js/leaflet-heat.js"></script>
+    <!-- Leaflet-markerCluster js -->
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <!-- Require.js -->
-    <!-- <script src="js/require.js"></script> -->
     <!-- Turf.js -->
     <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-    <!-- Dataset -->
-    <!-- <script src="js/la.js"></script> -->
     <!-- Our js -->
+    <script src="js/la.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
 </body>
