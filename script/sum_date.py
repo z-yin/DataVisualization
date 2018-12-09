@@ -9,7 +9,7 @@ with open('../data/crime2014.csv', newline='') as csvfile:
         if date in sum_of_dates:
             sum_of_dates[date] = sum_of_dates[date] + 1
         else:
-            sum_of_dates[date] = 0
+            sum_of_dates[date] = 1
 
 print("Dict size: " + str(len(sum_of_dates)))
 

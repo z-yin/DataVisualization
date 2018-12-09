@@ -9,7 +9,7 @@ with open('../data/crime2014.csv', newline='') as csvfile:
         if district in sum_of_districts:
             sum_of_districts[district] = sum_of_districts[district] + 1
         else:
-            sum_of_districts[district] = 0
+            sum_of_districts[district] = 1
 
 print("Dict size: " + str(len(sum_of_districts)))
 

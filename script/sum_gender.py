@@ -9,7 +9,7 @@ with open('../data/crime2014.csv', newline='') as csvfile:
         if gender in sum_of_gender:
             sum_of_gender[gender] = sum_of_gender[gender] + 1
         else:
-            sum_of_gender[gender] = 0
+            sum_of_gender[gender] = 1
 
 print("Dict size: " + str(len(sum_of_gender)))
 
