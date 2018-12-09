@@ -1,5 +1,6 @@
 var mapboxAccessToken = "pk.eyJ1Ijoiemhhb3lpbiIsImEiOiJjanA4OWp5MXgxajNoM3BxZmVqaGJ0Y2U5In0.Io8tZLNDfd62IQy50yvQNQ";
 var map = L.map('map').setView([34.1, -118.25], 10);
+var layers;
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
     id: 'mapbox.light',
@@ -20,7 +21,7 @@ var crime2014 = (function() {
         'dataType': "json",
         'success': function (data) {
             crime2014 = data;
-            // displayHeatMap(data);
+            layers = displayHeatMap(data);
         }
     });
     return crime2014;
@@ -28,7 +29,11 @@ var crime2014 = (function() {
 
 $("#click").click(function() {
     var data = filter(age2, gender2, district2, timePeriod2);
-    displayHeatMap(data);
+    if (layers[2]){
+        map.removeLayer(layers[0]);
+        map.removeLayer(layers[1]);
+    }
+    layers = displayHeatMap(data);
 })
 
 var gender = $("input[name='gender']:checked").val();
