@@ -1,7 +1,7 @@
 // 在这里改条件！
 var age2 = [[30, 30], [50, 60]];                               // 例：[[10, 30], [50, 60]]
 var gender2 = 'M';                                 // 例：'F'和'M'
-var district2 = ['2', '4'];                         // 例：['2', '4']
+var district2 = ['12', '15'];                         // 例：['2', '4']
 var timePeriod2 = [["04/01/2014", '04/30/2014'], ["03/01/2014", "03/29/2014"]];   // 这里是'月/日/年'!
 
 function filter (age, gender, district, timePeriod) {
@@ -101,4 +101,29 @@ function displayHeatMap (data) {
         var hasLayer = false; // for layer clearing
         return [null, null, hasLayer]; // for layer clearing
     }
+}
+
+function histogramAge () {
+    var xAge = [];
+    var yAge = [];
+    for (var key in sumAge) {
+        xAge.push(parseInt(key));
+        yAge.push(sumAge[key]);
+    }
+
+    var traceAge = {
+        x: xAge,
+        y: yAge,
+        mode: 'markers',
+        type: 'scatter'
+    };
+
+    var dataAge = [traceAge];
+
+    var layoutAge = {
+        title: 'Crime Count',
+        dragmode: 'lasso'
+    };
+
+    Plotly.newPlot('age-histogram', dataAge, layoutAge, {displayModeBar: false});
 }
