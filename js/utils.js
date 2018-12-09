@@ -1,6 +1,6 @@
 // 在这里改条件！
 var age2 = [[30, 30], [50, 60]];                               // 例：[[10, 30], [50, 60]]
-var gender2 = 'F';                                 // 例：'F'和'M'
+var gender2 = 'M';                                 // 例：'F'和'M'
 var district2 = ['2', '4'];                         // 例：['2', '4']
 var timePeriod2 = [["04/01/2014", '04/30/2014'], ["03/01/2014", "03/29/2014"]];   // 这里是'月/日/年'!
 
@@ -86,13 +86,10 @@ function displayHeatMap (data) {
         var crimesLayer = L.geoJson(data, {
             onEachFeature: function (feature, layer) {
                 const crime = feature.properties;
-                // const html = `<div class="popup"><h2>${crime["Date Occurred"]}</h2></div>` + 
-                //     `<p>${crime["Area ID"]} District</p><p>Victim age: ${crime["Victim Age"]}</p><p>Victim sex: ${crime["Victim Sex"]}</p><p>Date occured: ${crime["Date Occurred"]}</p></div>`;
-                const html = `<div class="popup"></div`;
+                const html = `<div class="popup"><h2>${crime["Date Occurred"]}</h2></div>` + 
+                    `<p>${crime["Area ID"]} District</p><p>Victim age: ${crime["Victim Age"]}</p><p>Victim sex: ${crime["Victim Sex"]}</p><p>Date occured: ${crime["Date Occurred"]}</p></div>`;
                 layer.bindPopup(html);
-                // layer.bindTooltip("");
-                // layer.bindTooltip(`${crime["Date Occurred"]}, ${crime["Area ID"]}`, {sticky: true});
-                layer.bindTooltip("dd", {stick: true});
+                layer.bindTooltip(`${crime["Date Occurred"]}, ${crime["Area ID"]}`, {sticky: true});
             }
         });  
         
