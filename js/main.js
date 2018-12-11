@@ -1,39 +1,140 @@
-var mapboxAccessToken = "pk.eyJ1Ijoiemhhb3lpbiIsImEiOiJjanA4OWp5MXgxajNoM3BxZmVqaGJ0Y2U5In0.Io8tZLNDfd62IQy50yvQNQ";
-var map = L.map('map').setView([34.1, -118.25], 10);
-var layers = [null, null, false];
+var margin = {top: 10, right: 0, bottom: 0, left: 0},
+    width = 300,
+    barHeight = 20,
+    barWidth = (width - margin.left - margin.right) * 0.8;
 
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=' + mapboxAccessToken, {
-    id: 'mapbox.light',
-    attribution: '&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors, &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>',
-    maxZoom: 18,
-    minZoom: 10,
-    noWrap: false,
-}).addTo(map);
+var i = 0,
+    duration = 400,
+    root;
 
-L.geoJson(la).addTo(map);
+var diagonal = d3.linkHorizontal()
+    .x(function(d) { return d.y; })
+    .y(function(d) { return d.x; });
 
-var crime2014 = (function() {
-    // var crime2014 = null;
-    $.ajax({
-        'async': true,
-        'global': true,
-        'url': "../data/crime2014.geojson",
-        'dataType': "json",
-        'success': function (data) {
-            crime2014 = data;
-            // layers = displayHeatMap(data);
-        }
-    });
-    return crime2014;
-})();
+var svg = d3.select("svg")
+    .attr("width", width) // + margin.left + margin.right)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-$("#click").click(function() {
-    var data = filter(age2, gender2, district2, timePeriod2);
-    if (layers[2]){
-        map.removeLayer(layers[0]);
-        map.removeLayer(layers[1]);
-    }
-    layers = displayHeatMap(data);
-})
+d3.json("../data/topic_tree.json").then(function(data) {
+  root = d3.hierarchy(data);
+  root.x0 = 0;
+  root.y0 = 0;
+  update(root);
+});
 
-var gender = $("input[name='gender']:checked").val();
+function update(source) {
+
+  // Compute the flattened node list.
+  var nodes = root.descendants();
+
+  var height = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom);
+
+  d3.select("svg").transition()
+      .duration(duration)
+      .attr("height", height);
+
+  d3.select(self.frameElement).transition()
+      .duration(duration)
+      .style("height", height + "px");
+
+  // Compute the "layout". TODO https://github.com/d3/d3-hierarchy/issues/67
+  var index = -1;
+  root.eachBefore(function(n) {
+    n.x = ++index * barHeight;
+    n.y = n.depth * 20;
+  });
+
+  // Update the nodes…
+  var node = svg.selectAll(".node")
+    .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  var nodeEnter = node.enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .style("opacity", 0);
+
+  // Enter any new nodes at the parent's previous position.
+  nodeEnter.append("rect")
+      .attr("y", -barHeight / 2)
+      .attr("height", barHeight)
+      .attr("width", barWidth)
+      .style("fill", color)
+      .on("click", click);
+
+  nodeEnter.append("text")
+      .attr("dy", 3.5)
+      .attr("dx", 5.5)
+      .text(function(d) { return d.data.name; });
+
+  // Transition nodes to their new position.
+  nodeEnter.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1);
+
+  node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+      .style("opacity", 1)
+    .select("rect")
+      .style("fill", color);
+
+  // Transition exiting nodes to the parent's new position.
+  node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .style("opacity", 0)
+      .remove();
+
+  // Update the links…
+  var link = svg.selectAll(".link")
+    .data(root.links(), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  root.each(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children on click.
+function click(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+  update(d);
+}
+
+function color(d) {
+  return d._children ? "#3182bd" : d.children ? "#c6dbef" : "#fd8d3c";
+}

@@ -5,43 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Data Visualization</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Leaflet css -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
-    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-    crossorigin=""/>
-    <!-- Leaflet markerCluster -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <!-- Our css -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <!-- jQuery js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="map"></div>
-    <div id="age-histogram"></div>
-    <div id="filter">
-        <form>
-            <input type="button" value="click" id="click">
-        </form>
+    <div id="div-svg">
+        <svg></svg>
     </div>
+    
 
-    <!-- Leaflet.js -->
-    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
-    integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
-    crossorigin=""></script>
-    <!-- Leaflet-heat js -->
-    <script src="js/leaflet-heat.js"></script>
-    <!-- Leaflet-markerCluster js -->
-    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <!-- Turf.js -->
-    <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-    <!-- Plotly js -->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- d3 js -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <!-- Our js -->
-    <script src="js/la.js"></script>
     <script src="js/utils.js"></script>
-    <script src="js/histogram.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

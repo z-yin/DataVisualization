@@ -1,0 +1,3552 @@
+{
+    "name": "topic",
+    "children": [{
+        "name": "Environment",
+        "children": [{
+            "name": "Agricultural production",
+            "children": [{
+                "name": "Agricultural machinery, tractors"
+            }, {
+                "name": "Fertilizer consumption (% of fertilizer production)"
+            }, {
+                "name": "Fertilizer consumption (kilograms per hectare of arable land)"
+            }, {
+                "name": "Land under cereal production (hectares)"
+            }, {
+                "name": "Agricultural machinery, tractors per 100 sq. km of arable land"
+            }, {
+                "name": "Cereal production (metric tons)"
+            }, {
+                "name": "Crop production index (2004-2006 = 100)"
+            }, {
+                "name": "Food production index (2004-2006 = 100)"
+            }, {
+                "name": "Livestock production index (2004-2006 = 100)"
+            }, {
+                "name": "Cereal yield (kg per hectare)"
+            }, {
+                "name": "Aquaculture production (metric tons)"
+            }, {
+                "name": "Capture fisheries production (metric tons)"
+            }, {
+                "name": "Total fisheries production (metric tons)"
+            }]
+        }, {
+            "name": "Land use",
+            "children": [{
+                "name": "Agricultural land (sq. km)"
+            }, {
+                "name": "Agricultural land (% of land area)"
+            }, {
+                "name": "Arable land (hectares)"
+            }, {
+                "name": "Arable land (hectares per person)"
+            }, {
+                "name": "Arable land (% of land area)"
+            }, {
+                "name": "Permanent cropland (% of land area)"
+            }, {
+                "name": "Rural land area where elevation is below 5 meters (sq. km)"
+            }, {
+                "name": "Rural land area where elevation is below 5 meters (% of total land area)"
+            }, {
+                "name": "Urban land area where elevation is below 5 meters (sq. km)"
+            }, {
+                "name": "Urban land area where elevation is below 5 meters (% of total land area)"
+            }, {
+                "name": "Land area where elevation is below 5 meters (% of total land area)"
+            }, {
+                "name": "Forest area (sq. km)"
+            }, {
+                "name": "Forest area (% of land area)"
+            }, {
+                "name": "Agricultural irrigated land (% of total agricultural land)"
+            }, {
+                "name": "Average precipitation in depth (mm per year)"
+            }, {
+                "name": "Land area (sq. km)"
+            }, {
+                "name": "Rural land area (sq. km)"
+            }, {
+                "name": "Urban land area (sq. km)"
+            }, {
+                "name": "Surface area (sq. km)"
+            }, {
+                "name": "Disaster risk reduction progress score (1-5 scale; 5=best)"
+            }, {
+                "name": "Droughts, floods, extreme temperatures (% of population, average 1990-2009)"
+            }, {
+                "name": "Rural population living in areas where elevation is below 5 meters (% of total population)"
+            }, {
+                "name": "Urban population living in areas where elevation is below 5 meters (% of total population)"
+            }, {
+                "name": "Population living in areas where elevation is below 5 meters (% of total population)"
+            }]
+        }, {
+            "name": "Energy production & use",
+            "children": [{
+                "name": "Access to clean fuels and technologies for cooking  (% of population)"
+            }, {
+                "name": "Energy intensity level of primary energy (MJ/$2011 PPP GDP)"
+            }, {
+                "name": "Access to electricity, rural (% of rural population)"
+            }, {
+                "name": "Access to electricity, urban (% of urban population)"
+            }, {
+                "name": "Access to electricity (% of population)"
+            }, {
+                "name": "Electricity production from coal sources (% of total)"
+            }, {
+                "name": "Electricity production from oil, gas and coal sources (% of total)"
+            }, {
+                "name": "Electricity production from hydroelectric sources (% of total)"
+            }, {
+                "name": "Electric power transmission and distribution losses (% of output)"
+            }, {
+                "name": "Electricity production from natural gas sources (% of total)"
+            }, {
+                "name": "Electricity production from nuclear sources (% of total)"
+            }, {
+                "name": "Electricity production from oil sources (% of total)"
+            }, {
+                "name": "Renewable electricity output (% of total electricity output)"
+            }, {
+                "name": "Electricity production from renewable sources, excluding hydroelectric (kWh)"
+            }, {
+                "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)"
+            }, {
+                "name": "Renewable energy consumption (% of total final energy consumption)"
+            }, {
+                "name": "GDP per unit of energy use (PPP $ per kg of oil equivalent)"
+            }, {
+                "name": "GDP per unit of energy use (constant 2011 PPP $ per kg of oil equivalent)"
+            }, {
+                "name": "Energy imports, net (% of energy use)"
+            }, {
+                "name": "Alternative and nuclear energy (% of total energy use)"
+            }, {
+                "name": "Fossil fuel energy consumption (% of total)"
+            }, {
+                "name": "Energy use (kg of oil equivalent) per $1,000 GDP (constant 2011 PPP)"
+            }, {
+                "name": "Combustible renewables and waste (% of total energy)"
+            }, {
+                "name": "Electric power consumption (kWh per capita)"
+            }, {
+                "name": "Energy use (kg of oil equivalent per capita)"
+            }]
+        }, {
+            "name": "Emissions",
+            "children": [{
+                "name": "CO2 intensity (kg per kg of oil equivalent energy use)"
+            }, {
+                "name": "CO2 emissions from gaseous fuel consumption (kt)"
+            }, {
+                "name": "CO2 emissions from gaseous fuel consumption (% of total)"
+            }, {
+                "name": "CO2 emissions (kg per 2010 US$ of GDP)"
+            }, {
+                "name": "CO2 emissions (kt)"
+            }, {
+                "name": "CO2 emissions from liquid fuel consumption (kt)"
+            }, {
+                "name": "CO2 emissions from liquid fuel consumption (% of total)"
+            }, {
+                "name": "CO2 emissions (metric tons per capita)"
+            }, {
+                "name": "CO2 emissions (kg per PPP $ of GDP)"
+            }, {
+                "name": "CO2 emissions (kg per 2011 PPP $ of GDP)"
+            }, {
+                "name": "CO2 emissions from solid fuel consumption (kt)"
+            }, {
+                "name": "CO2 emissions from solid fuel consumption (% of total)"
+            }, {
+                "name": "Other greenhouse gas emissions, HFC, PFC and SF6 (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Other greenhouse gas emissions (% change from 1990)"
+            }, {
+                "name": "Total greenhouse gas emissions (kt of CO2 equivalent)"
+            }, {
+                "name": "Total greenhouse gas emissions (% change from 1990)"
+            }, {
+                "name": "HFC gas emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Agricultural methane emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Agricultural methane emissions (% of total)"
+            }, {
+                "name": "Methane emissions in energy sector (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Energy related methane emissions (% of total)"
+            }, {
+                "name": "Methane emissions (kt of CO2 equivalent)"
+            }, {
+                "name": "Methane emissions (% change from 1990)"
+            }, {
+                "name": "Agricultural nitrous oxide emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Agricultural nitrous oxide emissions (% of total)"
+            }, {
+                "name": "Nitrous oxide emissions in energy sector (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Nitrous oxide emissions in energy sector (% of total)"
+            }, {
+                "name": "Nitrous oxide emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "Nitrous oxide emissions (% change from 1990)"
+            }, {
+                "name": "PFC gas emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "PM2.5 air pollution, mean annual exposure (micrograms per cubic meter)"
+            }, {
+                "name": "PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-1 value (% of total)"
+            }, {
+                "name": "PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-2 value (% of total)"
+            }, {
+                "name": "PM2.5 pollution, population exposed to levels exceeding WHO Interim Target-3 value (% of total)"
+            }, {
+                "name": "PM2.5 air pollution, population exposed to levels exceeding WHO guideline value (% of total)"
+            }, {
+                "name": "SF6 gas emissions (thousand metric tons of CO2 equivalent)"
+            }, {
+                "name": "GHG net emissions/removals by LUCF (Mt of CO2 equivalent)"
+            }, {
+                "name": "CO2 emissions from residential buildings and commercial and public services (% of total fuel combustion)"
+            }, {
+                "name": "CO2 emissions from electricity and heat production, total (% of total fuel combustion)"
+            }, {
+                "name": "CO2 emissions from manufacturing industries and construction (% of total fuel combustion)"
+            }, {
+                "name": "CO2 emissions from other sectors, excluding residential buildings and commercial and public services (% of total fuel combustion)"
+            }, {
+                "name": "CO2 emissions from transport (% of total fuel combustion)"
+            }]
+        }, {
+            "name": "Biodiversity & protected areas",
+            "children": [{
+                "name": "Bird species, threatened"
+            }, {
+                "name": "Fish species, threatened"
+            }, {
+                "name": "Plant species (higher), threatened"
+            }, {
+                "name": "Mammal species, threatened"
+            }, {
+                "name": "Terrestrial protected areas (% of total land area)"
+            }, {
+                "name": "Marine protected areas (% of territorial waters)"
+            }, {
+                "name": "Terrestrial and marine protected areas (% of total territorial area)"
+            }]
+        }, {
+            "name": "Density & urbanization",
+            "children": [{
+                "name": "Population density (people per sq. km of land area)"
+            }, {
+                "name": "Population living in slums (% of urban population)"
+            }, {
+                "name": "Population in largest city"
+            }, {
+                "name": "Population in the largest city (% of urban population)"
+            }, {
+                "name": "Population in urban agglomerations of more than 1 million"
+            }, {
+                "name": "Population in urban agglomerations of more than 1 million (% of total population)"
+            }, {
+                "name": "Rural population"
+            }, {
+                "name": "Rural population growth (annual %)"
+            }, {
+                "name": "Rural population (% of total population)"
+            }, {
+                "name": "Urban population growth (annual %)"
+            }, {
+                "name": "Urban population"
+            }, {
+                "name": "Urban population (% of total)"
+            }]
+        }, {
+            "name": "Freshwater",
+            "children": [{
+                "name": "Water productivity, total (constant 2010 US$ GDP per cubic meter of total freshwater withdrawal)"
+            }, {
+                "name": "Annual freshwater withdrawals, agriculture (% of total freshwater withdrawal)"
+            }, {
+                "name": "Annual freshwater withdrawals, domestic (% of total freshwater withdrawal)"
+            }, {
+                "name": "Annual freshwater withdrawals, industry (% of total freshwater withdrawal)"
+            }, {
+                "name": "Level of water stress: freshwater withdrawal as a proportion of available freshwater resources"
+            }, {
+                "name": "Annual freshwater withdrawals, total (billion cubic meters)"
+            }, {
+                "name": "Annual freshwater withdrawals, total (% of internal resources)"
+            }, {
+                "name": "Renewable internal freshwater resources, total (billion cubic meters)"
+            }, {
+                "name": "Renewable internal freshwater resources per capita (cubic meters)"
+            }]
+        }, {
+            "name": "Natural resources contribution to GDP",
+            "children": [{
+                "name": "Coal rents (% of GDP)"
+            }, {
+                "name": "Forest rents (% of GDP)"
+            }, {
+                "name": "Mineral rents (% of GDP)"
+            }, {
+                "name": "Natural gas rents (% of GDP)"
+            }, {
+                "name": "Oil rents (% of GDP)"
+            }, {
+                "name": "Total natural resources rents (% of GDP)"
+            }]
+        }]
+    }, {
+        "name": "Economic Policy & Debt",
+        "children": [{
+            "name": "Balance of payments",
+            "children": [{
+                "name": "Current account",
+                "children": [{
+                    "name": "Goods, services & income",
+                    "children": [{
+                        "name": "Trade in services (% of GDP)"
+                    }, {
+                        "name": "Communications, computer, etc. (% of service imports, BoP)"
+                    }, {
+                        "name": "Primary income payments (BoP, current US$)"
+                    }, {
+                        "name": "Imports of goods and services (BoP, current US$)"
+                    }, {
+                        "name": "Insurance and financial services (% of service imports, BoP)"
+                    }, {
+                        "name": "Goods imports (BoP, current US$)"
+                    }, {
+                        "name": "Service imports (BoP, current US$)"
+                    }, {
+                        "name": "Charges for the use of intellectual property, payments (BoP, current US$)"
+                    }, {
+                        "name": "Imports of goods, services and primary income (BoP, current US$)"
+                    }, {
+                        "name": "Transport services (% of service imports, BoP)"
+                    }, {
+                        "name": "Travel services (% of service imports, BoP)"
+                    }, {
+                        "name": "Net primary income (BoP, current US$)"
+                    }, {
+                        "name": "Communications, computer, etc. (% of service exports, BoP)"
+                    }, {
+                        "name": "Primary income receipts (BoP, current US$)"
+                    }, {
+                        "name": "Exports of goods and services (BoP, current US$)"
+                    }, {
+                        "name": "Insurance and financial services (% of service exports, BoP)"
+                    }, {
+                        "name": "Goods exports (BoP, current US$)"
+                    }, {
+                        "name": "Service exports (BoP, current US$)"
+                    }, {
+                        "name": "Charges for the use of intellectual property, receipts (BoP, current US$)"
+                    }, {
+                        "name": "Exports of goods, services and primary income (BoP, current US$)"
+                    }, {
+                        "name": "Transport services (% of service exports, BoP)"
+                    }, {
+                        "name": "Travel services (% of service exports, BoP)"
+                    }]
+                }, {
+                    "name": "Transfers",
+                    "children": [{
+                        "name": "Secondary income, other sectors, payments (BoP, current US$)"
+                    }, {
+                        "name": "Personal remittances, paid (current US$)"
+                    }, {
+                        "name": "Net secondary income (BoP, current US$)"
+                    }, {
+                        "name": "Secondary income receipts (BoP, current US$)"
+                    }, {
+                        "name": "Personal transfers, receipts (BoP, current US$)"
+                    }, {
+                        "name": "Personal remittances, received (current US$)"
+                    }, {
+                        "name": "Personal remittances, received (% of GDP)"
+                    }]
+                }, {
+                    "name": "Balances",
+                    "children": [{
+                        "name": "Current account balance (BoP, current US$)"
+                    }, {
+                        "name": "Current account balance (% of GDP)"
+                    }, {
+                        "name": "Net trade in goods and services (BoP, current US$)"
+                    }, {
+                        "name": "Net trade in goods (BoP, current US$)"
+                    }]
+                }]
+            }, {
+                "name": "Capital & financial account",
+                "children": [{
+                    "name": "Foreign direct investment, net outflows (BoP, current US$)"
+                }, {
+                    "name": "Foreign direct investment, net outflows (% of GDP)"
+                }, {
+                    "name": "Net financial account (BoP, current US$)"
+                }, {
+                    "name": "Net errors and omissions (BoP, current US$)"
+                }, {
+                    "name": "Foreign direct investment, net (BoP, current US$)"
+                }, {
+                    "name": "Portfolio Investment, net (BoP, current US$)"
+                }, {
+                    "name": "Reserves and related items (BoP, current US$)"
+                }, {
+                    "name": "Net capital account (BoP, current US$)"
+                }, {
+                    "name": "Foreign direct investment, net inflows (BoP, current US$)"
+                }, {
+                    "name": "Foreign direct investment, net inflows (% of GDP)"
+                }, {
+                    "name": "Primary income on FDI (current US$)"
+                }, {
+                    "name": "Portfolio equity, net inflows (BoP, current US$)"
+                }]
+            }, {
+                "name": "Reserves & other items",
+                "children": [{
+                    "name": "Grants, excluding technical cooperation (BoP, current US$)"
+                }, {
+                    "name": "Technical cooperation grants (BoP, current US$)"
+                }, {
+                    "name": "Total reserves (includes gold, current US$)"
+                }, {
+                    "name": "Total reserves (% of total external debt)"
+                }, {
+                    "name": "Total reserves in months of imports"
+                }, {
+                    "name": "Total reserves minus gold (current US$)"
+                }]
+            }]
+        }, {
+            "name": "Official development assistance",
+            "children": [{
+                "name": "Net bilateral aid flows from DAC donors, Australia (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Austria (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Belgium (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Canada (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, European Union institutions (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Switzerland (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Czech Republic (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Germany (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Denmark (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Spain (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Finland (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, France (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, United Kingdom (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Greece (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Ireland (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Iceland (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Italy (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Japan (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Korea, Rep. (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Luxembourg (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Netherlands (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Norway (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, New Zealand (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Poland (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Portugal (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Slovak Republic (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Slovenia (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Sweden (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, Total (current US$)"
+            }, {
+                "name": "Net bilateral aid flows from DAC donors, United States (current US$)"
+            }, {
+                "name": "Net ODA provided, to the least developed countries (current US$)"
+            }, {
+                "name": "Net ODA provided to the least developed countries (% of GNI)"
+            }, {
+                "name": "Net ODA provided, total (current US$)"
+            }, {
+                "name": "Net ODA provided, total (% of GNI)"
+            }, {
+                "name": "Net ODA provided, total (constant 2015 US$)"
+            }, {
+                "name": "IDA grants (current US$)"
+            }, {
+                "name": "Debt forgiveness grants (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, FAO (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, IAEA (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, IFAD (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, ILO (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNAIDS (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNICEF (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNHCR (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNDP (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNECE (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNFPA (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNPBF (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNRWA (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, UNTA (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, WFP (current US$)"
+            }, {
+                "name": "Net official flows from UN agencies, WHO (current US$)"
+            }, {
+                "name": "Net official development assistance and official aid received (current US$)"
+            }, {
+                "name": "Net official development assistance and official aid received (constant 2013 US$)"
+            }, {
+                "name": "Net official aid received (current US$)"
+            }, {
+                "name": "Net official aid received (constant 2014 US$)"
+            }, {
+                "name": "Net official development assistance received (current US$)"
+            }, {
+                "name": "Net ODA received (% of gross capital formation)"
+            }, {
+                "name": "Net ODA received (% of GNI)"
+            }, {
+                "name": "Net official development assistance received (constant 2014 US$)"
+            }, {
+                "name": "Net ODA received (% of imports of goods, services and primary income)"
+            }, {
+                "name": "Net ODA received per capita (current US$)"
+            }, {
+                "name": "Net ODA received (% of central government expense)"
+            }]
+        }, {
+            "name": "External debt",
+            "children": [{
+                "name": "Amortization",
+                "children": [{
+                    "name": "PPG, bilateral (AMT, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (AMT, current US$)"
+                }, {
+                    "name": "IMF repurchases (AMT, current US$)"
+                }, {
+                    "name": "Principal repayments on external debt, long-term + IMF (AMT, current US$)"
+                }, {
+                    "name": "Principal repayments on external debt, long-term (AMT, current US$)"
+                }, {
+                    "name": "Principal repayments on external debt, private nonguaranteed (PNG) (AMT, current US$)"
+                }, {
+                    "name": "Principal repayments on external debt, public and publicly guaranteed (PPG) (AMT, current US$)"
+                }, {
+                    "name": "PPG, IBRD (AMT, current US$)"
+                }, {
+                    "name": "PPG, IDA (AMT, current US$)"
+                }, {
+                    "name": "PPG, multilateral (AMT, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (AMT, current US$)"
+                }, {
+                    "name": "PPG, official creditors (AMT, current US$)"
+                }, {
+                    "name": "PPG, bonds (AMT, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (AMT, current US$)"
+                }, {
+                    "name": "PNG, bonds (AMT, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (AMT, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (AMT, current US$)"
+                }, {
+                    "name": "PPG, private creditors (AMT, current US$)"
+                }]
+            }, {
+                "name": "Arrears, reschedulings, etc.",
+                "children": [{
+                    "name": "Principal arrears, public and publicly guaranteed (current US$)"
+                }, {
+                    "name": "Principal arrears, official creditors (current US$)"
+                }, {
+                    "name": "Principal arrears, private creditors (current US$)"
+                }, {
+                    "name": "Principal forgiven (current US$)"
+                }, {
+                    "name": "Principal rescheduled (current US$)"
+                }, {
+                    "name": "Principal rescheduled, official (current US$)"
+                }, {
+                    "name": "Principal rescheduled, private (current US$)"
+                }, {
+                    "name": "Debt forgiveness or reduction (current US$)"
+                }, {
+                    "name": "Total change in external debt stocks (current US$)"
+                }, {
+                    "name": "Residual, debt stock-flow reconciliation (current US$)"
+                }, {
+                    "name": "Debt buyback (current US$)"
+                }, {
+                    "name": "Debt stock reduction (current US$)"
+                }, {
+                    "name": "Debt stock rescheduled (current US$)"
+                }, {
+                    "name": "Interest arrears, public and publicly guaranteed (current US$)"
+                }, {
+                    "name": "Net change in interest arrears (current US$)"
+                }, {
+                    "name": "Interest arrears, official creditors (current US$)"
+                }, {
+                    "name": "Interest arrears, private creditors (current US$)"
+                }, {
+                    "name": "Interest forgiven (current US$)"
+                }, {
+                    "name": "Interest rescheduled (capitalized) (current US$)"
+                }, {
+                    "name": "Interest rescheduled, official (current US$)"
+                }, {
+                    "name": "Interest rescheduled, private (current US$)"
+                }, {
+                    "name": "Total amount of debt rescheduled (current US$)"
+                }]
+            }, {
+                "name": "Commitments",
+                "children": [{
+                    "name": "Commitments, public and publicly guaranteed (COM, current US$)"
+                }, {
+                    "name": "Commitments, IBRD (COM, current US$)"
+                }, {
+                    "name": "Commitments, IDA (COM, current US$)"
+                }, {
+                    "name": "Commitments, official creditors (COM, current US$)"
+                }, {
+                    "name": "Commitments, private creditors (COM, current US$)"
+                }]
+            }, {
+                "name": "Currency composition",
+                "children": [{
+                    "name": "Currency composition of PPG debt, Deutsche mark (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, Euro (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, French franc (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, Japanese yen (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, Multiple currencies (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, all other currencies (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, SDR (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, Swiss franc (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, Pound sterling (%)"
+                }, {
+                    "name": "Currency composition of PPG debt, U.S. dollars (%)"
+                }]
+            }, {
+                "name": "Disbursements",
+                "children": [{
+                    "name": "PPG, bilateral (DIS, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (DIS, current US$)"
+                }, {
+                    "name": "IMF purchases (DIS, current US$)"
+                }, {
+                    "name": "Disbursements on external debt, long-term + IMF (DIS, current US$)"
+                }, {
+                    "name": "Disbursements on external debt, long-term (DIS, current US$)"
+                }, {
+                    "name": "Disbursements on external debt, private nonguaranteed (PNG) (DIS, current US$)"
+                }, {
+                    "name": "Disbursements on external debt, public and publicly guaranteed (PPG) (DIS, current US$)"
+                }, {
+                    "name": "PPG, IBRD (DIS, current US$)"
+                }, {
+                    "name": "PPG, IDA (DIS, current US$)"
+                }, {
+                    "name": "PPG, multilateral (DIS, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (DIS, current US$)"
+                }, {
+                    "name": "PPG, official creditors (DIS, current US$)"
+                }, {
+                    "name": "PPG, bonds (DIS, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (DIS, current US$)"
+                }, {
+                    "name": "PNG, bonds (DIS, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (DIS, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (DIS, current US$)"
+                }, {
+                    "name": "PPG, private creditors (DIS, current US$)"
+                }]
+            }, {
+                "name": "Debt outstanding",
+                "children": [{
+                    "name": "External debt stocks, concessional (DOD, current US$)"
+                }, {
+                    "name": "PPG, bilateral (DOD, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, total (DOD, current US$)"
+                }, {
+                    "name": "Use of IMF credit (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, long-term (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, private nonguaranteed (PNG) (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, public and publicly guaranteed (PPG) (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, short-term (DOD, current US$)"
+                }, {
+                    "name": "PPG, IBRD (DOD, current US$)"
+                }, {
+                    "name": "PPG, IDA (DOD, current US$)"
+                }, {
+                    "name": "PPG, multilateral (DOD, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (DOD, current US$)"
+                }, {
+                    "name": "IBRD loans and IDA credits (DOD, current US$)"
+                }, {
+                    "name": "PPG, official creditors (DOD, current US$)"
+                }, {
+                    "name": "PPG, bonds (DOD, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (DOD, current US$)"
+                }, {
+                    "name": "PNG, bonds (DOD, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (DOD, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, long-term private sector (DOD, current US$)"
+                }, {
+                    "name": "PPG, private creditors (DOD, current US$)"
+                }, {
+                    "name": "External debt stocks, long-term public sector (DOD, current US$)"
+                }, {
+                    "name": "Present value of external debt (current US$)"
+                }, {
+                    "name": "External debt stocks, variable rate (DOD, current US$)"
+                }]
+            }, {
+                "name": "Debt ratios & other items",
+                "children": [{
+                    "name": "Concessional debt (% of total external debt)"
+                }, {
+                    "name": "External debt stocks (% of exports of goods, services and primary income)"
+                }, {
+                    "name": "External debt stocks (% of GNI)"
+                }, {
+                    "name": "Short-term debt (% of total reserves)"
+                }, {
+                    "name": "Short-term debt (% of exports of goods, services and primary income)"
+                }, {
+                    "name": "Short-term debt (% of total external debt)"
+                }, {
+                    "name": "Multilateral debt (% of total external debt)"
+                }, {
+                    "name": "Present value of external debt (% of exports of goods, services and income)"
+                }, {
+                    "name": "Present value of external debt (% of GNI)"
+                }, {
+                    "name": "Interest payments on external debt (% of exports of goods, services and primary income)"
+                }, {
+                    "name": "Interest payments on external debt (% of GNI)"
+                }, {
+                    "name": "Total debt service (% of exports of goods, services and primary income)"
+                }, {
+                    "name": "Total debt service (% of GNI)"
+                }, {
+                    "name": "Public and publicly guaranteed debt service (% of GNI)"
+                }, {
+                    "name": "Public and publicly guaranteed debt service (% of exports of goods, services and primary income)"
+                }, {
+                    "name": "Multilateral debt service (% of public and publicly guaranteed debt service)"
+                }]
+            }, {
+                "name": "Terms",
+                "children": [{
+                    "name": "Average grace period on new external debt commitments (years)"
+                }, {
+                    "name": "Average grace period on new external debt commitments, official (years)"
+                }, {
+                    "name": "Average grace period on new external debt commitments, private (years)"
+                }, {
+                    "name": "Average grant element on new external debt commitments (%)"
+                }, {
+                    "name": "Average grant element on new external debt commitments, official (%)"
+                }, {
+                    "name": "Average grant element on new external debt commitments, private (%)"
+                }, {
+                    "name": "Average interest on new external debt commitments (%)"
+                }, {
+                    "name": "Average interest on new external debt commitments, official (%)"
+                }, {
+                    "name": "Average interest on new external debt commitments, private (%)"
+                }, {
+                    "name": "Average maturity on new external debt commitments (years)"
+                }, {
+                    "name": "Average maturity on new external debt commitments, official (years)"
+                }, {
+                    "name": "Average maturity on new external debt commitments, private (years)"
+                }]
+            }, {
+                "name": "Interest",
+                "children": [{
+                    "name": "PPG, bilateral (INT, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (INT, current US$)"
+                }, {
+                    "name": "Interest payments on external debt, total (INT, current US$)"
+                }, {
+                    "name": "IMF charges (INT, current US$)"
+                }, {
+                    "name": "Interest payments on external debt, long-term (INT, current US$)"
+                }, {
+                    "name": "Interest payments on external debt, private nonguaranteed (PNG) (INT, current US$)"
+                }, {
+                    "name": "Interest payments on external debt, public and publicly guaranteed (PPG) (INT, current US$)"
+                }, {
+                    "name": "Interest payments on external debt, short-term (INT, current US$)"
+                }, {
+                    "name": "PPG, IBRD (INT, current US$)"
+                }, {
+                    "name": "PPG, IDA (INT, current US$)"
+                }, {
+                    "name": "PPG, multilateral (INT, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (INT, current US$)"
+                }, {
+                    "name": "PPG, official creditors (INT, current US$)"
+                }, {
+                    "name": "PPG, bonds (INT, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (INT, current US$)"
+                }, {
+                    "name": "PNG, bonds (INT, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (INT, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (INT, current US$)"
+                }, {
+                    "name": "PPG, private creditors (INT, current US$)"
+                }]
+            }, {
+                "name": "Net flows",
+                "children": [{
+                    "name": "Net financial flows, bilateral (NFL, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (NFL, current US$)"
+                }, {
+                    "name": "Portfolio investment, bonds (PPG + PNG) (NFL, current US$)"
+                }, {
+                    "name": "Net flows on external debt, total (NFL, current US$)"
+                }, {
+                    "name": "Net flows on external debt, long-term (NFL, current US$)"
+                }, {
+                    "name": "Net flows on external debt, private nonguaranteed (PNG) (NFL, current US$)"
+                }, {
+                    "name": "Net flows on external debt, public and publicly guaranteed (PPG) (NFL, current US$)"
+                }, {
+                    "name": "Net flows on external debt, short-term (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, IMF concessional (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, IMF nonconcessional (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, IBRD (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, IDA (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, multilateral (NFL, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, others (NFL, current US$)"
+                }, {
+                    "name": "EBRD, private nonguaranteed (NFL, current US$)"
+                }, {
+                    "name": "IFC, private nonguaranteed (NFL, current US$)"
+                }, {
+                    "name": "PPG, official creditors (NFL, current US$)"
+                }, {
+                    "name": "PPG, bonds (NFL, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (NFL, current US$)"
+                }, {
+                    "name": "Commercial banks and other lending (PPG + PNG) (NFL, current US$)"
+                }, {
+                    "name": "PNG, bonds (NFL, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (NFL, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (NFL, current US$)"
+                }, {
+                    "name": "PPG, private creditors (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, RDB concessional (NFL, current US$)"
+                }, {
+                    "name": "Net financial flows, RDB nonconcessional (NFL, current US$)"
+                }]
+            }, {
+                "name": "Net transfers",
+                "children": [{
+                    "name": "PPG, bilateral (NTR, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (NTR, current US$)"
+                }, {
+                    "name": "Net transfers on external debt, total (NTR, current US$)"
+                }, {
+                    "name": "Net transfers on external debt, long-term (NTR, current US$)"
+                }, {
+                    "name": "Net transfers on external debt, private nonguaranteed (PNG) (NTR, current US$)"
+                }, {
+                    "name": "Net transfers on external debt, public and publicly guaranteed (PPG) (NTR, current US$)"
+                }, {
+                    "name": "PPG, IBRD (NTR, current US$)"
+                }, {
+                    "name": "PPG, IDA (NTR, current US$)"
+                }, {
+                    "name": "PPG, multilateral (NTR, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (NTR, current US$)"
+                }, {
+                    "name": "PPG, official creditors (NTR, current US$)"
+                }, {
+                    "name": "PPG, bonds (NTR, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (NTR, current US$)"
+                }, {
+                    "name": "PNG, bonds (NTR, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (NTR, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (NTR, current US$)"
+                }, {
+                    "name": "PPG, private creditors (NTR, current US$)"
+                }]
+            }, {
+                "name": "Debt service",
+                "children": [{
+                    "name": "PPG, bilateral (TDS, current US$)"
+                }, {
+                    "name": "PPG, bilateral concessional (TDS, current US$)"
+                }, {
+                    "name": "Debt service on external debt, total (TDS, current US$)"
+                }, {
+                    "name": "IMF repurchases and charges (TDS, current US$)"
+                }, {
+                    "name": "Debt service on external debt, long-term (TDS, current US$)"
+                }, {
+                    "name": "Debt service on external debt, private nonguaranteed (PNG) (TDS, current US$)"
+                }, {
+                    "name": "Debt service to exports (%)"
+                }, {
+                    "name": "Debt service on external debt, public and publicly guaranteed (PPG) (TDS, current US$)"
+                }, {
+                    "name": "PPG, IBRD (TDS, current US$)"
+                }, {
+                    "name": "PPG, IDA (TDS, current US$)"
+                }, {
+                    "name": "Multilateral debt service (TDS, current US$)"
+                }, {
+                    "name": "PPG, multilateral concessional (TDS, current US$)"
+                }, {
+                    "name": "PPG, official creditors (TDS, current US$)"
+                }, {
+                    "name": "PPG, bonds (TDS, current US$)"
+                }, {
+                    "name": "PPG, commercial banks (TDS, current US$)"
+                }, {
+                    "name": "PNG, bonds (TDS, current US$)"
+                }, {
+                    "name": "PNG, commercial banks and other creditors (TDS, current US$)"
+                }, {
+                    "name": "PPG, other private creditors (TDS, current US$)"
+                }, {
+                    "name": "PPG, private creditors (TDS, current US$)"
+                }]
+            }, {
+                "name": "Undisbursed debt",
+                "children": [{
+                    "name": "Undisbursed external debt, total (UND, current US$)"
+                }, {
+                    "name": "Undisbursed external debt, official creditors (UND, current US$)"
+                }, {
+                    "name": "Undisbursed external debt, private creditors (UND, current US$)"
+                }]
+            }]
+        }, {
+            "name": "National accounts",
+            "children": [{
+                "name": "US$ at current prices",
+                "children": [{
+                    "name": "Expenditure on GDP",
+                    "children": [{
+                        "name": "General government final consumption expenditure (current US$)"
+                    }, {
+                        "name": "Household final consumption expenditure (current US$)"
+                    }, {
+                        "name": "Final consumption expenditure (current US$)"
+                    }, {
+                        "name": "Gross national expenditure (current US$)"
+                    }, {
+                        "name": "Exports of goods and services (current US$)"
+                    }, {
+                        "name": "Gross fixed capital formation (current US$)"
+                    }, {
+                        "name": "Changes in inventories (current US$)"
+                    }, {
+                        "name": "Gross capital formation (current US$)"
+                    }, {
+                        "name": "Imports of goods and services (current US$)"
+                    }, {
+                        "name": "External balance on goods and services (current US$)"
+                    }]
+                }, {
+                    "name": "Value added",
+                    "children": [{
+                        "name": "Agriculture, value added (current US$)"
+                    }, {
+                        "name": "Manufacturing, value added (current US$)"
+                    }, {
+                        "name": "Industry, value added (current US$)"
+                    }, {
+                        "name": "Services, value added (current US$)"
+                    }]
+                }, {
+                    "name": "Aggregate indicators",
+                    "children": [{
+                        "name": "Gross value added at factor cost (current US$)"
+                    }, {
+                        "name": "GDP (current US$)"
+                    }, {
+                        "name": "GDP per capita (current US$)"
+                    }, {
+                        "name": "Gross domestic savings (current US$)"
+                    }, {
+                        "name": "GNI (current US$)"
+                    }, {
+                        "name": "Gross savings (current US$)"
+                    }, {
+                        "name": "Net income from abroad (current US$)"
+                    }, {
+                        "name": "Net taxes on products (current US$)"
+                    }, {
+                        "name": "Net current transfers from abroad (current US$)"
+                    }]
+                }]
+            }, {
+                "name": "Local currency at current prices",
+                "children": [{
+                    "name": "Expenditure on GDP",
+                    "children": [{
+                        "name": "General government final consumption expenditure (current LCU)"
+                    }, {
+                        "name": "Household final consumption expenditure (current LCU)"
+                    }, {
+                        "name": "Final consumption expenditure (current LCU)"
+                    }, {
+                        "name": "Gross national expenditure (current LCU)"
+                    }, {
+                        "name": "Exports of goods and services (current LCU)"
+                    }, {
+                        "name": "Gross fixed capital formation, private sector (current LCU)"
+                    }, {
+                        "name": "Gross fixed capital formation (current LCU)"
+                    }, {
+                        "name": "Changes in inventories (current LCU)"
+                    }, {
+                        "name": "Gross capital formation (current LCU)"
+                    }, {
+                        "name": "Imports of goods and services (current LCU)"
+                    }, {
+                        "name": "External balance on goods and services (current LCU)"
+                    }, {
+                        "name": "Discrepancy in expenditure estimate of GDP (current LCU)"
+                    }]
+                }, {
+                    "name": "Value added",
+                    "children": [{
+                        "name": "Agriculture, value added (current LCU)"
+                    }, {
+                        "name": "Financial intermediary services indirectly Measured (FISIM) (current LCU)"
+                    }, {
+                        "name": "Manufacturing, value added (current LCU)"
+                    }, {
+                        "name": "Industry, value added (current LCU)"
+                    }, {
+                        "name": "Services, value added (current LCU)"
+                    }]
+                }, {
+                    "name": "Aggregate indicators",
+                    "children": [{
+                        "name": "Gross value added at factor cost (current LCU)"
+                    }, {
+                        "name": "GDP (current LCU)"
+                    }, {
+                        "name": "GDP at market prices: linked series (current LCU)"
+                    }, {
+                        "name": "GDP per capita (current LCU)"
+                    }, {
+                        "name": "Gross domestic savings (current LCU)"
+                    }, {
+                        "name": "GNI (current LCU)"
+                    }, {
+                        "name": "GNI per capita (current LCU)"
+                    }, {
+                        "name": "Gross savings (current LCU)"
+                    }, {
+                        "name": "Net income from abroad (current LCU)"
+                    }, {
+                        "name": "Net taxes on products (current LCU)"
+                    }, {
+                        "name": "Net current transfers from abroad (current LCU)"
+                    }]
+                }]
+            }, {
+                "name": "US$ at constant 2010 prices",
+                "children": [{
+                    "name": "Expenditure on GDP",
+                    "children": [{
+                        "name": "General government final consumption expenditure (constant 2010 US$)"
+                    }, {
+                        "name": "Household final consumption expenditure (constant 2010 US$)"
+                    }, {
+                        "name": "Household final consumption expenditure per capita (constant 2010 US$)"
+                    }, {
+                        "name": "Final consumption expenditure (constant 2010 US$)"
+                    }, {
+                        "name": "Gross national expenditure (constant 2010 US$)"
+                    }, {
+                        "name": "Exports of goods and services (constant 2010 US$)"
+                    }, {
+                        "name": "Gross fixed capital formation (constant 2010 US$)"
+                    }, {
+                        "name": "Gross capital formation (constant 2010 US$)"
+                    }, {
+                        "name": "Imports of goods and services (constant 2010 US$)"
+                    }]
+                }, {
+                    "name": "Value added",
+                    "children": [{
+                        "name": "Agriculture, value added per worker (constant 2010 US$)"
+                    }, {
+                        "name": "Agriculture, value added (constant 2010 US$)"
+                    }, {
+                        "name": "Industry, value added per worker (constant 2010 US$)"
+                    }, {
+                        "name": "Manufacturing, value added (constant 2010 US$)"
+                    }, {
+                        "name": "Industry, value added (constant 2010 US$)"
+                    }, {
+                        "name": "Services, value added per worker (constant 2010 US$)"
+                    }, {
+                        "name": "Services, value added (constant 2010 US$)"
+                    }]
+                }, {
+                    "name": "Aggregate indicators",
+                    "children": [{
+                        "name": "Gross value added at factor cost (constant 2010 US$)"
+                    }, {
+                        "name": "GDP (constant 2010 US$)"
+                    }, {
+                        "name": "GDP per capita (constant 2010 US$)"
+                    }, {
+                        "name": "GNI (constant 2010 US$)"
+                    }, {
+                        "name": "GNI per capita (constant 2010 US$)"
+                    }]
+                }]
+            }, {
+                "name": "Growth rates",
+                "children": [{
+                    "name": "General government final consumption expenditure (annual % growth)"
+                }, {
+                    "name": "Household final consumption expenditure (annual % growth)"
+                }, {
+                    "name": "Household final consumption expenditure per capita growth (annual %)"
+                }, {
+                    "name": "Final consumption expenditure (annual % growth)"
+                }, {
+                    "name": "Exports of goods and services (annual % growth)"
+                }, {
+                    "name": "Gross fixed capital formation (annual % growth)"
+                }, {
+                    "name": "Gross capital formation (annual % growth)"
+                }, {
+                    "name": "Imports of goods and services (annual % growth)"
+                }, {
+                    "name": "Agriculture, value added (annual % growth)"
+                }, {
+                    "name": "Manufacturing, value added (annual % growth)"
+                }, {
+                    "name": "Industry, value added (annual % growth)"
+                }, {
+                    "name": "Services, value added (annual % growth)"
+                }, {
+                    "name": "GDP growth (annual %)"
+                }, {
+                    "name": "GDP per capita growth (annual %)"
+                }, {
+                    "name": "GNI growth (annual %)"
+                }, {
+                    "name": "GNI per capita growth (annual %)"
+                }]
+            }, {
+                "name": "Local currency at constant prices",
+                "children": [{
+                    "name": "Expenditure on GDP",
+                    "children": [{
+                        "name": "General government final consumption expenditure (constant LCU)"
+                    }, {
+                        "name": "Household final consumption expenditure (constant LCU)"
+                    }, {
+                        "name": "Final consumption expenditure (constant LCU)"
+                    }, {
+                        "name": "Gross national expenditure (constant LCU)"
+                    }, {
+                        "name": "Exports of goods and services (constant LCU)"
+                    }, {
+                        "name": "Gross fixed capital formation (constant LCU)"
+                    }, {
+                        "name": "Changes in inventories (constant LCU)"
+                    }, {
+                        "name": "Gross capital formation (constant LCU)"
+                    }, {
+                        "name": "Imports of goods and services (constant LCU)"
+                    }, {
+                        "name": "External balance on goods and services (constant LCU)"
+                    }, {
+                        "name": "Discrepancy in expenditure estimate of GDP (constant LCU)"
+                    }]
+                }, {
+                    "name": "Value added",
+                    "children": [{
+                        "name": "Agriculture, value added (constant LCU)"
+                    }, {
+                        "name": "Financial intermediary services indirectly Measured (FISIM) (constant LCU)"
+                    }, {
+                        "name": "Manufacturing, value added (constant LCU)"
+                    }, {
+                        "name": "Industry, value added (constant LCU)"
+                    }, {
+                        "name": "Services, value added (constant LCU)"
+                    }]
+                }, {
+                    "name": "Other items",
+                    "children": [{
+                        "name": "Exports as a capacity to import (constant LCU)"
+                    }, {
+                        "name": "Gross domestic income (constant LCU)"
+                    }, {
+                        "name": "Terms of trade adjustment (constant LCU)"
+                    }]
+                }, {
+                    "name": "Aggregate indicators",
+                    "children": [{
+                        "name": "Gross value added at factor cost (constant LCU)"
+                    }, {
+                        "name": "GDP (constant LCU)"
+                    }, {
+                        "name": "GDP per capita (constant LCU)"
+                    }, {
+                        "name": "GNI (constant LCU)"
+                    }, {
+                        "name": "GNI per capita (constant LCU)"
+                    }, {
+                        "name": "Net income from abroad (constant LCU)"
+                    }, {
+                        "name": "Net taxes on products (constant LCU)"
+                    }, {
+                        "name": "Net current transfers from abroad (constant LCU)"
+                    }]
+                }]
+            }, {
+                "name": "Shares of GDP & other",
+                "children": [{
+                    "name": "General government final consumption expenditure (% of GDP)"
+                }, {
+                    "name": "Households and NPISHs final consumption expenditure (% of GDP)"
+                }, {
+                    "name": "Final consumption expenditure (% of GDP)"
+                }, {
+                    "name": "Gross national expenditure deflator (base year varies by country)"
+                }, {
+                    "name": "Gross national expenditure (% of GDP)"
+                }, {
+                    "name": "Exports of goods and services (% of GDP)"
+                }, {
+                    "name": "Gross fixed capital formation, private sector (% of GDP)"
+                }, {
+                    "name": "Gross fixed capital formation (% of GDP)"
+                }, {
+                    "name": "Gross capital formation (% of GDP)"
+                }, {
+                    "name": "Imports of goods and services (% of GDP)"
+                }, {
+                    "name": "External balance on goods and services (% of GDP)"
+                }, {
+                    "name": "Trade (% of GDP)"
+                }, {
+                    "name": "Agriculture, value added (% of GDP)"
+                }, {
+                    "name": "Manufacturing, value added (% of GDP)"
+                }, {
+                    "name": "Industry, value added (% of GDP)"
+                }, {
+                    "name": "Chemicals (% of value added in manufacturing)"
+                }, {
+                    "name": "Food, beverages and tobacco (% of value added in manufacturing)"
+                }, {
+                    "name": "Machinery and transport equipment (% of value added in manufacturing)"
+                }, {
+                    "name": "Other manufacturing (% of value added in manufacturing)"
+                }, {
+                    "name": "Medium and high-tech industry (% manufacturing value added)"
+                }, {
+                    "name": "Textiles and clothing (% of value added in manufacturing)"
+                }, {
+                    "name": "Services, value added (% of GDP)"
+                }, {
+                    "name": "Gross domestic savings (% of GDP)"
+                }, {
+                    "name": "Gross savings (% of GNI)"
+                }, {
+                    "name": "Gross savings (% of GDP)"
+                }]
+            }, {
+                "name": "Adjusted savings & income",
+                "children": [{
+                    "name": "Adjusted savings: education expenditure (current US$)"
+                }, {
+                    "name": "Adjusted savings: education expenditure (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: carbon dioxide damage (current US$)"
+                }, {
+                    "name": "Adjusted savings: carbon dioxide damage (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: net forest depletion (current US$)"
+                }, {
+                    "name": "Adjusted savings: net forest depletion (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: consumption of fixed capital (current US$)"
+                }, {
+                    "name": "Adjusted savings: consumption of fixed capital (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: mineral depletion (current US$)"
+                }, {
+                    "name": "Adjusted savings: mineral depletion (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: energy depletion (current US$)"
+                }, {
+                    "name": "Adjusted savings: energy depletion (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: particulate emission damage (current US$)"
+                }, {
+                    "name": "Adjusted savings: particulate emission damage (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: natural resources depletion (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: gross savings (% of GNI)"
+                }, {
+                    "name": "Adjusted savings: net national savings (current US$)"
+                }, {
+                    "name": "Adjusted savings: net national savings (% of GNI)"
+                }, {
+                    "name": "Adjusted net national income (current US$)"
+                }, {
+                    "name": "Adjusted net national income (constant 2010 US$)"
+                }, {
+                    "name": "Adjusted net national income (annual % growth)"
+                }, {
+                    "name": "Adjusted net national income per capita (current US$)"
+                }, {
+                    "name": "Adjusted net national income per capita (constant 2010 US$)"
+                }, {
+                    "name": "Adjusted net national income per capita (annual % growth)"
+                }, {
+                    "name": "Adjusted net savings, including particulate emission damage (current US$)"
+                }, {
+                    "name": "Adjusted net savings, including particulate emission damage (% of GNI)"
+                }, {
+                    "name": "Adjusted net savings, excluding particulate emission damage (current US$)"
+                }, {
+                    "name": "Adjusted net savings, excluding particulate emission damage (% of GNI)"
+                }]
+            }, {
+                "name": "Atlas GNI & GNI per capita",
+                "children": [{
+                    "name": "GNI, Atlas method (current US$)"
+                }, {
+                    "name": "GNI per capita, Atlas method (current US$)"
+                }]
+            }]
+        }, {
+            "name": "Purchasing power parity",
+            "children": [{
+                "name": "Household final consumption expenditure, PPP (current international $)"
+            }, {
+                "name": "Household final consumption expenditure, PPP (constant 2011 international $)"
+            }, {
+                "name": "GDP, PPP (current international $)"
+            }, {
+                "name": "GDP, PPP (constant 2011 international $)"
+            }, {
+                "name": "GDP per capita, PPP (current international $)"
+            }, {
+                "name": "GDP per capita, PPP (constant 2011 international $)"
+            }, {
+                "name": "GNI, PPP (current international $)"
+            }, {
+                "name": "GNI, PPP (constant 2011 international $)"
+            }, {
+                "name": "GNI per capita, PPP (current international $)"
+            }, {
+                "name": "GNI per capita, PPP (constant 2011 international $)"
+            }, {
+                "name": "PPP conversion factor, GDP (LCU per international $)"
+            }, {
+                "name": "2005 PPP conversion factor, GDP (LCU per international $)"
+            }, {
+                "name": "Price level ratio of PPP conversion factor (GDP) to market exchange rate"
+            }, {
+                "name": "PPP conversion factor, private consumption (LCU per international $)"
+            }, {
+                "name": "2005 PPP conversion factor, private consumption (LCU per international $)"
+            }]
+        }]
+    }, {
+        "name": "Infrastructure",
+        "children": [{
+            "name": "Communications",
+            "children": [{
+                "name": "ICT service exports (BoP, current US$)"
+            }, {
+                "name": "ICT service exports (% of service exports, BoP)"
+            }, {
+                "name": "Mobile cellular subscriptions"
+            }, {
+                "name": "Mobile cellular subscriptions (per 100 people)"
+            }, {
+                "name": "Fixed telephone subscriptions"
+            }, {
+                "name": "Fixed telephone subscriptions (per 100 people)"
+            }, {
+                "name": "Fixed broadband subscriptions"
+            }, {
+                "name": "Fixed broadband subscriptions (per 100 people)"
+            }, {
+                "name": "Secure Internet servers"
+            }, {
+                "name": "Secure Internet servers (per 1 million people)"
+            }, {
+                "name": "Individuals using the Internet (% of population)"
+            }, {
+                "name": "ICT goods imports (% total goods imports)"
+            }, {
+                "name": "ICT goods exports (% of total goods exports)"
+            }]
+        }, {
+            "name": "Transportation",
+            "children": [{
+                "name": "Pump price for diesel fuel (US$ per liter)"
+            }, {
+                "name": "Pump price for gasoline (US$ per liter)"
+            }, {
+                "name": "Burden of customs procedure, WEF (1=extremely inefficient to 7=extremely efficient)"
+            }, {
+                "name": "Quality of port infrastructure, WEF (1=extremely underdeveloped to 7=well developed and efficient by international standards)"
+            }, {
+                "name": "Air transport, registered carrier departures worldwide"
+            }, {
+                "name": "Air transport, freight (million ton-km)"
+            }, {
+                "name": "Air transport, passengers carried"
+            }, {
+                "name": "Railways, goods transported (million ton-km)"
+            }, {
+                "name": "Railways, passengers carried (million passenger-km)"
+            }, {
+                "name": "Rail lines (total route-km)"
+            }, {
+                "name": "Liner shipping connectivity index (maximum value in 2004 = 100)"
+            }, {
+                "name": "Container port traffic (TEU: 20 foot equivalent units)"
+            }]
+        }, {
+            "name": "Technology",
+            "children": [{
+                "name": "Research and development expenditure (% of GDP)"
+            }, {
+                "name": "Industrial design applications, nonresident, by count"
+            }, {
+                "name": "Industrial design applications, resident, by count"
+            }, {
+                "name": "Scientific and technical journal articles"
+            }, {
+                "name": "Patent applications, nonresidents"
+            }, {
+                "name": "Patent applications, residents"
+            }, {
+                "name": "Trademark applications, nonresident, by count"
+            }, {
+                "name": "Trademark applications, direct nonresident"
+            }, {
+                "name": "Trademark applications, direct resident"
+            }, {
+                "name": "Trademark applications, resident, by count"
+            }, {
+                "name": "Trademark applications, total"
+            }, {
+                "name": "Researchers in R&D (per million people)"
+            }, {
+                "name": "Technicians in R&D (per million people)"
+            }, {
+                "name": "Medium and high-tech exports (% manufactured exports)"
+            }, {
+                "name": "High-technology exports (current US$)"
+            }, {
+                "name": "High-technology exports (% of manufactured exports)"
+            }]
+        }]
+    }, {
+        "name": "Financial Sector",
+        "children": [{
+            "name": "Capital markets",
+            "children": [{
+                "name": "S&P Global Equity Indices (annual % change)"
+            }, {
+                "name": "Market capitalization of listed domestic companies (current US$)"
+            }, {
+                "name": "Market capitalization of listed domestic companies (% of GDP)"
+            }, {
+                "name": "Listed domestic companies, total"
+            }, {
+                "name": "Stocks traded, total value (current US$)"
+            }, {
+                "name": "Stocks traded, total value (% of GDP)"
+            }, {
+                "name": "Stocks traded, turnover ratio of domestic shares (%)"
+            }]
+        }, {
+            "name": "Assets",
+            "children": [{
+                "name": "Bank nonperforming loans to total gross loans (%)"
+            }, {
+                "name": "Bank capital to assets ratio (%)"
+            }, {
+                "name": "Domestic credit to private sector by banks (% of GDP)"
+            }, {
+                "name": "Bank liquid reserves to bank assets ratio (%)"
+            }, {
+                "name": "Claims on central government (annual growth as % of broad money)"
+            }, {
+                "name": "Claims on other sectors of the domestic economy (annual growth as % of broad money)"
+            }, {
+                "name": "Net domestic credit (current LCU)"
+            }, {
+                "name": "Net foreign assets (current LCU)"
+            }, {
+                "name": "Claims on private sector (annual growth as % of broad money)"
+            }, {
+                "name": "Claims on central government, etc. (% GDP)"
+            }, {
+                "name": "Claims on other sectors of the domestic economy (% of GDP)"
+            }, {
+                "name": "Domestic credit provided by financial sector (% of GDP)"
+            }, {
+                "name": "Domestic credit to private sector (% of GDP)"
+            }]
+        }, {
+            "name": "Access",
+            "children": [{
+                "name": "Automated teller machines (ATMs) (per 100,000 adults)"
+            }, {
+                "name": "Commercial bank branches (per 100,000 adults)"
+            }, {
+                "name": "Borrowers from commercial banks (per 1,000 adults)"
+            }, {
+                "name": "Depositors with commercial banks (per 1,000 adults)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, poorest 40% (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, richest 60% (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, female (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, male (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, older adults (% of population ages 25+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, primary education or less (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, secondary education or more (% of population ages 15+)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider, young adults (% of population ages 15-24)"
+            }, {
+                "name": "Account ownership at a financial institution or with a mobile-money-service provider (% of population ages 15+)"
+            }, {
+                "name": "Average transaction cost of sending remittances to a specific country (%)"
+            }, {
+                "name": "Average transaction cost of sending remittances from a specific country (%)"
+            }]
+        }, {
+            "name": "Monetary holdings (liabilities)",
+            "children": [{
+                "name": "Broad money (current LCU)"
+            }, {
+                "name": "Broad money (% of GDP)"
+            }, {
+                "name": "Broad money to total reserves ratio"
+            }, {
+                "name": "Broad money growth (annual %)"
+            }]
+        }, {
+            "name": "Exchange rates & prices",
+            "children": [{
+                "name": "Consumer price index (2010 = 100)"
+            }, {
+                "name": "Inflation, consumer prices (annual %)"
+            }, {
+                "name": "Wholesale price index (2010 = 100)"
+            }, {
+                "name": "Inflation, GDP deflator (annual %)"
+            }, {
+                "name": "Inflation, GDP deflator: linked series (annual %)"
+            }, {
+                "name": "GDP deflator (base year varies by country)"
+            }, {
+                "name": "GDP deflator: linked series (base year varies by country)"
+            }, {
+                "name": "DEC alternative conversion factor (LCU per US$)"
+            }, {
+                "name": "Official exchange rate (LCU per US$, period average)"
+            }, {
+                "name": "Real effective exchange rate index (2010 = 100)"
+            }]
+        }, {
+            "name": "Interest rates",
+            "children": [{
+                "name": "Deposit interest rate (%)"
+            }, {
+                "name": "Lending interest rate (%)"
+            }, {
+                "name": "Interest rate spread (lending rate minus deposit rate, %)"
+            }, {
+                "name": "Real interest rate (%)"
+            }, {
+                "name": "Risk premium on lending (lending rate minus treasury bill rate, %)"
+            }]
+        }]
+    }, {
+        "name": "Public Sector",
+        "children": [{
+            "name": "Government finance",
+            "children": [{
+                "name": "Deficit & financing",
+                "children": [{
+                    "name": "Net acquisition of financial assets (current LCU)"
+                }, {
+                    "name": "Net acquisition of financial assets (% of GDP)"
+                }, {
+                    "name": "Central government debt, total (current LCU)"
+                }, {
+                    "name": "Central government debt, total (% of GDP)"
+                }, {
+                    "name": "Net incurrence of liabilities, total (current LCU)"
+                }, {
+                    "name": "Net incurrence of liabilities, total (% of GDP)"
+                }, {
+                    "name": "Net investment in nonfinancial assets (current LCU)"
+                }, {
+                    "name": "Net investment in nonfinancial assets (% of GDP)"
+                }, {
+                    "name": "Net lending (+) / net borrowing (-) (current LCU)"
+                }, {
+                    "name": "Net lending (+) / net borrowing (-) (% of GDP)"
+                }]
+            }, {
+                "name": "Revenue",
+                "children": [{
+                    "name": "Grants and other revenue (current LCU)"
+                }, {
+                    "name": "Grants and other revenue (% of revenue)"
+                }, {
+                    "name": "Social contributions (current LCU)"
+                }, {
+                    "name": "Social contributions (% of revenue)"
+                }, {
+                    "name": "Revenue, excluding grants (current LCU)"
+                }, {
+                    "name": "Revenue, excluding grants (% of GDP)"
+                }, {
+                    "name": "Taxes on exports (current LCU)"
+                }, {
+                    "name": "Taxes on exports (% of tax revenue)"
+                }, {
+                    "name": "Taxes on goods and services (current LCU)"
+                }, {
+                    "name": "Taxes on goods and services (% of revenue)"
+                }, {
+                    "name": "Taxes on goods and services (% value added of industry and services)"
+                }, {
+                    "name": "Customs and other import duties (current LCU)"
+                }, {
+                    "name": "Customs and other import duties (% of tax revenue)"
+                }, {
+                    "name": "Taxes on international trade (current LCU)"
+                }, {
+                    "name": "Taxes on international trade (% of revenue)"
+                }, {
+                    "name": "Other taxes (current LCU)"
+                }, {
+                    "name": "Other taxes (% of revenue)"
+                }, {
+                    "name": "Tax revenue (current LCU)"
+                }, {
+                    "name": "Tax revenue (% of GDP)"
+                }, {
+                    "name": "Taxes on income, profits and capital gains (current LCU)"
+                }, {
+                    "name": "Taxes on income, profits and capital gains (% of revenue)"
+                }, {
+                    "name": "Taxes on income, profits and capital gains (% of total taxes)"
+                }]
+            }, {
+                "name": "Expense",
+                "children": [{
+                    "name": "Compensation of employees (current LCU)"
+                }, {
+                    "name": "Compensation of employees (% of expense)"
+                }, {
+                    "name": "Goods and services expense (current LCU)"
+                }, {
+                    "name": "Goods and services expense (% of expense)"
+                }, {
+                    "name": "Interest payments (current LCU)"
+                }, {
+                    "name": "Interest payments (% of revenue)"
+                }, {
+                    "name": "Interest payments (% of expense)"
+                }, {
+                    "name": "Other expense (current LCU)"
+                }, {
+                    "name": "Other expense (% of expense)"
+                }, {
+                    "name": "Expense (current LCU)"
+                }, {
+                    "name": "Expense (% of GDP)"
+                }, {
+                    "name": "Subsidies and other transfers (current LCU)"
+                }, {
+                    "name": "Subsidies and other transfers (% of expense)"
+                }]
+            }]
+        }, {
+            "name": "Policy & institutions",
+            "children": [{
+                "name": "Human capital index (HCI) (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), female (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), lower bound (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), female, lower bound (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), male, lower bound (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), male (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), upper bound (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), female, upper bound (scale 0-1)"
+            }, {
+                "name": "Human capital index (HCI), male, upper bound (scale 0-1)"
+            }, {
+                "name": "CPIA business regulatory environment rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA debt policy rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA economic management cluster average (1=low to 6=high)"
+            }, {
+                "name": "CPIA policy and institutions for environmental sustainability rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA quality of budgetary and financial management rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA financial sector rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA fiscal policy rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA gender equality rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA building human resources rating (1=low to 6=high)"
+            }, {
+                "name": "IDA resource allocation index (1=low to 6=high)"
+            }, {
+                "name": "CPIA macroeconomic management rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA quality of public administration rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA equity of public resource use rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA property rights and rule-based governance rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA social protection rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA public sector management and institutions cluster average (1=low to 6=high)"
+            }, {
+                "name": "CPIA efficiency of revenue mobilization rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA policies for social inclusion/equity cluster average (1=low to 6=high)"
+            }, {
+                "name": "CPIA structural policies cluster average (1=low to 6=high)"
+            }, {
+                "name": "CPIA trade rating (1=low to 6=high)"
+            }, {
+                "name": "CPIA transparency, accountability, and corruption in the public sector rating (1=low to 6=high)"
+            }, {
+                "name": "Methodology assessment of statistical capacity (scale 0 - 100)"
+            }, {
+                "name": "Overall level of statistical capacity (scale 0 - 100)"
+            }, {
+                "name": "Periodicity and timeliness assessment of statistical capacity (scale 0 - 100)"
+            }, {
+                "name": "Source data assessment of statistical capacity (scale 0 - 100)"
+            }]
+        }, {
+            "name": "Defense & arms trade",
+            "children": [{
+                "name": "Arms imports (SIPRI trend indicator values)"
+            }, {
+                "name": "Armed forces personnel, total"
+            }, {
+                "name": "Armed forces personnel (% of total labor force)"
+            }, {
+                "name": "Military expenditure (current USD)"
+            }, {
+                "name": "Military expenditure (current LCU)"
+            }, {
+                "name": "Military expenditure (% of GDP)"
+            }, {
+                "name": "Military expenditure (% of central government expenditure)"
+            }, {
+                "name": "Arms exports (SIPRI trend indicator values)"
+            }]
+        }, {
+            "name": "Conflict & fragility",
+            "children": [{
+                "name": "Battle-related deaths (number of people)"
+            }, {
+                "name": "Internally displaced persons, new displacement associated with conflict and violence (number of cases)"
+            }, {
+                "name": "Internally displaced persons, new displacement associated with disasters (number of cases)"
+            }, {
+                "name": "Internally displaced persons, total displaced by conflict and violence (number of people)"
+            }, {
+                "name": "Intentional homicides, female (per 100,000 female)"
+            }, {
+                "name": "Intentional homicides, male (per 100,000 male)"
+            }, {
+                "name": "Intentional homicides (per 100,000 people)"
+            }, {
+                "name": "Presence of peace keepers (number of troops, police, and military observers in mandate)"
+            }]
+        }]
+    }, {
+        "name": "Private Sector & Trade",
+        "children": [{
+            "name": "Business environment",
+            "children": [{
+                "name": "Distance to frontier score (0=lowest performance to 100=frontier)"
+            }, {
+                "name": "Business extent of disclosure index (0=less disclosure to 10=more disclosure)"
+            }, {
+                "name": "Ease of doing business index (1=most business-friendly regulations)"
+            }, {
+                "name": "New business density (new registrations per 1,000 people ages 15-64)"
+            }, {
+                "name": "New businesses registered (number)"
+            }, {
+                "name": "Depth of credit information index (0=low to 8=high)"
+            }, {
+                "name": "Private credit bureau coverage (% of adults)"
+            }, {
+                "name": "Public credit registry coverage (% of adults)"
+            }, {
+                "name": "Average time to clear exports through customs (days)"
+            }, {
+                "name": "Delay in obtaining an electrical connection (days)"
+            }, {
+                "name": "Power outages in firms in a typical month (number)"
+            }, {
+                "name": "Firms experiencing electrical outages (% of firms)"
+            }, {
+                "name": "Time required to get electricity (days)"
+            }, {
+                "name": "Cost to export (US$ per container)"
+            }, {
+                "name": "Firms using banks to finance working capital (% of firms)"
+            }, {
+                "name": "Firms using banks to finance investment (% of firms)"
+            }, {
+                "name": "Bribery incidence (% of firms experiencing at least one bribe payment request)"
+            }, {
+                "name": "Firms competing against unregistered firms (% of firms)"
+            }, {
+                "name": "Informal payments to public officials (% of firms)"
+            }, {
+                "name": "Losses due to theft and vandalism (% of annual sales for affected firms)"
+            }, {
+                "name": "Time required to obtain an operating license (days)"
+            }, {
+                "name": "Firms with female top manager (% of firms)"
+            }, {
+                "name": "Firms with female participation in ownership (% of firms)"
+            }, {
+                "name": "Firms formally registered when operations started (% of firms)"
+            }, {
+                "name": "Firms that do not report all sales for tax purposes (% of firms)"
+            }, {
+                "name": "Firms visited or required meetings with tax officials (% of firms)"
+            }, {
+                "name": "Value lost due to electrical outages (% of sales for affected firms)"
+            }, {
+                "name": "Firms that spend on R&D (% of firms)"
+            }, {
+                "name": "Firms experiencing losses due to theft and vandalism (% of firms)"
+            }, {
+                "name": "Firms offering formal training (% of firms)"
+            }, {
+                "name": "Time spent dealing with the requirements of government regulations (% of senior management time)"
+            }, {
+                "name": "Cost to import (US$ per container)"
+            }, {
+                "name": "Time to resolve insolvency (years)"
+            }, {
+                "name": "Strength of legal rights index (0=weak to 12=strong)"
+            }, {
+                "name": "Time required to enforce a contract (days)"
+            }, {
+                "name": "Time required to register property (days)"
+            }, {
+                "name": "Procedures to register property (number)"
+            }, {
+                "name": "Cost of business start-up procedures, female (% of GNI per capita)"
+            }, {
+                "name": "Cost of business start-up procedures, male (% of GNI per capita)"
+            }, {
+                "name": "Cost of business start-up procedures (% of GNI per capita)"
+            }, {
+                "name": "Time required to start a business (days)"
+            }, {
+                "name": "Time required to start a business, female (days)"
+            }, {
+                "name": "Time required to start a business, male (days)"
+            }, {
+                "name": "Start-up procedures to register a business (number)"
+            }, {
+                "name": "Start-up procedures to register a business, female (number)"
+            }, {
+                "name": "Start-up procedures to register a business, male (number)"
+            }, {
+                "name": "Time to prepare and pay taxes (hours)"
+            }, {
+                "name": "Firms expected to give gifts in meetings with tax officials (% of firms)"
+            }, {
+                "name": "Labor tax and contributions (% of commercial profits)"
+            }, {
+                "name": "Number of visits or required meetings with tax officials (average for affected firms)"
+            }, {
+                "name": "Other taxes payable by businesses (% of commercial profits)"
+            }, {
+                "name": "Tax payments (number)"
+            }, {
+                "name": "Profit tax (% of commercial profits)"
+            }, {
+                "name": "Total tax rate (% of commercial profits)"
+            }, {
+                "name": "Time required to build a warehouse (days)"
+            }, {
+                "name": "Procedures to build a warehouse (number)"
+            }]
+        }, {
+            "name": "Trade facilitation",
+            "children": [{
+                "name": "Cost to export, border compliance (US$)"
+            }, {
+                "name": "Cost to export, documentary compliance (US$)"
+            }, {
+                "name": "Documents to export (number)"
+            }, {
+                "name": "Time to export (days)"
+            }, {
+                "name": "Time to export, border compliance (hours)"
+            }, {
+                "name": "Time to export, documentary compliance (hours)"
+            }, {
+                "name": "Cost to import, border compliance (US$)"
+            }, {
+                "name": "Cost to import, documentary compliance (US$)"
+            }, {
+                "name": "Documents to import (number)"
+            }, {
+                "name": "Time to import (days)"
+            }, {
+                "name": "Time to import, border compliance (hours)"
+            }, {
+                "name": "Time to import, documentary compliance (hours)"
+            }, {
+                "name": "Lead time to export, median case (days)"
+            }, {
+                "name": "Lead time to import, median case (days)"
+            }, {
+                "name": "Logistics performance index: Efficiency of customs clearance process (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Quality of trade and transport-related infrastructure (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Ease of arranging competitively priced shipments (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Competence and quality of logistics services (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Overall (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Frequency with which shipments reach consignee within scheduled or expected time (1=low to 5=high)"
+            }, {
+                "name": "Logistics performance index: Ability to track and trace consignments (1=low to 5=high)"
+            }]
+        }, {
+            "name": "Private infrastructure investment",
+            "children": [{
+                "name": "Investment in energy with private participation (current US$)"
+            }, {
+                "name": "Investment in ICT with private participation (current US$)"
+            }, {
+                "name": "Investment in transport with private participation (current US$)"
+            }, {
+                "name": "Investment in water and sanitation with private participation (current US$)"
+            }, {
+                "name": "Public private partnerships investment in energy (current US$)"
+            }, {
+                "name": "Public private partnerships investment in ICT (current US$)"
+            }, {
+                "name": "Public private partnerships investment in transport (current US$)"
+            }, {
+                "name": "Public private partnerships investment in water and sanitation (current US$)"
+            }]
+        }, {
+            "name": "Travel & tourism",
+            "children": [{
+                "name": "International tourism, number of arrivals"
+            }, {
+                "name": "International tourism, number of departures"
+            }, {
+                "name": "International tourism, receipts (current US$)"
+            }, {
+                "name": "International tourism, receipts (% of total exports)"
+            }, {
+                "name": "International tourism, receipts for passenger transport items (current US$)"
+            }, {
+                "name": "International tourism, expenditures for passenger transport items (current US$)"
+            }, {
+                "name": "International tourism, receipts for travel items (current US$)"
+            }, {
+                "name": "International tourism, expenditures for travel items (current US$)"
+            }, {
+                "name": "International tourism, expenditures (current US$)"
+            }, {
+                "name": "International tourism, expenditures (% of total imports)"
+            }]
+        }, {
+            "name": "Total merchandise trade",
+            "children": [{
+                "name": "Merchandise trade (% of GDP)"
+            }]
+        }, {
+            "name": "Trade indexes",
+            "children": [{
+                "name": "Import volume index (2000 = 100)"
+            }, {
+                "name": "Import value index (2000 = 100)"
+            }, {
+                "name": "Net barter terms of trade index (2000 = 100)"
+            }, {
+                "name": "Export volume index (2000 = 100)"
+            }, {
+                "name": "Export value index (2000 = 100)"
+            }]
+        }, {
+            "name": "Tariffs",
+            "children": [{
+                "name": "Binding coverage, manufactured products (%)"
+            }, {
+                "name": "Bound rate, simple mean, manufactured products (%)"
+            }, {
+                "name": "Share of tariff lines with international peaks, manufactured products (%)"
+            }, {
+                "name": "Tariff rate, applied, simple mean, manufactured products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, simple mean, manufactured products (%)"
+            }, {
+                "name": "Share of tariff lines with specific rates, manufactured products (%)"
+            }, {
+                "name": "Tariff rate, applied, weighted mean, manufactured products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, weighted mean, manufactured products (%)"
+            }, {
+                "name": "Binding coverage, all products (%)"
+            }, {
+                "name": "Bound rate, simple mean, all products (%)"
+            }, {
+                "name": "Share of tariff lines with international peaks, all products (%)"
+            }, {
+                "name": "Tariff rate, applied, simple mean, all products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, simple mean, all products (%)"
+            }, {
+                "name": "Share of tariff lines with specific rates, all products (%)"
+            }, {
+                "name": "Tariff rate, applied, weighted mean, all products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, weighted mean, all products (%)"
+            }, {
+                "name": "Binding coverage, primary products (%)"
+            }, {
+                "name": "Bound rate, simple mean, primary products (%)"
+            }, {
+                "name": "Share of tariff lines with international peaks, primary products (%)"
+            }, {
+                "name": "Tariff rate, applied, simple mean, primary products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, simple mean, primary products (%)"
+            }, {
+                "name": "Share of tariff lines with specific rates, primary products (%)"
+            }, {
+                "name": "Tariff rate, applied, weighted mean, primary products (%)"
+            }, {
+                "name": "Tariff rate, most favored nation, weighted mean, primary products (%)"
+            }]
+        }, {
+            "name": "Trade price indices",
+            "children": [{
+                "name": "Import unit value index (2000 = 100)"
+            }, {
+                "name": "Export unit value index (2000 = 100)"
+            }]
+        }, {
+            "name": "Imports",
+            "children": [{
+                "name": "Agricultural raw materials imports (% of merchandise imports)"
+            }, {
+                "name": "Food imports (% of merchandise imports)"
+            }, {
+                "name": "Fuel imports (% of merchandise imports)"
+            }, {
+                "name": "Insurance and financial services (% of commercial service imports)"
+            }, {
+                "name": "Manufactures imports (% of merchandise imports)"
+            }, {
+                "name": "Ores and metals imports (% of merchandise imports)"
+            }, {
+                "name": "Merchandise imports from economies in the Arab World (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports (current US$)"
+            }, {
+                "name": "Merchandise imports from high-income economies (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies outside region (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in East Asia & Pacific (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in Europe & Central Asia (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in Latin America & the Caribbean (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in Middle East & North Africa (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in South Asia (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies in Sub-Saharan Africa (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports by the reporting economy, residual (% of total merchandise imports)"
+            }, {
+                "name": "Merchandise imports by the reporting economy (current US$)"
+            }, {
+                "name": "Merchandise imports from low- and middle-income economies within region (% of total merchandise imports)"
+            }, {
+                "name": "Computer, communications and other services (% of commercial service imports)"
+            }, {
+                "name": "Commercial service imports (current US$)"
+            }, {
+                "name": "Transport services (% of commercial service imports)"
+            }, {
+                "name": "Travel services (% of commercial service imports)"
+            }]
+        }, {
+            "name": "Exports",
+            "children": [{
+                "name": "Agricultural raw materials exports (% of merchandise exports)"
+            }, {
+                "name": "Food exports (% of merchandise exports)"
+            }, {
+                "name": "Fuel exports (% of merchandise exports)"
+            }, {
+                "name": "Insurance and financial services (% of commercial service exports)"
+            }, {
+                "name": "Manufactures exports (% of merchandise exports)"
+            }, {
+                "name": "Ores and metals exports (% of merchandise exports)"
+            }, {
+                "name": "Merchandise exports to economies in the Arab World (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports (current US$)"
+            }, {
+                "name": "Merchandise exports to high-income economies (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies outside region (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in East Asia & Pacific (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in Europe & Central Asia (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in Latin America & the Caribbean (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in Middle East & North Africa (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in South Asia (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies in Sub-Saharan Africa (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports by the reporting economy, residual (% of total merchandise exports)"
+            }, {
+                "name": "Merchandise exports by the reporting economy (current US$)"
+            }, {
+                "name": "Merchandise exports to low- and middle-income economies within region (% of total merchandise exports)"
+            }, {
+                "name": "Computer, communications and other services (% of commercial service exports)"
+            }, {
+                "name": "Commercial service exports (current US$)"
+            }, {
+                "name": "Transport services (% of commercial service exports)"
+            }, {
+                "name": "Travel services (% of commercial service exports)"
+            }]
+        }]
+    }, {
+        "name": "Social Protection & Labor",
+        "children": [{
+            "name": "Performance",
+            "children": [{
+                "name": "Adequacy of social protection and labor programs (% of total welfare of beneficiary households)"
+            }, {
+                "name": "Benefit incidence of social protection and labor programs to poorest quintile (% of total SPL benefits)"
+            }, {
+                "name": "Coverage of social protection and labor programs (% of population)"
+            }, {
+                "name": "Adequacy of unemployment benefits and ALMP (% of total welfare of beneficiary households)"
+            }, {
+                "name": "Benefit incidence of unemployment benefits and ALMP to poorest quintile (% of total U/ALMP benefits)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP (% of population)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP in poorest quintile (% of population)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP in 2nd quintile (% of population)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP in 3rd quintile (% of population)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP in 4th quintile (% of population)"
+            }, {
+                "name": "Coverage of unemployment benefits and ALMP in richest quintile (% of population)"
+            }, {
+                "name": "Adequacy of social safety net programs (% of total welfare of beneficiary households)"
+            }, {
+                "name": "Benefit incidence of social safety net programs to poorest quintile (% of total safety net benefits)"
+            }, {
+                "name": "Coverage of social safety net programs (% of population)"
+            }, {
+                "name": "Coverage of social safety net programs in poorest quintile (% of population)"
+            }, {
+                "name": "Coverage of social safety net programs in 2nd quintile (% of population)"
+            }, {
+                "name": "Coverage of social safety net programs in 3rd quintile (% of population)"
+            }, {
+                "name": "Coverage of social safety net programs in 4th quintile (% of population)"
+            }, {
+                "name": "Coverage of social safety net programs in richest quintile (% of population)"
+            }, {
+                "name": "Adequacy of social insurance programs (% of total welfare of beneficiary households)"
+            }, {
+                "name": "Benefit incidence of social insurance programs to poorest quintile (% of total social insurance benefits)"
+            }, {
+                "name": "Coverage of social insurance programs (% of population)"
+            }, {
+                "name": "Coverage of social insurance programs in poorest quintile (% of population)"
+            }, {
+                "name": "Coverage of social insurance programs in 2nd quintile (% of population)"
+            }, {
+                "name": "Coverage of social insurance programs in 3rd quintile (% of population)"
+            }, {
+                "name": "Coverage of social insurance programs in 4th quintile (% of population)"
+            }, {
+                "name": "Coverage of social insurance programs in richest quintile (% of population)"
+            }]
+        }, {
+            "name": "Economic activity",
+            "children": [{
+                "name": "Child employment in agriculture, female (% of female economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in agriculture, male (% of male economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in agriculture (% of economically active children ages 7-14)"
+            }, {
+                "name": "Employment in agriculture, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in agriculture, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in agriculture (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, female (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, female (%) (modeled ILO estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, male (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, male (%) (modeled ILO estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, total (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, ages 15-24, total (%) (modeled ILO estimate)"
+            }, {
+                "name": "Employers, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employers, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employers, total (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Self-employed, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Self-employed, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Self-employed, total (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Female share of employment in senior and middle management (%)"
+            }, {
+                "name": "Employment to population ratio, 15+, female (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, 15+, female (%) (modeled ILO estimate)"
+            }, {
+                "name": "Employment to population ratio, 15+, male (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, 15+, male (%) (modeled ILO estimate)"
+            }, {
+                "name": "Employment to population ratio, 15+, total (%) (national estimate)"
+            }, {
+                "name": "Employment to population ratio, 15+, total (%) (modeled ILO estimate)"
+            }, {
+                "name": "Vulnerable employment, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Vulnerable employment, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Vulnerable employment, total (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Wage and salaried workers, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Wage and salaried workers, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Wage and salaried workers, total (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Children in employment, unpaid family workers, female (% of female children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, unpaid family workers, male (% of male children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, unpaid family workers (% of children in employment, ages 7-14)"
+            }, {
+                "name": "Contributing family workers, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Contributing family workers, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Contributing family workers, total (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "GDP per person employed (constant 2011 PPP $)"
+            }, {
+                "name": "Employment in industry, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in industry, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in industry (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Informal employment, female (% of total non-agricultural employment)"
+            }, {
+                "name": "Informal employment, male (% of total non-agricultural employment)"
+            }, {
+                "name": "Informal employment (% of total non-agricultural employment)"
+            }, {
+                "name": "Child employment in manufacturing, female (% of female economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in manufacturing, male (% of male economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in manufacturing (% of economically active children ages 7-14)"
+            }, {
+                "name": "Children in employment, self-employed, female (% of female children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, self-employed, male (% of male children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, self-employed (% of children in employment, ages 7-14)"
+            }, {
+                "name": "Child employment in services, female (% of female economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in services, male (% of male economically active children ages 7-14)"
+            }, {
+                "name": "Child employment in services (% of economically active children ages 7-14)"
+            }, {
+                "name": "Employment in services, female (% of female employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in services, male (% of male employment) (modeled ILO estimate)"
+            }, {
+                "name": "Employment in services (% of total employment) (modeled ILO estimate)"
+            }, {
+                "name": "Children in employment, female (% of female children ages 7-14)"
+            }, {
+                "name": "Children in employment, male (% of male children ages 7-14)"
+            }, {
+                "name": "Average working hours of children, study and work, female, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, study and work, female (% of female children in employment, ages 7-14)"
+            }, {
+                "name": "Average working hours of children, study and work, male, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, study and work, male (% of male children in employment, ages 7-14)"
+            }, {
+                "name": "Average working hours of children, study and work, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, study and work (% of children in employment, ages 7-14)"
+            }, {
+                "name": "Average working hours of children, working only, female, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, work only, female (% of female children in employment, ages 7-14)"
+            }, {
+                "name": "Average working hours of children, working only, male, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, work only, male (% of male children in employment, ages 7-14)"
+            }, {
+                "name": "Average working hours of children, working only, ages 7-14 (hours per week)"
+            }, {
+                "name": "Children in employment, work only (% of children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, total (% of children ages 7-14)"
+            }, {
+                "name": "Part time employment, female (% of total female employment)"
+            }, {
+                "name": "Part time employment, male (% of total male employment)"
+            }, {
+                "name": "Part time employment, total (% of total employment)"
+            }, {
+                "name": "Children in employment, wage workers, female (% of female children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, wage workers, male (% of male children in employment, ages 7-14)"
+            }, {
+                "name": "Children in employment, wage workers (% of children in employment, ages 7-14)"
+            }]
+        }, {
+            "name": "Labor force structure",
+            "children": [{
+                "name": "Labor force participation rate for ages 15-24, female (%) (national estimate)"
+            }, {
+                "name": "Labor force participation rate for ages 15-24, female (%) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate for ages 15-24, male (%) (national estimate)"
+            }, {
+                "name": "Labor force participation rate for ages 15-24, male (%) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate for ages 15-24, total (%) (national estimate)"
+            }, {
+                "name": "Labor force participation rate for ages 15-24, total (%) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate, female (% of female population ages 15-64) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate, male (% of male population ages 15-64) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate, total (% of total population ages 15-64) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force with advanced education, female (% of female working-age population with advanced education)"
+            }, {
+                "name": "Labor force with advanced education, male (% of male working-age population with advanced education)"
+            }, {
+                "name": "Labor force with advanced education (% of total working-age population with advanced education)"
+            }, {
+                "name": "Labor force with basic education, female (% of female working-age population with basic education)"
+            }, {
+                "name": "Labor force with basic education, male (% of male working-age population with basic education)"
+            }, {
+                "name": "Labor force with basic education (% of total working-age population with basic education)"
+            }, {
+                "name": "Labor force participation rate, female (% of female population ages 15+) (national estimate)"
+            }, {
+                "name": "Labor force participation rate, female (% of female population ages 15+) (modeled ILO estimate)"
+            }, {
+                "name": "Ratio of female to male labor force participation rate (%) (national estimate)"
+            }, {
+                "name": "Ratio of female to male labor force participation rate (%) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate, male (% of male population ages 15+) (national estimate)"
+            }, {
+                "name": "Labor force participation rate, male (% of male population ages 15+) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force participation rate, total (% of total population ages 15+) (national estimate)"
+            }, {
+                "name": "Labor force participation rate, total (% of total population ages 15+) (modeled ILO estimate)"
+            }, {
+                "name": "Labor force with intermediate education, female (% of female working-age population with intermediate education)"
+            }, {
+                "name": "Labor force with intermediate education, male (% of male working-age population with intermediate education)"
+            }, {
+                "name": "Labor force with intermediate education (% of total working-age population with intermediate education)"
+            }, {
+                "name": "Labor force, female (% of total labor force)"
+            }, {
+                "name": "Labor force, total"
+            }]
+        }, {
+            "name": "Unemployment",
+            "children": [{
+                "name": "Unemployment, youth female (% of female labor force ages 15-24) (national estimate)"
+            }, {
+                "name": "Unemployment, youth female (% of female labor force ages 15-24) (modeled ILO estimate)"
+            }, {
+                "name": "Unemployment, youth male (% of male labor force ages 15-24) (national estimate)"
+            }, {
+                "name": "Unemployment, youth male (% of male labor force ages 15-24) (modeled ILO estimate)"
+            }, {
+                "name": "Unemployment, youth total (% of total labor force ages 15-24) (national estimate)"
+            }, {
+                "name": "Unemployment, youth total (% of total labor force ages 15-24) (modeled ILO estimate)"
+            }, {
+                "name": "Unemployment with advanced education, female (% of female labor force with advanced education)"
+            }, {
+                "name": "Unemployment with advanced education, male (% of male labor force with advanced education)"
+            }, {
+                "name": "Unemployment with advanced education (% of total labor force with advanced education)"
+            }, {
+                "name": "Unemployment with basic education, female (% of female labor force with basic education)"
+            }, {
+                "name": "Unemployment with basic education, male (% of male labor force with basic education)"
+            }, {
+                "name": "Unemployment with basic education (% of total labor force with basic education)"
+            }, {
+                "name": "Unemployment with intermediate education, female (% of female labor force with intermediate education)"
+            }, {
+                "name": "Unemployment with intermediate education, male (% of male labor force with intermediate education)"
+            }, {
+                "name": "Unemployment with intermediate education (% of total labor force with intermediate education)"
+            }, {
+                "name": "Share of youth not in education, employment or training, female (% of female youth population)"
+            }, {
+                "name": "Share of youth not in education, employment or training, male (% of male youth population)"
+            }, {
+                "name": "Share of youth not in education, employment or training, total (% of youth population)"
+            }, {
+                "name": "Unemployment, female (% of female labor force) (national estimate)"
+            }, {
+                "name": "Unemployment, female (% of female labor force) (modeled ILO estimate)"
+            }, {
+                "name": "Unemployment, male (% of male labor force) (national estimate)"
+            }, {
+                "name": "Unemployment, male (% of male labor force) (modeled ILO estimate)"
+            }, {
+                "name": "Unemployment, total (% of total labor force) (national estimate)"
+            }, {
+                "name": "Unemployment, total (% of total labor force) (modeled ILO estimate)"
+            }]
+        }, {
+            "name": "Migration",
+            "children": [{
+                "name": "Net migration"
+            }, {
+                "name": "Refugee population by country or territory of asylum"
+            }, {
+                "name": "Refugee population by country or territory of origin"
+            }, {
+                "name": "International migrant stock, total"
+            }, {
+                "name": "International migrant stock (% of population)"
+            }]
+        }]
+    }, {
+        "name": "Education",
+        "children": [{
+            "name": "Outcomes",
+            "children": [{
+                "name": "Literacy rate, youth female (% of females ages 15-24)"
+            }, {
+                "name": "Literacy rate, youth (ages 15-24), gender parity index (GPI)"
+            }, {
+                "name": "Literacy rate, youth male (% of males ages 15-24)"
+            }, {
+                "name": "Literacy rate, youth total (% of people ages 15-24)"
+            }, {
+                "name": "Literacy rate, adult female (% of females ages 15 and above)"
+            }, {
+                "name": "Literacy rate, adult male (% of males ages 15 and above)"
+            }, {
+                "name": "Literacy rate, adult total (% of people ages 15 and above)"
+            }, {
+                "name": "Compulsory education, duration (years)"
+            }, {
+                "name": "Primary completion rate, female (% of relevant age group)"
+            }, {
+                "name": "Primary completion rate, male (% of relevant age group)"
+            }, {
+                "name": "Primary completion rate, total (% of relevant age group)"
+            }, {
+                "name": "Educational attainment, at least completed primary, population 25+ years, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed primary, population 25+ years, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed primary, population 25+ years, total (%) (cumulative)"
+            }, {
+                "name": "Primary education, duration (years)"
+            }, {
+                "name": "Lower secondary completion rate, female (% of relevant age group)"
+            }, {
+                "name": "Lower secondary completion rate, male (% of relevant age group)"
+            }, {
+                "name": "Lower secondary completion rate, total (% of relevant age group)"
+            }, {
+                "name": "Educational attainment, at least completed lower secondary, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed lower secondary, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed lower secondary, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed post-secondary, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed post-secondary, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed post-secondary, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed upper secondary, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed upper secondary, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed upper secondary, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Secondary education, duration (years)"
+            }, {
+                "name": "Educational attainment, at least Bachelor's or equivalent, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least Bachelor's or equivalent, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, Doctoral or equivalent, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, Doctoral or equivalent, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least Master's or equivalent, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least Master's or equivalent, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed short-cycle tertiary, population 25+, female (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed short-cycle tertiary, population 25+, male (%) (cumulative)"
+            }, {
+                "name": "Educational attainment, at least completed short-cycle tertiary, population 25+, total (%) (cumulative)"
+            }]
+        }, {
+            "name": "Participation",
+            "children": [{
+                "name": "School enrollment, primary (gross), gender parity index (GPI)"
+            }, {
+                "name": "School enrollment, primary and secondary (gross), gender parity index (GPI)"
+            }, {
+                "name": "School enrollment, secondary (gross), gender parity index (GPI)"
+            }, {
+                "name": "School enrollment, tertiary (gross), gender parity index (GPI)"
+            }, {
+                "name": "School enrollment, preprimary (% gross)"
+            }, {
+                "name": "School enrollment, preprimary, female (% gross)"
+            }, {
+                "name": "School enrollment, preprimary, male (% gross)"
+            }, {
+                "name": "Primary education, pupils"
+            }, {
+                "name": "Primary education, pupils (% female)"
+            }, {
+                "name": "School enrollment, primary (% gross)"
+            }, {
+                "name": "School enrollment, primary, female (% gross)"
+            }, {
+                "name": "School enrollment, primary, male (% gross)"
+            }, {
+                "name": "School enrollment, primary (% net)"
+            }, {
+                "name": "School enrollment, primary, female (% net)"
+            }, {
+                "name": "School enrollment, primary, male (% net)"
+            }, {
+                "name": "School enrollment, primary, private (% of total primary)"
+            }, {
+                "name": "Adjusted net enrollment rate, primary (% of primary school age children)"
+            }, {
+                "name": "Adjusted net enrollment rate, primary, female (% of primary school age children)"
+            }, {
+                "name": "Adjusted net enrollment rate, primary, male (% of primary school age children)"
+            }, {
+                "name": "Children out of school, primary"
+            }, {
+                "name": "Children out of school, primary, female"
+            }, {
+                "name": "Children out of school, female (% of female primary school age)"
+            }, {
+                "name": "Children out of school, primary, male"
+            }, {
+                "name": "Children out of school, male (% of male primary school age)"
+            }, {
+                "name": "Children out of school (% of primary school age)"
+            }, {
+                "name": "Secondary education, pupils"
+            }, {
+                "name": "Secondary education, pupils (% female)"
+            }, {
+                "name": "Secondary education, general pupils"
+            }, {
+                "name": "Secondary education, general pupils (% female)"
+            }, {
+                "name": "Secondary education, vocational pupils"
+            }, {
+                "name": "Secondary education, vocational pupils (% female)"
+            }, {
+                "name": "School enrollment, secondary (% gross)"
+            }, {
+                "name": "School enrollment, secondary, female (% gross)"
+            }, {
+                "name": "School enrollment, secondary, male (% gross)"
+            }, {
+                "name": "School enrollment, secondary (% net)"
+            }, {
+                "name": "School enrollment, secondary, female (% net)"
+            }, {
+                "name": "School enrollment, secondary, male (% net)"
+            }, {
+                "name": "School enrollment, secondary, private (% of total secondary)"
+            }, {
+                "name": "Adolescents out of school, female (% of female lower secondary school age)"
+            }, {
+                "name": "Adolescents out of school, male (% of male lower secondary school age)"
+            }, {
+                "name": "Adolescents out of school (% of lower secondary school age)"
+            }, {
+                "name": "School enrollment, tertiary (% gross)"
+            }, {
+                "name": "School enrollment, tertiary, female (% gross)"
+            }, {
+                "name": "School enrollment, tertiary, male (% gross)"
+            }]
+        }, {
+            "name": "Inputs",
+            "children": [{
+                "name": "Preprimary education, duration (years)"
+            }, {
+                "name": "Pupil-teacher ratio, preprimary"
+            }, {
+                "name": "Trained teachers in preprimary education, female (% of female teachers)"
+            }, {
+                "name": "Trained teachers in preprimary education, male (% of male teachers)"
+            }, {
+                "name": "Trained teachers in preprimary education (% of total teachers)"
+            }, {
+                "name": "Primary school starting age (years)"
+            }, {
+                "name": "Pupil-teacher ratio, primary"
+            }, {
+                "name": "Trained teachers in primary education, female (% of female teachers)"
+            }, {
+                "name": "Trained teachers in primary education, male (% of male teachers)"
+            }, {
+                "name": "Trained teachers in primary education (% of total teachers)"
+            }, {
+                "name": "Primary education, teachers"
+            }, {
+                "name": "Primary education, teachers (% female)"
+            }, {
+                "name": "Lower secondary school starting age (years)"
+            }, {
+                "name": "Pupil-teacher ratio, lower secondary"
+            }, {
+                "name": "Pupil-teacher ratio, secondary"
+            }, {
+                "name": "Pupil-teacher ratio, upper secondary"
+            }, {
+                "name": "Trained teachers in secondary education, female (% of female teachers)"
+            }, {
+                "name": "Trained teachers in lower secondary education, female (% of female teachers)"
+            }, {
+                "name": "Trained teachers in lower secondary education, male (% of male teachers)"
+            }, {
+                "name": "Trained teachers in lower secondary education (% of total teachers)"
+            }, {
+                "name": "Trained teachers in secondary education, male (% of male teachers)"
+            }, {
+                "name": "Trained teachers in upper secondary education, female (% of female teachers)"
+            }, {
+                "name": "Trained teachers in upper secondary education, male (% of male teachers)"
+            }, {
+                "name": "Trained teachers in upper secondary education (% of total teachers)"
+            }, {
+                "name": "Trained teachers in secondary education (% of total teachers)"
+            }, {
+                "name": "Secondary education, teachers"
+            }, {
+                "name": "Secondary education, teachers, female"
+            }, {
+                "name": "Secondary education, teachers (% female)"
+            }, {
+                "name": "Pupil-teacher ratio, tertiary"
+            }, {
+                "name": "Tertiary education, academic staff (% female)"
+            }, {
+                "name": "Current education expenditure, primary (% of total expenditure in primary public institutions)"
+            }, {
+                "name": "Current education expenditure, secondary (% of total expenditure in secondary public institutions)"
+            }, {
+                "name": "Current education expenditure, tertiary (% of total expenditure in tertiary public institutions)"
+            }, {
+                "name": "Current education expenditure, total (% of total expenditure in public institutions)"
+            }, {
+                "name": "All education staff compensation, primary (% of total expenditure in primary public institutions)"
+            }, {
+                "name": "All education staff compensation, secondary (% of total expenditure in secondary public institutions)"
+            }, {
+                "name": "All education staff compensation, tertiary (% of total expenditure in tertiary public institutions)"
+            }, {
+                "name": "All education staff compensation, total (% of total expenditure in public institutions)"
+            }, {
+                "name": "Government expenditure per student, primary (% of GDP per capita)"
+            }, {
+                "name": "Expenditure on primary education (% of government expenditure on education)"
+            }, {
+                "name": "Government expenditure per student, secondary (% of GDP per capita)"
+            }, {
+                "name": "Expenditure on secondary education (% of government expenditure on education)"
+            }, {
+                "name": "Government expenditure per student, tertiary (% of GDP per capita)"
+            }, {
+                "name": "Expenditure on tertiary education (% of government expenditure on education)"
+            }, {
+                "name": "Government expenditure on education, total (% of government expenditure)"
+            }, {
+                "name": "Government expenditure on education, total (% of GDP)"
+            }]
+        }, {
+            "name": "Efficiency",
+            "children": [{
+                "name": "Gross intake ratio in first grade of primary education, female (% of relevant age group)"
+            }, {
+                "name": "Gross intake ratio in first grade of primary education, male (% of relevant age group)"
+            }, {
+                "name": "Gross intake ratio in first grade of primary education, total (% of relevant age group)"
+            }, {
+                "name": "Net intake rate in grade 1, female (% of official school-age population)"
+            }, {
+                "name": "Net intake rate in grade 1, male (% of official school-age population)"
+            }, {
+                "name": "Net intake rate in grade 1 (% of official school-age population)"
+            }, {
+                "name": "Over-age students, primary, female (% of female enrollment)"
+            }, {
+                "name": "Over-age students, primary, male (% of male enrollment)"
+            }, {
+                "name": "Over-age students, primary (% of enrollment)"
+            }, {
+                "name": "Persistence to grade 5, female (% of cohort)"
+            }, {
+                "name": "Persistence to grade 5, male (% of cohort)"
+            }, {
+                "name": "Persistence to grade 5, total (% of cohort)"
+            }, {
+                "name": "Persistence to last grade of primary, female (% of cohort)"
+            }, {
+                "name": "Persistence to last grade of primary, male (% of cohort)"
+            }, {
+                "name": "Persistence to last grade of primary, total (% of cohort)"
+            }, {
+                "name": "Repeaters, primary, female (% of female enrollment)"
+            }, {
+                "name": "Repeaters, primary, male (% of male enrollment)"
+            }, {
+                "name": "Repeaters, primary, total (% of total enrollment)"
+            }, {
+                "name": "Progression to secondary school, female (%)"
+            }, {
+                "name": "Progression to secondary school, male (%)"
+            }, {
+                "name": "Progression to secondary school (%)"
+            }]
+        }]
+    }, {
+        "name": "Gender",
+        "children": [{
+            "name": "Public life & decision making",
+            "children": [{
+                "name": "Women participating in the three decisions (own health care, major household purchases, and visiting family) (% of women age 15-49)"
+            }, {
+                "name": "Women making their own informed decisions regarding sexual relations, contraceptive use and reproductive health care  (% of women age 15-49)"
+            }, {
+                "name": "Proportion of seats held by women in national parliaments (%)"
+            }, {
+                "name": "Law prohibits or invalidates child or early marriage (1=yes; 0=no)"
+            }, {
+                "name": "Law mandates equal remuneration for females and males for work of equal value (1=yes; 0=no)"
+            }, {
+                "name": "Law mandates paid or unpaid maternity leave (1=yes; 0=no)"
+            }, {
+                "name": "Law mandates nondiscrimination based on gender in hiring (1=yes; 0=no)"
+            }, {
+                "name": "Legislation exists on domestic violence (1=yes; 0=no)"
+            }, {
+                "name": "Mothers are guaranteed an equivalent position after maternity leave (1=yes; 0=no)"
+            }, {
+                "name": "Nondiscrimination clause mentions gender in the constitution (1=yes; 0=no)"
+            }]
+        }, {
+            "name": "Participation & access",
+            "children": [{
+                "name": "Nonpregnant and nonnursing women can do the same jobs as men (1=yes; 0=no)"
+            }, {
+                "name": "Proportion of time spent on unpaid domestic and care work, female (% of 24 hour day)"
+            }, {
+                "name": "Proportion of time spent on unpaid domestic and care work, male (% of 24 hour day)"
+            }]
+        }, {
+            "name": "Health",
+            "children": [{
+                "name": "Proportion of women subjected to physical and/or sexual violence in the last 12 months (% of women age 15-49)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife when she argues with him (%)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife when she burns the food (%)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife when she goes out without telling him (%)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife when she neglects the children (%)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife (any of five reasons) (%)"
+            }, {
+                "name": "Women who believe a husband is justified in beating his wife when she refuses sex with him (%)"
+            }]
+        }, {
+            "name": "Agency",
+            "children": [{
+                "name": "Women who were first married by age 15 (% of women ages 20-24)"
+            }]
+        }]
+    }, {
+        "name": "Health",
+        "children": [{
+            "name": "Risk factors",
+            "children": [{
+                "name": "Total alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)"
+            }, {
+                "name": "Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions (% of total)"
+            }, {
+                "name": "Cause of death, by injury (% of total)"
+            }, {
+                "name": "Cause of death, by non-communicable diseases (% of total)"
+            }, {
+                "name": "Women's share of population ages 15+ living with HIV (%)"
+            }, {
+                "name": "Prevalence of HIV, total (% of population ages 15-49)"
+            }, {
+                "name": "Children (0-14) living with HIV"
+            }, {
+                "name": "Prevalence of HIV, female (% ages 15-24)"
+            }, {
+                "name": "Prevalence of HIV, male (% ages 15-24)"
+            }, {
+                "name": "Antiretroviral therapy coverage (% of people living with HIV)"
+            }, {
+                "name": "Adults (ages 15+) newly infected with HIV"
+            }, {
+                "name": "Children (ages 0-14) newly infected with HIV"
+            }, {
+                "name": "Adults (ages 15+) and children (ages 0-14) newly infected with HIV"
+            }, {
+                "name": "Incidence of HIV (% of uninfected population ages 15-49)"
+            }, {
+                "name": "Antiretroviral therapy coverage for PMTCT (% of pregnant women living with HIV)"
+            }, {
+                "name": "Incidence of malaria (per 1,000 population at risk)"
+            }, {
+                "name": "Smoking prevalence, total (ages 15+)"
+            }, {
+                "name": "Smoking prevalence, females (% of adults)"
+            }, {
+                "name": "Smoking prevalence, males (% of adults)"
+            }, {
+                "name": "Risk of catastrophic expenditure for surgical care (% of people at risk)"
+            }, {
+                "name": "Risk of impoverishing expenditure for surgical care (% of people at risk)"
+            }, {
+                "name": "Diabetes prevalence (% of population ages 20 to 79)"
+            }, {
+                "name": "Female genital mutilation prevalence (%)"
+            }, {
+                "name": "People practicing open defecation, rural (% of rural population)"
+            }, {
+                "name": "People practicing open defecation, urban (% of urban population)"
+            }, {
+                "name": "People practicing open defecation (% of population)"
+            }, {
+                "name": "Mortality caused by road traffic injury (per 100,000 people)"
+            }, {
+                "name": "Incidence of tuberculosis (per 100,000 people)"
+            }]
+        }, {
+            "name": "Nutrition",
+            "children": [{
+                "name": "Prevalence of anemia among women of reproductive age (% of women ages 15-49)"
+            }, {
+                "name": "Prevalence of anemia among children (% of children under 5)"
+            }, {
+                "name": "Prevalence of anemia among non-pregnant women (% of women ages 15-49)"
+            }, {
+                "name": "Prevalence of anemia among pregnant women (%)"
+            }, {
+                "name": "Exclusive breastfeeding (% of children under 6 months)"
+            }, {
+                "name": "Low-birthweight babies (% of births)"
+            }, {
+                "name": "Prevalence of underweight, weight for age, female (% of children under 5)"
+            }, {
+                "name": "Prevalence of underweight, weight for age, male (% of children under 5)"
+            }, {
+                "name": "Prevalence of underweight, weight for age (% of children under 5)"
+            }, {
+                "name": "Prevalence of overweight, weight for height, female (% of children under 5)"
+            }, {
+                "name": "Prevalence of overweight, weight for height, male (% of children under 5)"
+            }, {
+                "name": "Prevalence of overweight, weight for height (% of children under 5)"
+            }, {
+                "name": "Prevalence of stunting, height for age, female (% of children under 5)"
+            }, {
+                "name": "Prevalence of stunting, height for age, male (% of children under 5)"
+            }, {
+                "name": "Prevalence of stunting, height for age (% of children under 5)"
+            }, {
+                "name": "Prevalence of wasting, weight for height, female (% of children under 5)"
+            }, {
+                "name": "Prevalence of wasting, weight for height, male (% of children under 5)"
+            }, {
+                "name": "Prevalence of wasting, weight for height (% of children under 5)"
+            }, {
+                "name": "Prevalence of severe wasting, weight for height, female (% of children under 5)"
+            }, {
+                "name": "Prevalence of severe wasting, weight for height, male (% of children under 5)"
+            }, {
+                "name": "Prevalence of severe wasting, weight for height (% of children under 5)"
+            }, {
+                "name": "Prevalence of undernourishment (% of population)"
+            }, {
+                "name": "Depth of the food deficit (kilocalories per person per day)"
+            }, {
+                "name": "Consumption of iodized salt (% of households)"
+            }, {
+                "name": "Vitamin A supplementation coverage rate (% of children ages 6-59 months)"
+            }]
+        }, {
+            "name": "Disease prevention",
+            "children": [{
+                "name": "Condom use, population ages 15-24, female (% of females ages 15-24)"
+            }, {
+                "name": "Condom use, population ages 15-24, male (% of males ages 15-24)"
+            }, {
+                "name": "People using at least basic drinking water services, rural (% of rural population)"
+            }, {
+                "name": "People using at least basic drinking water services, urban (% of urban population)"
+            }, {
+                "name": "People using at least basic drinking water services (% of population)"
+            }, {
+                "name": "People using safely managed drinking water services, rural (% of rural population)"
+            }, {
+                "name": "People using safely managed drinking water services, urban (% of urban population)"
+            }, {
+                "name": "People using safely managed drinking water services (% of population)"
+            }, {
+                "name": "Immunization, HepB3 (% of one-year-old children)"
+            }, {
+                "name": "Immunization, DPT (% of children ages 12-23 months)"
+            }, {
+                "name": "Immunization, measles (% of children ages 12-23 months)"
+            }, {
+                "name": "Use of insecticide-treated bed nets (% of under-5 population)"
+            }, {
+                "name": "Children with fever receiving antimalarial drugs (% of children under age 5 with fever)"
+            }, {
+                "name": "ARI treatment (% of children under 5 taken to a health provider)"
+            }, {
+                "name": "People using at least basic sanitation services, rural (% of rural population)"
+            }, {
+                "name": "People using at least basic sanitation services, urban (% of urban population)"
+            }, {
+                "name": "People using at least basic sanitation services (% of population)"
+            }, {
+                "name": "People with basic handwashing facilities including soap and water, rural (% of rural population)"
+            }, {
+                "name": "People with basic handwashing facilities including soap and water, urban (% of urban population)"
+            }, {
+                "name": "People with basic handwashing facilities including soap and water (% of population)"
+            }, {
+                "name": "Diarrhea treatment (% of children under 5 receiving oral rehydration and continued feeding)"
+            }, {
+                "name": "Diarrhea treatment (% of children under 5 who received ORS packet)"
+            }, {
+                "name": "People using safely managed sanitation services, rural (% of rural population)"
+            }, {
+                "name": "People using safely managed sanitation services, urban\u00a0 (% of urban population)"
+            }, {
+                "name": "People using safely managed sanitation services (% of population)"
+            }, {
+                "name": "Tuberculosis treatment success rate (% of new cases)"
+            }, {
+                "name": "Tuberculosis case detection rate (%, all forms)"
+            }]
+        }, {
+            "name": "Mortality",
+            "children": [{
+                "name": "Number of deaths ages 5-14 years"
+            }, {
+                "name": "Number of infant deaths"
+            }, {
+                "name": "Number of under-five deaths"
+            }, {
+                "name": "Number of neonatal deaths"
+            }, {
+                "name": "Probability of dying at age 5-14 years (per 1,000 children age 5)"
+            }, {
+                "name": "Mortality rate, under-5 (per 1,000 live births)"
+            }, {
+                "name": "Mortality rate, under-5, female (per 1,000 live births)"
+            }, {
+                "name": "Mortality rate, under-5, male (per 1,000 live births)"
+            }, {
+                "name": "Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70 (%)"
+            }, {
+                "name": "Mortality rate, neonatal (per 1,000 live births)"
+            }, {
+                "name": "Mortality rate attributed to household and ambient air pollution, age-standardized (per 100,000 population)"
+            }, {
+                "name": "Mortality rate attributed to unintentional poisoning (per 100,000 population)"
+            }, {
+                "name": "Mortality rate attributed to unintentional poisoning, female (per 100,000 female population)"
+            }, {
+                "name": "Mortality rate attributed to unintentional poisoning, male (per 100,000 male population)"
+            }, {
+                "name": "Suicide mortality rate (per 100,000 population)"
+            }, {
+                "name": "Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (per 100,000 population)"
+            }, {
+                "name": "Completeness of infant death reporting (% of reported infant deaths to estimated infant deaths)"
+            }, {
+                "name": "Completeness of total death reporting (% of reported total deaths to estimated total deaths)"
+            }, {
+                "name": "Mortality rate, adult, female (per 1,000 female adults)"
+            }, {
+                "name": "Mortality rate, adult, male (per 1,000 male adults)"
+            }, {
+                "name": "Mortality rate, infant, female (per 1,000 live births)"
+            }, {
+                "name": "Mortality rate, infant (per 1,000 live births)"
+            }, {
+                "name": "Mortality rate, infant, male (per 1,000 live births)"
+            }, {
+                "name": "Life expectancy at birth, female (years)"
+            }, {
+                "name": "Life expectancy at birth, total (years)"
+            }, {
+                "name": "Life expectancy at birth, male (years)"
+            }, {
+                "name": "Survival to age 65, female (% of cohort)"
+            }, {
+                "name": "Survival to age 65, male (% of cohort)"
+            }]
+        }, {
+            "name": "Reproductive health",
+            "children": [{
+                "name": "Demand for family planning satisfied by modern methods (% of married women with demand for family planning)"
+            }, {
+                "name": "Number of maternal deaths"
+            }, {
+                "name": "Lifetime risk of maternal death (1 in: rate varies by country)"
+            }, {
+                "name": "Lifetime risk of maternal death (%)"
+            }, {
+                "name": "Pregnant women receiving prenatal care (%)"
+            }, {
+                "name": "Births attended by skilled health staff (% of total)"
+            }, {
+                "name": "Maternal mortality ratio (modeled estimate, per 100,000 live births)"
+            }, {
+                "name": "Maternal mortality ratio (national estimate, per 100,000 live births)"
+            }, {
+                "name": "Newborns protected against tetanus (%)"
+            }, {
+                "name": "Adolescent fertility rate (births per 1,000 women ages 15-19)"
+            }, {
+                "name": "Contraceptive prevalence, modern methods (% of women ages 15-49)"
+            }, {
+                "name": "Contraceptive prevalence, any methods (% of women ages 15-49)"
+            }, {
+                "name": "Fertility rate, total (births per woman)"
+            }, {
+                "name": "Wanted fertility rate (births per woman)"
+            }, {
+                "name": "Teenage mothers (% of women ages 15-19 who have had children or are currently pregnant)"
+            }, {
+                "name": "Unmet need for contraception (% of married women ages 15-49)"
+            }]
+        }, {
+            "name": "Health systems",
+            "children": [{
+                "name": "Hospital beds (per 1,000 people)"
+            }, {
+                "name": "Community health workers (per 1,000 people)"
+            }, {
+                "name": "Nurses and midwives (per 1,000 people)"
+            }, {
+                "name": "Physicians (per 1,000 people)"
+            }, {
+                "name": "Specialist surgical workforce (per 100,000 population)"
+            }, {
+                "name": "Number of surgical procedures (per 100,000 population)"
+            }, {
+                "name": "Current health expenditure (% of GDP)"
+            }, {
+                "name": "Current health expenditure per capita (current US$)"
+            }, {
+                "name": "Current health expenditure per capita, PPP (current international $)"
+            }, {
+                "name": "External health expenditure (% of current health expenditure)"
+            }, {
+                "name": "External health expenditure per capita (current US$)"
+            }, {
+                "name": "External health expenditure per capita, PPP (current international $)"
+            }, {
+                "name": "Domestic general government health expenditure (% of current health expenditure)"
+            }, {
+                "name": "Domestic general government health expenditure (% of GDP)"
+            }, {
+                "name": "Domestic general government health expenditure (% of general government expenditure)"
+            }, {
+                "name": "Domestic general government health expenditure per capita (current US$)"
+            }, {
+                "name": "Domestic general government health expenditure per capita, PPP (current international $)"
+            }, {
+                "name": "Out-of-pocket expenditure (% of current health expenditure)"
+            }, {
+                "name": "Out-of-pocket expenditure per capita (current US$)"
+            }, {
+                "name": "Out-of-pocket expenditure per capita, PPP (current international $)"
+            }, {
+                "name": "Domestic private health expenditure (% of current health expenditure)"
+            }, {
+                "name": "Domestic private health expenditure per capita (current US$)"
+            }, {
+                "name": "Domestic private health expenditure per capita, PPP  (current international $)"
+            }]
+        }, {
+            "name": "Universal Health Coverage",
+            "children": [{
+                "name": "Increase in poverty gap at $1.90 ($ 2011 PPP) poverty line due to out-of-pocket health care expenditure (USD)"
+            }, {
+                "name": "Number of people pushed below the $1.90 ($ 2011 PPP) poverty line by out-of-pocket health care expenditure"
+            }, {
+                "name": "Increase in poverty gap at $1.90 ($ 2011 PPP) poverty line due to out-of-pocket health care expenditure (% of poverty line)"
+            }, {
+                "name": "Proportion of population pushed below the $1.90 ($ 2011 PPP) poverty line by out-of-pocket health care expenditure (%)"
+            }, {
+                "name": "Increase in poverty gap at $3.10 ($ 2011 PPP) poverty line due to out-of-pocket health care expenditure (USD)"
+            }, {
+                "name": "Number of people pushed below the $3.10 ($ 2011 PPP) poverty line by out-of-pocket health care expenditure"
+            }, {
+                "name": "Increase in poverty gap at $3.10 ($ 2011 PPP) poverty line due to out-of-pocket health care expenditure (% of poverty line)"
+            }, {
+                "name": "Proportion of population pushed below the $3.10 ($ 2011 PPP) poverty line by out-of-pocket health care expenditure (%)"
+            }, {
+                "name": "Number of people spending more than 10% of household consumption or income on out-of-pocket health care expenditure"
+            }, {
+                "name": "Proportion of population spending more than 10% of household consumption or income on out-of-pocket health care expenditure (%)"
+            }, {
+                "name": "Number of people spending more than 25% of household consumption or income on out-of-pocket health care expenditure"
+            }, {
+                "name": "Proportion of population spending more than 25% of household consumption or income on out-of-pocket health care expenditure (%)"
+            }, {
+                "name": "UHC service coverage index"
+            }]
+        }, {
+            "name": "Population",
+            "children": [{
+                "name": "Dynamics",
+                "children": [{
+                    "name": "Birth rate, crude (per 1,000 people)"
+                }, {
+                    "name": "Death rate, crude (per 1,000 people)"
+                }, {
+                    "name": "Female headed households (% of households with a female head)"
+                }, {
+                    "name": "Women who were first married by age 18 (% of women ages 20-24)"
+                }, {
+                    "name": "Age dependency ratio (% of working-age population)"
+                }, {
+                    "name": "Age dependency ratio, old (% of working-age population)"
+                }, {
+                    "name": "Age dependency ratio, young (% of working-age population)"
+                }, {
+                    "name": "Population growth (annual %)"
+                }, {
+                    "name": "Completeness of birth registration, female (%)"
+                }, {
+                    "name": "Completeness of birth registration, male (%)"
+                }, {
+                    "name": "Completeness of birth registration, rural (%)"
+                }, {
+                    "name": "Completeness of birth registration, urban (%)"
+                }, {
+                    "name": "Completeness of birth registration (%)"
+                }, {
+                    "name": "Completeness of death registration with cause-of-death information (%)"
+                }]
+            }, {
+                "name": "Structure",
+                "children": [{
+                    "name": "Population ages 0-4, female (% of female population)"
+                }, {
+                    "name": "Population ages 0-4, male (% of male population)"
+                }, {
+                    "name": "Population ages 0-14, female"
+                }, {
+                    "name": "Population ages 0-14, female (% of total)"
+                }, {
+                    "name": "Population ages 0-14, male"
+                }, {
+                    "name": "Population ages 0-14, male (% of total)"
+                }, {
+                    "name": "Population ages 0-14, total"
+                }, {
+                    "name": "Population ages 0-14 (% of total)"
+                }, {
+                    "name": "Population ages 5-9, female (% of female population)"
+                }, {
+                    "name": "Population ages 5-9, male (% of male population)"
+                }, {
+                    "name": "Population ages 10-14, female (% of female population)"
+                }, {
+                    "name": "Population ages 10-14, male (% of male population)"
+                }, {
+                    "name": "Population ages 15-19, female (% of female population)"
+                }, {
+                    "name": "Population ages 15-19, male (% of male population)"
+                }, {
+                    "name": "Population ages 15-64, female"
+                }, {
+                    "name": "Population ages 15-64, female (% of total)"
+                }, {
+                    "name": "Population ages 15-64, male"
+                }, {
+                    "name": "Population ages 15-64, male (% of total)"
+                }, {
+                    "name": "Population ages 15-64, total"
+                }, {
+                    "name": "Population ages 15-64 (% of total)"
+                }, {
+                    "name": "Population ages 20-24, female (% of female population)"
+                }, {
+                    "name": "Population ages 20-24, male (% of male population)"
+                }, {
+                    "name": "Population ages 25-29, female (% of female population)"
+                }, {
+                    "name": "Population ages 25-29, male (% of male population)"
+                }, {
+                    "name": "Population ages 30-34, female (% of female population)"
+                }, {
+                    "name": "Population ages 30-34, male (% of male population)"
+                }, {
+                    "name": "Population ages 35-39, female (% of female population)"
+                }, {
+                    "name": "Population ages 35-39, male (% of male population)"
+                }, {
+                    "name": "Population ages 40-44, female (% of female population)"
+                }, {
+                    "name": "Population ages 40-44, male (% of male population)"
+                }, {
+                    "name": "Population ages 45-49, female (% of female population)"
+                }, {
+                    "name": "Population ages 45-49, male (% of male population)"
+                }, {
+                    "name": "Population ages 50-54, female (% of female population)"
+                }, {
+                    "name": "Population ages 50-54, male (% of male population)"
+                }, {
+                    "name": "Population ages 55-59, female (% of female population)"
+                }, {
+                    "name": "Population ages 55-59, male (% of male population)"
+                }, {
+                    "name": "Population ages 60-64, female (% of female population)"
+                }, {
+                    "name": "Population ages 60-64, male (% of male population)"
+                }, {
+                    "name": "Population ages 65-69, female (% of female population)"
+                }, {
+                    "name": "Population ages 65-69, male (% of male population)"
+                }, {
+                    "name": "Population ages 65 and above, female"
+                }, {
+                    "name": "Population ages 65 and above, female (% of total)"
+                }, {
+                    "name": "Population ages 65 and above, male"
+                }, {
+                    "name": "Population ages 65 and above, male (% of total)"
+                }, {
+                    "name": "Population ages 65 and above, total"
+                }, {
+                    "name": "Population ages 65 and above (% of total)"
+                }, {
+                    "name": "Population ages 70-74, female (% of female population)"
+                }, {
+                    "name": "Population ages 70-74, male (% of male population)"
+                }, {
+                    "name": "Population ages 75-79, female (% of female population)"
+                }, {
+                    "name": "Population ages 75-79, male (% of male population)"
+                }, {
+                    "name": "Population ages 80 and above, female (% of female population)"
+                }, {
+                    "name": "Population ages 80 and above, male (% of male population)"
+                }, {
+                    "name": "Sex ratio at birth (male births per female births)"
+                }, {
+                    "name": "Population, total"
+                }, {
+                    "name": "Population, female"
+                }, {
+                    "name": "Population, female (% of total)"
+                }, {
+                    "name": "Population, male"
+                }, {
+                    "name": "Population, male (% of total)"
+                }]
+            }]
+        }]
+    }, {
+        "name": "Poverty",
+        "children": [{
+            "name": "Income distribution",
+            "children": [{
+                "name": "Income share held by second 20%"
+            }, {
+                "name": "Income share held by third 20%"
+            }, {
+                "name": "Income share held by fourth 20%"
+            }, {
+                "name": "Income share held by highest 20%"
+            }, {
+                "name": "Income share held by highest 10%"
+            }, {
+                "name": "Income share held by lowest 10%"
+            }, {
+                "name": "Income share held by lowest 20%"
+            }, {
+                "name": "GINI index (World Bank estimate)"
+            }]
+        }, {
+            "name": "Poverty rates",
+            "children": [{
+                "name": "Poverty headcount ratio at $1.90 a day (2011 PPP) (% of population)"
+            }, {
+                "name": "Poverty gap at $1.90 a day (2011 PPP) (%)"
+            }, {
+                "name": "Poverty headcount ratio at $3.20 a day (2011 PPP) (% of population)"
+            }, {
+                "name": "Poverty gap at $3.20 a day (2011 PPP) (%)"
+            }, {
+                "name": "Poverty gap at national poverty lines (%)"
+            }, {
+                "name": "Poverty headcount ratio at national poverty lines (% of population)"
+            }, {
+                "name": "Rural poverty gap at national poverty lines (%)"
+            }, {
+                "name": "Rural poverty headcount ratio at national poverty lines (% of rural population)"
+            }, {
+                "name": "Poverty headcount ratio at $5.50 a day (2011 PPP) (% of population)"
+            }, {
+                "name": "Poverty gap at $5.50 a day (2011 PPP) (%)"
+            }, {
+                "name": "Urban poverty gap at national poverty lines (%)"
+            }, {
+                "name": "Urban poverty headcount ratio at national poverty lines (% of urban population)"
+            }]
+        }, {
+            "name": "Shared prosperity",
+            "children": [{
+                "name": "Survey mean consumption or income per capita, bottom 40% of population (2011 PPP $ per day)"
+            }, {
+                "name": "Annualized average growth rate in per capita real survey mean consumption or income, bottom 40% of population (%)"
+            }, {
+                "name": "Survey mean consumption or income per capita, total population (2011 PPP $ per day)"
+            }, {
+                "name": "Annualized average growth rate in per capita real survey mean consumption or income, total population (%)"
+            }]
+        }]
+    }]
+}
