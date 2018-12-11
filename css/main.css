@@ -7,17 +7,44 @@
   }
   
 .node text {
-font: 10px sans-serif;
-pointer-events: none;
+  font: 10px sans-serif;
+  pointer-events: none;
 }
 
 .link {
-fill: none;
-stroke: #9ecae1;
-stroke-width: 1.5px;
+  fill: none;
+  stroke: #9ecae1;
+  stroke-width: 1.5px;
 }
 
 #div-svg {
     overflow: scroll; 
     height:400px;
+}
+
+.stroke {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+  }
+  
+.fill {
+  fill: #f2f2f2;
+}
+
+.graticule {
+  fill: none;
+  stroke: #777;
+  stroke-width: .5px;
+stroke-opacity: .5;
+}
+
+.land {
+  fill: darkgrey;
+}
+
+.boundary {
+  fill: none;
+  stroke: #fff;
+  stroke-width: .5px;
 }
