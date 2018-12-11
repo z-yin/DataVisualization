@@ -42,7 +42,6 @@ body {
 }
 
 #div-map {
-  overflow: scroll;
   height: 600px;
   width: 600px;
 }
