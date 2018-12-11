@@ -1,7 +1,12 @@
-var mapWidth = 950,
-    mapHeight = 700;
+var mapWidth = 600,
+    mapHeight = 600;
 
-var colors = { clickable: 'darkgrey', hover: 'grey', clicked: "red", clickhover: "darkred" };
+var colors = {
+    clickable: 'darkgrey',
+    hover: 'grey',
+    clicked: "red",
+    clickhover: "darkred"
+};
 
 var projection = d3.geoOrthographic()
     .scale(300)
@@ -14,13 +19,15 @@ var path = d3.geoPath()
 
 var graticule = d3.geoGraticule();
 
-var map = d3.select("#div-map > svg")
-    .attr("mapWidth", mapWidth)
-    .attr("mapHeight", mapHeight)
+var map = d3.select("#div-map").append("svg")
+    .attr("width", mapWidth)
+    .attr("height", mapHeight)
     .attr("class", "map");
 
 map.append("defs").append("path")
-    .datum({type: "Sphere"})
+    .datum({
+        type: "Sphere"
+    })
     .attr("id", "sphere")
     .attr("d", path);
 
@@ -37,86 +44,188 @@ map.append("path")
     .attr("class", "graticule")
     .attr("d", path);
 
-queue()
-    .defer(d3.tsv, "../data/world-country-names.tsv")
-    .defer(d3.json, "../data/world-110m.json")
-    .await(ready);
+var files = ["../data/world-110m.json", "../data/world_country_names.tsv"];
+var promises = [];
 
-function ready(error, world, names) {
-  if (error) throw error;
+promises.push(d3.json(files[0]));
+promises.push(d3.tsv(files[1]));
 
-  var globe = {type: "Sphere"},
-    land = topojson.feature(world, world.objects.land),
-    countries = topojson.feature(world, world.objects.countries).features,
-    borders = topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; });
+Promise.all(promises).then(function (values) {
+    var world = values[0];
+    var names = values[1];
 
-  countries = countries.filter(function(d) {
-    return names.some(function(n) {
-      if (d.id == n.id) return d.name = n.name;
+    var globe = {
+            type: "Sphere"
+        },
+        land = topojson.feature(world, world.objects.land),
+        countries = topojson.feature(world, world.objects.countries).features,
+        borders = topojson.mesh(world, world.objects.countries, function (a, b) {
+            return a !== b;
+        });
+
+    countries = countries.filter(function (d) {
+        return names.some(function (n) {
+            if (d.id == n.id) return d.name = n.name;
+        });
+    }).sort(function (a, b) {
+        return a.name.localeCompare(b.name);
     });
-  }).sort(function(a, b) {
-    return a.name.localeCompare(b.name);
-  });
 
-  map.insert("path", ".graticule")
-      .datum(topojson.feature(world, world.objects.land))
-      .attr("class", "land")
-      .attr("d", path);
+    map.insert("path", ".graticule")
+        .datum(topojson.feature(world, world.objects.land))
+        .attr("class", "land")
+        .attr("d", path);
 
-  for(i = 0; i < names.length; i++) {
-    for (j = 0; j < countries.length; j++) {
-      if (countries[j].id == names[i].id) {
-        map.insert("path", ".graticule")
-          .datum(countries[j])
-          .attr("fill", colors.clickable)
-          .attr("d", path)
-          .attr("class", "clickable")
-          .attr("data-country-id", j)
-          .on("click", function() {
-            d3.selectAll(".clicked")
-              .classed("clicked", false)
-              .attr("fill", colors.clickable);
-            d3.select(this)
-              .classed("clicked", true)
-              .attr("fill", colors.clicked);
+    for (i = 0; i < names.length; i++) {
+        for (j = 0; j < countries.length; j++) {
+            if (countries[j].id == names[i].id) {
+                map.insert("path", ".graticule")
+                    .datum(countries[j])
+                    .attr("fill", colors.clickable)
+                    .attr("d", path)
+                    .attr("class", "clickable")
+                    .attr("data-country-id", j)
+                    .on("click", function () {
+                        d3.selectAll(".clicked")
+                            .classed("clicked", false)
+                            .attr("fill", colors.clickable);
+                        d3.select(this)
+                            .classed("clicked", true)
+                            .attr("fill", colors.clicked);
 
-            (function transition() {
-              d3.select(".clicked").transition()
-              .duration(1250)
-              .tween("rotate", function() {
-                var p = d3.geo.centroid(countries[d3.select(this).attr("data-country-id")]),
-                    r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
-                return function (t) {
-                  projection.rotate(r(t));
-                  map.selectAll("path").attr("d", path);
-                }
-              });
-            })();
-          })
-          .on("mousemove", function() {
-            var c = d3.select(this);
-            if (c.classed("clicked")) {
-              c.attr("fill", colors.clickhover);
-            } else {
-              c.attr("fill", colors.hover);
+                        (function transition() {
+                            d3.select(".clicked").transition()
+                                .duration(1250)
+                                .tween("rotate", function () {
+                                    var p = d3.geoCentroid(countries[d3.select(this).attr("data-country-id")]),
+                                        r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+                                    return function (t) {
+                                        projection.rotate(r(t));
+                                        map.selectAll("path").attr("d", path);
+                                    }
+                                });
+                        })();
+                    })
+                    .on("mousemove", function () {
+                        var c = d3.select(this);
+                        if (c.classed("clicked")) {
+                            c.attr("fill", colors.clickhover);
+                        } else {
+                            c.attr("fill", colors.hover);
+                        }
+                    })
+                    .on("mouseout", function () {
+                        var c = d3.select(this);
+                        if (c.classed("clicked")) {
+                            c.attr("fill", colors.clicked);
+                        } else {
+                            d3.select(this).attr("fill", colors.clickable);
+                        }
+                    });
             }
-          })
-          .on("mouseout", function() {
-            var c = d3.select(this);
-            if (c.classed("clicked")) {
-              c.attr("fill", colors.clicked);
-            } else {
-              d3.select(this).attr("fill", colors.clickable);
-            }
-          });
-      }
+        }
     }
-  }
 
-  map.insert("path", ".graticule")
-      .datum(topojson.mesh(world, world.objects.countries, function(a, b) { return a !== b; }))
-      .attr("class", "boundary")
-      .attr("d", path);
-};
+    map.insert("path", ".graticule")
+        .datum(topojson.mesh(world, world.objects.countries, function (a, b) {
+            return a !== b;
+        }))
+        .attr("class", "boundary")
+        .attr("d", path);
+});
+
+// d3.queue()
+//     .defer(d3.json, "../data/world-110m.json")
+//     .defer(d3.tsv, "../data/world_country_names.tsv")
+//     .await(ready);
+
+// console.log("1");
+
+// function ready(error, world, names) {
+//     console.log("sd");
+//     if (error) throw error;
+
+//     console.log("sd")
+//     console.log(world);
+
+// var globe = {
+//         type: "Sphere"
+//     },
+//     land = topojson.feature(world, world.objects.land),
+//     countries = topojson.feature(world, world.objects.countries).features,
+//     borders = topojson.mesh(world, world.objects.countries, function (a, b) {
+//         return a !== b;
+//     });
+
+// countries = countries.filter(function (d) {
+//     return names.some(function (n) {
+//         if (d.id == n.id) return d.name = n.name;
+//     });
+// }).sort(function (a, b) {
+//     return a.name.localeCompare(b.name);
+// });
+
+// map.insert("path", ".graticule")
+//     .datum(topojson.feature(world, world.objects.land))
+//     .attr("class", "land")
+//     .attr("d", path);
+
+// for (i = 0; i < names.length; i++) {
+//     for (j = 0; j < countries.length; j++) {
+//         if (countries[j].id == names[i].id) {
+//             map.insert("path", ".graticule")
+//                 .datum(countries[j])
+//                 .attr("fill", colors.clickable)
+//                 .attr("d", path)
+//                 .attr("class", "clickable")
+//                 .attr("data-country-id", j)
+//                 .on("click", function () {
+//                     d3.selectAll(".clicked")
+//                         .classed("clicked", false)
+//                         .attr("fill", colors.clickable);
+//                     d3.select(this)
+//                         .classed("clicked", true)
+//                         .attr("fill", colors.clicked);
+
+//                     (function transition() {
+//                         d3.select(".clicked").transition()
+//                             .duration(1250)
+//                             .tween("rotate", function () {
+//                                 var p = d3.geoCentroid(countries[d3.select(this).attr("data-country-id")]),
+//                                     r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+//                                 return function (t) {
+//                                     projection.rotate(r(t));
+//                                     map.selectAll("path").attr("d", path);
+//                                 }
+//                             });
+//                     })();
+//                 })
+//                 .on("mousemove", function () {
+//                     var c = d3.select(this);
+//                     if (c.classed("clicked")) {
+//                         c.attr("fill", colors.clickhover);
+//                     } else {
+//                         c.attr("fill", colors.hover);
+//                     }
+//                 })
+//                 .on("mouseout", function () {
+//                     var c = d3.select(this);
+//                     if (c.classed("clicked")) {
+//                         c.attr("fill", colors.clicked);
+//                     } else {
+//                         d3.select(this).attr("fill", colors.clickable);
+//                     }
+//                 });
+//         }
+//     }
+// }
+
+// map.insert("path", ".graticule")
+//     .datum(topojson.mesh(world, world.objects.countries, function (a, b) {
+//         return a !== b;
+//     }))
+//     .attr("class", "boundary")
+//     .attr("d", path);
+// };
 
 d3.select(self.frameElement).style("mapHeight", mapHeight + "px");

@@ -1,3 +1,21 @@
+body {
+  background-color: antiquewhite;
+}
+
+.row1 {
+  width: 100%;
+  height: 60%;
+}
+
+.row2 {
+  width: 100%;
+  height: 40%;
+}
+
+.block {
+  display: inline-block;
+}
+
 .node rect {
     cursor: pointer;
     fill: #fff;
@@ -17,9 +35,16 @@
   stroke-width: 1.5px;
 }
 
-#div-svg {
+#div-catagory {
     overflow: scroll; 
-    height:400px;
+    height:500px;
+    width: 310px;
+}
+
+#div-map {
+  overflow: scroll;
+  height: 600px;
+  width: 600px;
 }
 
 .stroke {
@@ -36,7 +61,7 @@
   fill: none;
   stroke: #777;
   stroke-width: .5px;
-stroke-opacity: .5;
+  stroke-opacity: .5;
 }
 
 .land {

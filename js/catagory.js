@@ -11,7 +11,7 @@ var diagonal = d3.linkHorizontal()
     .x(function(d) { return d.y; })
     .y(function(d) { return d.x; });
 
-var svg = d3.select("#div-svg > svg")
+var svg = d3.select("#div-catagory").append("svg")
     .attr("width", width) // + margin.left + margin.right)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
