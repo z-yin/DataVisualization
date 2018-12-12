@@ -1,3 +1,10 @@
+/**
+ * Global variables.
+ */
+var wdiData; // WDI data.
+var wdiTopic = []; // WDI data on a topic.
+var year = "2010";	// Selected year.
+
 {
 	var margin = {
 			top: 10,
@@ -31,8 +38,6 @@
 		"../data/WDIData1.csv",
 	];
 	var promises = [];
-	var wdiData; // WDI data.
-	var wdiTopic; // WDI data on a specific topic.
 
 	promises.push(d3.json(files[0]));
 	promises.push(d3.csv(files[1]));
@@ -179,6 +184,7 @@
 				return row["Indicator Name"] == d.data.name;
 			});
 			displayColor();
+			makeUpdateHist();
 			return;
 		}
 
@@ -199,45 +205,44 @@
 	/**
 	 * Show choropleth on the Earth.
 	 */
-	year = "2010";
 	function displayColor() {
-		var sorted;
-		var maximum = -Infinity;
-		var minimum = Infinity;
+		var sorted = [];
 		wdiTopic.forEach(function (row) {
-			console.log(row[year]);
+			// console.log(row[year]);
 			if (row[year] != "") {
-				
-				if (Number(row[year]) > maximum) maximum = Number(row[year]);
-				if (Number(row[year]) < minimum) minimum = Number(row[year]);
+				sorted.push(Number(row[year]));
 			}
 		});
+		if (sorted.length != 0) {
+			sorted.sort(function (a, b) {
+				return a - b;
+			});
+			var sortedMap = {};
+			for (var i = 0; i < sorted.length; i++) {
+				sortedMap[sorted[i]] = i + 1;
+			}
 
-		console.log(wdiTopic.length);
-
-		if (maximum == minimum) {
 			wdiTopic.forEach(function (row) {
-				if ($(`[data-country-name="${row["Country Name"]}"]`).length == 0) {
-					console.log("wrong" + $(`[data-country-name="${row["Country Name"]}"]`));
-					$(`[data-country-name="${row["Country Name"]}"]`).attr("fill", "#ffffff");
+				var country = $(`[data-country-name="${row["Country Name"]}"]`);
+				if (row[year] != "") {
+					if (country.length == 1) {
+						// console.log($(`[data-country-name="${row["Country Name"]}"]`).attr("data-country-name"));
+						country.attr("fill", getColor(sortedMap[Number(row[year])] / sorted.length));
+						country.attr("number", Number(row[year]));
+						// console.log(sortedMap[Number(row[year])] / sorted.length);
+					}
+				} else {
+					if (country.length == 1) {
+						country.attr("fill", "#ffffff");
+					}
 				}
 			});
-			return;
-		}
-
-		var range = maximum - minimum;
-		console.log(maximum + " - " + minimum);
-
-		wdiTopic.forEach(function (row) {
-			if (row[year] != "") {
+		} else {
+			wdiTopic.forEach(function (row) {
 				if ($(`[data-country-name="${row["Country Name"]}"]`).length == 1) {
-					console.log($(`[data-country-name="${row["Country Name"]}"]`).attr("data-country-name"));
-					$(`[data-country-name="${row["Country Name"]}"]`)
-						.attr("fill", getColor((Number(row[year]) - minimum) / range));
-
-					console.log((Number(row[year]) - minimum) / range);
+					$(`[data-country-name="${row["Country Name"]}"]`).attr("fill", "lightgrey");
 				}
-			}
-		});
+			});
+		}
 	}
 }

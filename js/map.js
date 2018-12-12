@@ -1,15 +1,15 @@
 /**
- * Global variable.
+ * Global variables.
  */
-var world;
-var names;
+var world; // World map.
+var names; // Country names.
 
 {
 	var width = 600,
 		height = 600;
 
 	var colors = {
-		clickable: 'darkgrey',
+		clickable: 'lightgrey',
 		hover: 'grey',
 		clicked: "red",
 		clickhover: "darkred"
@@ -53,6 +53,19 @@ var names;
 		.datum(graticule)
 		.attr("class", "graticule")
 		.attr("d", geoPath);
+
+	var commaFormat = d3.format(",.3f");
+	var tip = d3.tip()
+		.attr('class', 'd3-tip')
+		.offset([0, 0])
+		.html(function (d) {
+			var number = $(`[data-country-name="${d.name}"]`).attr("number");
+			if (number) {
+				return `${d.name}: ${commaFormat(number)}`;
+			}
+			return `${d.name}: Unknown`;
+		});
+	map.call(tip);
 
 	var files = [
 		"../data/world-110m.json",
@@ -98,14 +111,14 @@ var names;
 						.attr("d", geoPath)
 						.attr("class", "clickable")
 						.attr("data-country-id", j)
-						.attr("data-country-name", names[i].name)	// use for color changing in by catagory.js
+						.attr("data-country-name", names[i].name) // use for color changing in by catagory.js
 						.on("click", function () {
 							d3.selectAll(".clicked")
 								.classed("clicked", false)
-								.attr("fill", colors.clickable);
+							// .attr("fill", colors.clickable);
 							d3.select(this)
-								.classed("clicked", true)
-								.attr("fill", colors.clicked);
+								.classed("clicked", true);
+							// .attr("fill", colors.clicked);
 
 							(function transition() {
 								d3.select(".clicked").transition()
@@ -120,23 +133,38 @@ var names;
 									});
 							})();
 						})
+						.on('mouseover', function (d) {
+							tip.show(d);
+							d3.select(this)
+								.attr("stroke", "#ce3f46")
+								.attr("stroke-width", 2);
+						})
+						.on('mouseout', function (d) {
+							tip.hide(d);
+							d3.select(this)
+								// .attr("stroke", "#ce3f46")
+								.attr("stroke-width", 0);
+						})
 						.on("mousemove", function () {
 							var c = d3.select(this);
-							// if (c.classed("clicked")) {
-							// 	c.attr("fill", colors.clickhover);
-							// } else {
-							// 	c.attr("fill", colors.hover);
-							// }
+							if (c.classed("clicked")) {
+								// c.attr("fill", colors.clickhover);
+							} else {
+								// color.original = c.attr("fill");
+							}
+							// color.original = c.attr("fill");
 						})
-						.on("mouseout", function () {
-							var c = d3.select(this);
-							// if (c.classed("clicked")) {
-							// 	c.attr("fill", colors.clicked);
-							// } else {
-							// 	d3.select(this).attr("fill", colors.clickable);
-							// }
-						})
-						break;
+
+					// .on("mouseout", function () {
+					// 	var c = d3.select(this);
+					// 	if (c.classed("clicked")) {
+					// 		// c.attr("fill", colors.original);
+					// 	} else {
+					// 		// d3.select(this).attr("fill", colors.clickable);
+					// 		// c.attr("fill", colors.original);
+					// 	}
+					// })
+					break;
 				}
 			}
 		}
