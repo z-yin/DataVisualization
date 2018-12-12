@@ -1,3 +1,9 @@
+/**
+ * Global variable.
+ */
+var world;
+var names;
+
 {
 	var width = 600,
 		height = 600;
@@ -10,17 +16,13 @@
 	};
 
 	var moving = false;
-	const rValue = d => d.population;
-	const rScale = d3.scaleSqrt().range([0, 5]);
+	var initialScale = 300;
 
-	// var initialScale = 
 	var projection = d3.geoOrthographic()
-		.scale(250)
+		.scale(initialScale)
 		.translate([width / 2, height / 2])
-		.clipAngle(90)
+		.clipAngle(180)
 		.precision(10);
-
-	console.log(projection.scale())
 
 	var geoPath = d3.geoPath()
 		.projection(projection);
@@ -54,19 +56,16 @@
 
 	var files = [
 		"../data/world-110m.json",
-		"../data/world-50m.json",
 		"../data/world-country-names.tsv",
 	];
 	var promises = [];
 
 	promises.push(d3.json(files[0]));
-	promises.push(d3.json(files[1]));
-	promises.push(d3.tsv(files[2]));
+	promises.push(d3.tsv(files[1]));
 
 	Promise.all(promises).then(function (values) {
-		var world = values[0];
-		var world50 = values[1];
-		var names = values[2];
+		world = values[0];
+		names = values[1];
 
 		var globe = {
 			type: "Sphere"
@@ -99,6 +98,7 @@
 						.attr("d", geoPath)
 						.attr("class", "clickable")
 						.attr("data-country-id", j)
+						.attr("data-country-name", names[i].name)	// use for color changing in by catagory.js
 						.on("click", function () {
 							d3.selectAll(".clicked")
 								.classed("clicked", false)
@@ -122,20 +122,21 @@
 						})
 						.on("mousemove", function () {
 							var c = d3.select(this);
-							if (c.classed("clicked")) {
-								c.attr("fill", colors.clickhover);
-							} else {
-								c.attr("fill", colors.hover);
-							}
+							// if (c.classed("clicked")) {
+							// 	c.attr("fill", colors.clickhover);
+							// } else {
+							// 	c.attr("fill", colors.hover);
+							// }
 						})
 						.on("mouseout", function () {
 							var c = d3.select(this);
-							if (c.classed("clicked")) {
-								c.attr("fill", colors.clicked);
-							} else {
-								d3.select(this).attr("fill", colors.clickable);
-							}
+							// if (c.classed("clicked")) {
+							// 	c.attr("fill", colors.clicked);
+							// } else {
+							// 	d3.select(this).attr("fill", colors.clickable);
+							// }
 						})
+						break;
 				}
 			}
 		}
