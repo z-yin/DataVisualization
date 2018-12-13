@@ -4,6 +4,8 @@
 var wdiData; // WDI data.
 var wdiTopic = []; // WDI data on a topic.
 var year = "2010";	// Selected year.
+var maxData;	// Maximum of wdiTopic.
+var minData;	// Minimum of wdiTopic.
 
 {
 	var margin = {
@@ -206,28 +208,17 @@ var year = "2010";	// Selected year.
 	 * Show choropleth on the Earth.
 	 */
 	function displayColor() {
-		var sorted = [];
-		wdiTopic.forEach(function (row) {
-			// console.log(row[year]);
-			if (row[year] != "") {
-				sorted.push(Number(row[year]));
-			}
-		});
-		if (sorted.length != 0) {
-			sorted.sort(function (a, b) {
-				return a - b;
-			});
-			var sortedMap = {};
-			for (var i = 0; i < sorted.length; i++) {
-				sortedMap[sorted[i]] = i + 1;
-			}
+		minData = d3.min(wdiTopic, d => Number(d[year]));
+		maxData = d3.max(wdiTopic, d => Number(d[year])); 
 
+		if (minData != maxData) {
+			var color = getColorRange(minData, maxData);
 			wdiTopic.forEach(function (row) {
 				var country = $(`[data-country-name="${row["Country Name"]}"]`);
 				if (row[year] != "") {
 					if (country.length == 1) {
 						// console.log($(`[data-country-name="${row["Country Name"]}"]`).attr("data-country-name"));
-						country.attr("fill", getColor(sortedMap[Number(row[year])] / sorted.length));
+						country.attr("fill", color([Number(row[year])]));
 						country.attr("number", Number(row[year]));
 						// console.log(sortedMap[Number(row[year])] / sorted.length);
 					}

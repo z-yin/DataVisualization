@@ -5,6 +5,8 @@ var world; // World map.
 var names; // Country names.
 
 {
+	var color = getColorRange(minData, maxData);
+
 	var width = 600,
 		height = 600;
 
@@ -56,14 +58,15 @@ var names; // Country names.
 
 	var commaFormat = d3.format(",.3f");
 	var tip = d3.tip()
-		.attr('class', 'd3-tip')
+		.attr('class', 'map-tip')
 		.offset([0, 0])
 		.html(function (d) {
+			// console.log(d);
 			var number = $(`[data-country-name="${d.name}"]`).attr("number");
 			if (number) {
-				return `${d.name}: ${commaFormat(number)}`;
+				return `<strong>${d.name}:</strong> ${commaFormat(number)}`;
 			}
-			return `${d.name}: Unknown`;
+			return `<strong>${d.name}:</strong> <i>Unknown</i>`;
 		});
 	map.call(tip);
 
@@ -115,10 +118,8 @@ var names; // Country names.
 						.on("click", function () {
 							d3.selectAll(".clicked")
 								.classed("clicked", false)
-							// .attr("fill", colors.clickable);
 							d3.select(this)
 								.classed("clicked", true);
-							// .attr("fill", colors.clicked);
 
 							(function transition() {
 								d3.select(".clicked").transition()
@@ -138,32 +139,30 @@ var names; // Country names.
 							d3.select(this)
 								.attr("stroke", "#ce3f46")
 								.attr("stroke-width", 2);
+
+							var thisOfHist = d3.select(`[hist-country-name="${d.name}"]`);
+							if ($(`[hist-country-name="${d.name}"]`).length == 1) {
+								d3.select(".histogram-hover").attr("fill", d => d3.select(".histogram-hover").attr("original-color"));
+								d3.select(".histogram-clicked").attr("fill", d => d3.select(".histogram-clicked").attr("original-color"));
+								thisOfHist.attr("fill", "#7fbc41");
+
+								d3.selectAll(".histogram-hover")
+									.classed("histogram-hover", false);
+								d3.selectAll(".histogram-clicked")
+									.classed("histogram-clicked", false);
+								thisOfHist.classed("histogram-hover", true);
+
+								var offset = thisOfHist.attr("x") + thisOfHist.attr("width") - Number($("#div-histogram").css("width").slice(0, -2)) / 2;
+								$("#div-histogram").stop(true, false).animate({
+									scrollLeft: offset
+								}, 500);
+							}
 						})
 						.on('mouseout', function (d) {
 							tip.hide(d);
 							d3.select(this)
-								// .attr("stroke", "#ce3f46")
 								.attr("stroke-width", 0);
 						})
-						.on("mousemove", function () {
-							var c = d3.select(this);
-							if (c.classed("clicked")) {
-								// c.attr("fill", colors.clickhover);
-							} else {
-								// color.original = c.attr("fill");
-							}
-							// color.original = c.attr("fill");
-						})
-
-					// .on("mouseout", function () {
-					// 	var c = d3.select(this);
-					// 	if (c.classed("clicked")) {
-					// 		// c.attr("fill", colors.original);
-					// 	} else {
-					// 		// d3.select(this).attr("fill", colors.clickable);
-					// 		// c.attr("fill", colors.original);
-					// 	}
-					// })
 					break;
 				}
 			}
