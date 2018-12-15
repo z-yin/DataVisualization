@@ -1,6 +1,7 @@
 /**
  * Global variables.
  */
+var graph, x, y, xAxis, yAxis, histogram, bar, color;
 
 {
     var height = 590;
@@ -14,8 +15,6 @@
     };
 
     var count = 0;
-
-    var graph, x, y, xAxis, yAxis, histogram, bar, color;
 
     function makeUpdateHist() {
         color = getColorRange(minData, maxData);
@@ -87,8 +86,18 @@
             .attr("width", 18)
             .attr("stroke", "#e0780f")
             .attr("stroke-width", "1px")
-            .on("mouseover", tip.show)
-            .on("mouseout", tip.hide)
+            .on("mouseover", function (d) {
+                tip.show(d);
+                d3.select(`[data-country-name="${d["Country Name"]}"]`)
+                    .attr("stroke", "#ce3f46")
+                    .attr("stroke-width", 2);
+
+            })
+            .on("mouseout", function (d) {
+                tip.hide(d);
+                d3.select(`[data-country-name="${d["Country Name"]}"]`)
+                    .attr("stroke-width", 0);
+            })
             .on("click", function (d) {
                 d3.select(".histogram-hover").attr("fill", d => d3.select(".histogram-hover").attr("original-color"));
                 d3.select(".histogram-clicked").attr("fill", d => d3.select(".histogram-clicked").attr("original-color"));
@@ -102,11 +111,13 @@
                     .classed("histogram-clicked", true);
 
                 var offset = d3.select(this).attr("x") +
-                    d3.select(this).attr("width") -
+                    d3.select(this).attr("width") / 2 -
                     Number($("#div-histogram").css("width").slice(0, -2)) / 2;
                 $("#div-histogram").stop(true, false).animate({
                     scrollLeft: offset
                 }, 500);
+
+                rotateEarth(d["Country Name"]);
             });
 
         var gx = histogram.append("g")

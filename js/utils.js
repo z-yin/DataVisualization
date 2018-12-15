@@ -1,10 +1,15 @@
+/**
+ * 
+ * @param {Number} min 
+ * @param {Number} max 
+ */
 function getColorRange(min, max) {
     var scale = []
     for (var i = 0; i < 9; i++) {
         scale.push(min + i * (max - min) / 8);
     }
     return d3.scaleLinear()
-        .domain(scale)     // Multiple color scale.
+        .domain(scale) // Multiple color scale.
         .interpolate(d3.interpolateLab)
         .range(
             [
@@ -19,4 +24,53 @@ function getColorRange(min, max) {
                 d3.rgb("#d73027")
             ]
         );
+}
+
+/**
+ * 
+ * @param {string} name 
+ */
+function rotateEarth(name) {
+    var element = d3.select(`[data-country-name="${name}"]`);
+
+    d3.selectAll(".map-clicked")
+        .classed("map-clicked", false)
+    element
+        .classed("map-clicked", true);
+
+    d3.select(".map-clicked").transition()
+        .duration(1250)
+        .tween("rotate", function () {
+            var p = d3.geoCentroid(countries[d3.select(`[data-country-name="${name}"]`).attr("data-country-id")]),
+                r = d3.interpolate(projection.rotate(), [-p[0], -p[1]]);
+            return function (t) {
+                projection.rotate(r(t));
+                map.selectAll("path").attr("d", geoPath);
+            }
+        });
+}
+
+function formatData() {
+    var keys;
+    var tmpDict = {}
+    var flag = true;
+    wdiTopic.forEach(function (row) {
+        if (flag) {
+            keys = Object.keys(row); // Find the headers.
+            keys.forEach(function (k) {
+                if (k.length == 4) {
+                    tmpDict[k] = {
+                        "year": new Date(k)
+                    };
+                }
+            })
+            flag = false;
+        }
+        keys.forEach(function (e) {
+            if (e.length == 4) {
+                tmpDict[e][row["Country Name"]] = +row[e];
+            }
+        })
+    })
+    wdiFormatted = Object.values(tmpDict);
 }

@@ -3,12 +3,16 @@
  */
 var world; // World map.
 var names; // Country names.
+var countries;	// Countries for selecting.
+var projection;	// Projection of the Earth.
+var map;		// map svg.
+var geoPath;
 
 {
 	var color = getColorRange(minData, maxData);
 
 	var width = 600,
-		height = 600;
+		height = 550;
 
 	var colors = {
 		clickable: 'lightgrey',
@@ -20,13 +24,13 @@ var names; // Country names.
 	var moving = false;
 	var initialScale = 300;
 
-	var projection = d3.geoOrthographic()
+	projection = d3.geoOrthographic()
 		.scale(initialScale)
 		.translate([width / 2, height / 2])
 		.clipAngle(180)
 		.precision(10);
 
-	var geoPath = d3.geoPath()
+	geoPath = d3.geoPath()
 		.projection(projection);
 
 	var graticule = d3.geoGraticule();
@@ -86,8 +90,8 @@ var names; // Country names.
 		var globe = {
 			type: "Sphere"
 		}
-		var land = topojson.feature(world, world.objects.land)
-		var countries = topojson.feature(world, world.objects.countries).features
+		var land = topojson.feature(world, world.objects.land);
+		countries = topojson.feature(world, world.objects.countries).features;
 		var borders = topojson.mesh(world, world.objects.countries, function (a, b) {
 			return a !== b;
 		});
@@ -116,13 +120,13 @@ var names; // Country names.
 						.attr("data-country-id", j)
 						.attr("data-country-name", names[i].name) // use for color changing in by catagory.js
 						.on("click", function () {
-							d3.selectAll(".clicked")
-								.classed("clicked", false)
+							d3.selectAll(".map-clicked")
+								.classed("map-clicked", false)
 							d3.select(this)
-								.classed("clicked", true);
+								.classed("map-clicked", true);
 
 							(function transition() {
-								d3.select(".clicked").transition()
+								d3.select(".map-clicked").transition()
 									.duration(1250)
 									.tween("rotate", function () {
 										var p = d3.geoCentroid(countries[d3.select(this).attr("data-country-id")]),
@@ -152,7 +156,7 @@ var names; // Country names.
 									.classed("histogram-clicked", false);
 								thisOfHist.classed("histogram-hover", true);
 
-								var offset = thisOfHist.attr("x") + thisOfHist.attr("width") - Number($("#div-histogram").css("width").slice(0, -2)) / 2;
+								var offset = thisOfHist.attr("x") + thisOfHist.attr("width")/2 - Number($("#div-histogram").css("width").slice(0, -2)) / 2;
 								$("#div-histogram").stop(true, false).animate({
 									scrollLeft: offset
 								}, 500);

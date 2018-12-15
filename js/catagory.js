@@ -3,11 +3,15 @@
  */
 var wdiData; // WDI data.
 var wdiTopic = []; // WDI data on a topic.
-var year = "2010";	// Selected year.
-var maxData;	// Maximum of wdiTopic.
-var minData;	// Minimum of wdiTopic.
+var year = "2010"; // Selected year.
+var maxData; // Maximum of wdiTopic.
+var minData; // Minimum of wdiTopic.
+var wdiFormatted = [];
+var countryNames = [];
 
 {
+	var flag = true;
+	var flagStream = false;
 	var margin = {
 			top: 10,
 			right: 0,
@@ -185,8 +189,18 @@ var minData;	// Minimum of wdiTopic.
 			wdiTopic = wdiData.filter(function (row) {
 				return row["Indicator Name"] == d.data.name;
 			});
+			if (flag) {
+				wdiTopic.forEach(function (e) {
+					countryNames.push(e["Country Name"]);
+				});
+				flag = false;
+			}
 			displayColor();
 			makeUpdateHist();
+
+			formatData();
+			makeStreamGraph(flagStream);
+			flagStream = true;
 			return;
 		}
 
@@ -209,7 +223,7 @@ var minData;	// Minimum of wdiTopic.
 	 */
 	function displayColor() {
 		minData = d3.min(wdiTopic, d => Number(d[year]));
-		maxData = d3.max(wdiTopic, d => Number(d[year])); 
+		maxData = d3.max(wdiTopic, d => Number(d[year]));
 
 		if (minData != maxData) {
 			var color = getColorRange(minData, maxData);
