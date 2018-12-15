@@ -8,6 +8,7 @@ var maxData; // Maximum of wdiTopic.
 var minData; // Minimum of wdiTopic.
 var wdiFormatted = [];
 var countryNames = [];
+var wdiByIndicators = [];
 
 {
 	var flag = true;
@@ -41,19 +42,24 @@ var countryNames = [];
 
 	var files = [
 		"../data/topic_tree.json",
-		"../data/WDIData1.csv",
+		// "../data/WDIData1.csv",
 	];
 	var promises = [];
 
 	promises.push(d3.json(files[0]));
-	promises.push(d3.csv(files[1]));
+	// promises.push(d3.csv(files[1]));
 
 	Promise.all(promises).then(function (values) {
 		root = d3.hierarchy(values[0]);
 		root.x0 = 0;
 		root.y0 = 0;
-		wdiData = values[1];
+		// wdiData = values[1];
 		update(root);
+	});
+
+	// load large data on the back end
+	Promise.all([d3.csv("../data/WDIData1.csv")]).then(function (values) {
+		wdiData = values[0];
 	});
 
 	function update(source) {
@@ -184,6 +190,10 @@ var countryNames = [];
 
 	// Toggle children on click.
 	function click(d) {
+		if (wdiData == null) {
+			alert("Waiting for loading the data. Please try again seconds later.");
+			return;
+		}
 		// If the leaf node.
 		if (!d.children && !d._children) {
 			wdiTopic = wdiData.filter(function (row) {
@@ -198,7 +208,7 @@ var countryNames = [];
 			displayColor();
 			makeUpdateHist();
 
-			formatData();
+			yearData();
 			makeStreamGraph(flagStream);
 			flagStream = true;
 			return;

@@ -50,7 +50,7 @@ function rotateEarth(name) {
         });
 }
 
-function formatData() {
+function yearData() {
     var keys;
     var tmpDict = {}
     var flag = true;
@@ -73,4 +73,22 @@ function formatData() {
         })
     })
     wdiFormatted = Object.values(tmpDict);
+}
+
+function attributeData(topics, year) {
+    var rowsOfIndictors = wdiData.filter(function (row) {
+        return topics.has(row["Indicator Name"]);
+    });
+
+    var tmp = {};
+    countryNames.forEach(function (c) {
+        tmp["c"] = {"Country Name": c};
+    });
+
+    rowsOfIndictors.forEach(function (row) {
+        var indicator = row["Country Name"];
+        tmp[row["Country Name"]][row["Indicator Name"]] = +row[year];
+    });
+
+    wdiByIndicators = Object.values(tmp);
 }

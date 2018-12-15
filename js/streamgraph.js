@@ -163,38 +163,7 @@ function makeStreamGraph(isUpdating) {
             .attr("d", area)
             .style("fill", function (d) {
                 return color(Math.random());
-            })
-            // .on("mouseover", function (d, i) {
-            //     svg.selectAll(".layer")
-            //         .attr("opacity", function (d, j) {
-            //             return j != i ? 0.3 : 1;
-            //         });
-            // })
-            // .on("mousemove", function (d, i) {
-            //     var color = d3.select(this).style('fill');
-            //     mouse = d3.mouse(this);
-            //     mousex = mouse[0];
-            //     vertical.style("left", mousex + "px");
-            //     var invertedx = x.invert(mousex);
-            //     var xDate = invertedx.toString().split(' ')[3];
-            //     d.forEach(function (f) {
-            //         var year = (f.data.year.toString()).split(' ')[3];
-            //         if (xDate == year) {
-            //             tooltip
-            //                 .style("left", isOutOfWindow(mousex) + "px")
-            //                 .html("<div class='year'>" +
-            //                     year + "</div><div class='key'><div style='background:" + color +
-            //                     "' class='swatch'>&nbsp;</div>" + d.key + "</div><div class='value'>" +
-            //                     d3.format(",.3f")(f["data"][d.key]) + "</div>")
-            //                 .style("visibility", "visible");
-            //         }
-            //     });
-            // })
-            // .on("mouseout", function (d, i) {
-            //     svg.selectAll(".layer")
-            //         .attr("opacity", '1');
-            //     tooltip.style("visibility", "hidden");
-            // });
+            });
 
         svg.append("g")
             .attr("class", "axis axis--x")
