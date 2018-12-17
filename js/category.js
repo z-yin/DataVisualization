@@ -103,7 +103,19 @@ var flagStream = false;
 			.attr("height", barHeight)
 			.attr("width", barWidth)
 			.style("fill", color)
-			.on("click", click);
+			.on("click", click)
+			.on("mouseover", function (d) {
+				// if the leaf node
+				if (!d.children && !d._children) {
+					d3.select(this).style("fill", d3.rgb(d3.select(this).style("fill")).darker());
+				}
+			})
+			.on("mouseout", function (d) {
+				// if the leaf node
+				if (!d.children && !d._children) {
+					d3.select(this).style("fill", d3.rgb(d3.select(this).style("fill")).brighter());
+				}
+			});
 
 		nodeEnter.append("text")
 			.attr("dy", 3.5)
