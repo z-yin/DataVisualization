@@ -6,8 +6,8 @@ function makeStreamGraph(isUpdating) {
 
     var series = stack(wdiFormatted);
 
-    var width = 500,
-        height = 500;
+    var width = 600,
+        height = +d3.select(".row1").style("height").slice(0, -2);
 
     var x = d3.scaleTime()
         .domain(d3.extent(wdiFormatted, function (d) {
@@ -66,7 +66,7 @@ function makeStreamGraph(isUpdating) {
     }
 
     if (!isUpdating) {
-        var svg = d3.select("body").append("div")
+        var svg = d3.select("#div-stream")
             .attr("class", "cc")
             .attr("width", width)
             .attr("height", height)
@@ -116,7 +116,7 @@ function makeStreamGraph(isUpdating) {
                 var color = d3.select(this).style('fill');
                 mouse = d3.mouse(this);
                 mousex = mouse[0];
-                vertical.style("left", mousex + "px");
+                vertical.style("left", mousex + 5 + "px");
                 var invertedx = x.invert(mousex);
                 var xDate = invertedx.toString().split(' ')[3];
                 d.forEach(function (f) {

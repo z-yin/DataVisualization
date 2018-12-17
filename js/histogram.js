@@ -3,7 +3,7 @@
  */
 var graph, x, y, xAxis, yAxis, histogram, bar, color;
 
-var height = 590;
+var height = +d3.select(".row1").style("height").slice(0, -2);
 var width = 4000;
 
 margin = {

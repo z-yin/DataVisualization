@@ -11,8 +11,8 @@ var geoPath;
 {
 	var color = getColorRange(minData, maxData);
 
-	var width = 600,
-		height = 550;
+	var width = 650,
+		height = +d3.select(".row1").style("height").slice(0, -2);
 
 	var colors = {
 		clickable: 'lightgrey',
@@ -63,7 +63,8 @@ var geoPath;
 	var commaFormat = d3.format(",.3f");
 	var tip = d3.tip()
 		.attr('class', 'map-tip')
-		.offset([0, 0])
+		// .offset([0, 0])
+		.direction("e")
 		.html(function (d) {
 			// console.log(d);
 			var number = $(`[data-country-name="${d.name}"]`).attr("number");

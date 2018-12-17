@@ -76,19 +76,57 @@ function yearData() {
 }
 
 function attributeData(topics, year) {
+    // console.log(wdiData);
     var rowsOfIndictors = wdiData.filter(function (row) {
         return topics.has(row["Indicator Name"]);
     });
+    // console.log(rowsOfIndictors);
 
     var tmp = {};
+
     countryNames.forEach(function (c) {
-        tmp["c"] = {"Country Name": c};
+        tmp[c] = {
+            "Country Name": c
+        };
     });
 
     rowsOfIndictors.forEach(function (row) {
-        var indicator = row["Country Name"];
+        // console.log(row);
+        // console.log(row[year])
         tmp[row["Country Name"]][row["Indicator Name"]] = +row[year];
     });
 
     wdiByIndicators = Object.values(tmp);
 }
+
+var t = new Set(["Agricultural methane emissions (thousand metric tons of CO2 equivalent)",
+    "Access to electricity (% of population)",
+    "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    "Electric power consumption (kWh per capita)",
+    "Real interest rate (%)",
+    "Exports as a capacity to import (constant LCU)",
+    "Final consumption expenditure (% of GDP)"
+]);
+
+var yr = "2015";
+
+$("button").click(function () {
+    attributeData(t, yr);
+    parallel();
+});
+
+$(function () {
+    var select = $(".1960-2016");
+    select.append($('<option selected></option>').val(2016).html(2016));
+    for (i = 2015; i >= 1960; i--) {
+        select.append($('<option></option>').val(String(i)).html(i));
+    }
+});
+
+$(".1960-2016").on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    year = this.value;
+    displayColor();
+    makeUpdateHist();
+    yearData();
+});

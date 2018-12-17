@@ -3,16 +3,17 @@
  */
 var wdiData; // WDI data.
 var wdiTopic = []; // WDI data on a topic.
-var year = "2010"; // Selected year.
+var year = "2016"; // Selected year.
 var maxData; // Maximum of wdiTopic.
 var minData; // Minimum of wdiTopic.
 var wdiFormatted = [];
 var countryNames = [];
 var wdiByIndicators = [];
+var flagStream = false;
 
 {
+	var height = +d3.select(".row1").style("height").slice(0, -2);
 	var flag = true;
-	var flagStream = false;
 	var margin = {
 			top: 10,
 			right: 0,
@@ -35,30 +36,30 @@ var wdiByIndicators = [];
 			return d.x;
 		});
 
-	var svg = d3.select("#div-catagory").append("svg")
+	var svg = d3.select("#div-catagory")
+		.style("height", height)
+		.append("svg")
 		.attr("width", width) // + margin.left + margin.right)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 	var files = [
-		"../data/topic_tree.json",
-		// "../data/WDIData1.csv",
+		"../data/topic_tree.json"
 	];
 	var promises = [];
 
 	promises.push(d3.json(files[0]));
-	// promises.push(d3.csv(files[1]));
 
 	Promise.all(promises).then(function (values) {
 		root = d3.hierarchy(values[0]);
 		root.x0 = 0;
 		root.y0 = 0;
-		// wdiData = values[1];
+		moveChildren(root);
 		update(root);
 	});
 
 	// load large data on the back end
-	Promise.all([d3.csv("../data/WDIData1.csv")]).then(function (values) {
+	Promise.all([d3.csv("../data/WDIData.csv")]).then(function (values) {
 		wdiData = values[0];
 	});
 
@@ -67,17 +68,16 @@ var wdiByIndicators = [];
 		// Compute the flattened node list.
 		var nodes = root.descendants();
 
-		var height = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom);
+		var totalHeight = Math.max(500, nodes.length * barHeight + margin.top + margin.bottom);
 
 		d3.select("svg").transition()
 			.duration(duration)
-			.attr("height", height);
+			.attr("height", totalHeight);
 
 		d3.select(self.frameElement).transition()
 			.duration(duration)
-			.style("height", height + "px");
+			.style("height", totalHeight + "px");
 
-		// Compute the "layout". TODO https://github.com/d3/d3-hierarchy/issues/67
 		var index = -1;
 		root.eachBefore(function (n) {
 			n.x = ++index * barHeight;
@@ -222,6 +222,16 @@ var wdiByIndicators = [];
 			d._children = null;
 		}
 		update(d);
+	}
+
+	function moveChildren(node) {
+		if (node.children) {
+			node.children.forEach(function (c) {
+				moveChildren(c);
+			});
+			node._children = node.children;
+			node.children = null;
+		}
 	}
 
 	function color(d) {
