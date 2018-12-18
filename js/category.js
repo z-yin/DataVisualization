@@ -36,9 +36,19 @@ var flagStream = false;
 			return d.x;
 		});
 
+	var cateTip = d3.tip()
+		.attr('class', 'category-tip')
+		.style("position", "absolute")
+		.style("left", "380px")
+		.direction("e")
+		.html(function (d) {
+			return `${d.data.name}`;
+		});
+
 	var svg = d3.select("#div-catagory")
 		.style("height", height)
 		.append("svg")
+		.call(cateTip)
 		.attr("width", width) // + margin.left + margin.right)
 		.append("g")
 		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -61,6 +71,21 @@ var flagStream = false;
 	// load large data on the back end
 	Promise.all([d3.csv("../data/WDIData.csv")]).then(function (values) {
 		wdiData = values[0];
+		// preload
+		wdiTopic = wdiData.filter(function (row) {
+			return row["Indicator Name"] == "Population, total";
+		});
+		if (flag) {
+			wdiTopic.forEach(function (e) {
+				countryNames.push(e["Country Name"]);
+			});
+			flag = false;
+		}
+		displayColor();
+		makeUpdateHist();
+		yearData();
+		makeStreamGraph(flagStream);
+		flagStream = true;
 	});
 
 	function update(source) {
@@ -108,12 +133,14 @@ var flagStream = false;
 				// if the leaf node
 				if (!d.children && !d._children) {
 					d3.select(this).style("fill", d3.rgb(d3.select(this).style("fill")).darker());
+					cateTip.show(d);
 				}
 			})
 			.on("mouseout", function (d) {
 				// if the leaf node
 				if (!d.children && !d._children) {
 					d3.select(this).style("fill", d3.rgb(d3.select(this).style("fill")).brighter());
+					cateTip.hide(d);
 				}
 			});
 

@@ -13,10 +13,16 @@ html, body {
 .row2 {
   margin-top: 10px;
   height: 400px;
+  margin-bottom: 0;
 }
 
-.block {
+.block1 {
   vertical-align: top;
+  display: inline-block;
+}
+
+.block2 {
+  vertical-align: bottom;
   display: inline-block;
 }
 
@@ -44,7 +50,15 @@ html, body {
 }
 
 #div-stream {
+  height: 400px;
+  width: 500px;
+  margin: 0;
+}
 
+#div-parallel {
+  width: 500px;
+  height: 400px;
+  margin-bottom: 0;
 }
 
 .node rect {
@@ -93,7 +107,17 @@ html, body {
   stroke-width: .5px;
 }
 
-.map-tip {
+/* .category-tip {
+  font-family: sans-serif;
+  font-size: 1em;
+  line-height: 1;
+  padding: 6px;
+  background: rgb(0, 0, 0);
+  color: lightgray;
+  border-radius: 5px;
+} */
+
+.category-tip, .map-tip {
   font-family: sans-serif;
   font-size: 1em;
   line-height: 1;
@@ -161,7 +185,9 @@ html, body {
 }
 
 /*LAYERS*/
-.cc .layer {
+#div-stream .layer {
+  margin-left: 0;
+  left: 0;
 	cursor: crosshair;
 }
 

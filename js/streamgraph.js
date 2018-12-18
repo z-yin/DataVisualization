@@ -6,8 +6,8 @@ function makeStreamGraph(isUpdating) {
 
     var series = stack(wdiFormatted);
 
-    var width = 600,
-        height = +d3.select(".row1").style("height").slice(0, -2);
+    var width = +d3.select("#div-stream").style("width").slice(0, -2);
+        height = +d3.select(".row2").style("height").slice(0, -2);
 
     var x = d3.scaleTime()
         .domain(d3.extent(wdiFormatted, function (d) {
@@ -60,14 +60,13 @@ function makeStreamGraph(isUpdating) {
         .curve(d3.curveBasis);
 
     function isOutOfWindow(x) {
-        var svgWidth = $(".cc > svg").width();
+        var svgWidth = $("#div-stream > svg").width();
         var tipWidth = $(".tip").width();
         return x + tipWidth + 15 > svgWidth ? x - 30 - tipWidth : x + 15;
     }
 
     if (!isUpdating) {
         var svg = d3.select("#div-stream")
-            .attr("class", "cc")
             .attr("width", width)
             .attr("height", height)
             .append("svg")
@@ -75,19 +74,20 @@ function makeStreamGraph(isUpdating) {
             .attr("width", width)
             .attr("height", height);
 
-        var chartTop = $('.cc').offset().top;
-        var chartBottom = $('.cc').offset().bottom;
+        var chartTop = $('#div-stream').offset().top;
+        var chartBottom = $('#div-stream').offset().bottom;
 
-        var tooltip = d3.select(".cc")
+        var tooltip = d3.select("#div-stream")
             .append("div")
             .attr("class", "tip")
             .style("position", "absolute")
             .style("z-index", "20")
             .style("visibility", "hidden")
-            .style("top", chartTop + 40 + "px");
+            .style("top", chartTop + 40 + "px")
+            .style("left", "200px");
 
         // vertical line to help orient the user while exploring the streams
-        var vertical = d3.select(".cc")
+        var vertical = d3.select("#div-stream")
             .append("div")
             .attr("class", "remove")
             .style("position", "absolute")
@@ -96,6 +96,7 @@ function makeStreamGraph(isUpdating) {
             .style("height", height + "px")
             .style("top", chartTop + "px")
             .style("bottom", chartBottom + "px")
+            .style("left", "200px")
             .style("background", "#fcfcfc");
 
         svg.selectAll("path")
@@ -147,8 +148,8 @@ function makeStreamGraph(isUpdating) {
     } else {
         var svg = d3.select("#streamsvg");
 
-        var chartTop = $('.cc').offset().top;
-        var chartBottom = $('.cc').offset().bottom;
+        var chartTop = $('#div-stream').offset().top;
+        var chartBottom = $('#div-stream').offset().bottom;
 
         var tooltip = d3.select(".tip")
 
