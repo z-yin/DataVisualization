@@ -298,6 +298,7 @@ var flagStream = false;
 				} else {
 					if (country.length == 1) {
 						country.attr("fill", "#ffffff");
+						country.attr("number", null);
 					}
 				}
 			});

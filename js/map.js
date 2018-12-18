@@ -63,10 +63,8 @@ var geoPath;
 	var commaFormat = d3.format(",.3f");
 	var tip = d3.tip()
 		.attr('class', 'map-tip')
-		// .offset([0, 0])
 		.direction("e")
 		.html(function (d) {
-			// console.log(d);
 			var number = $(`[data-country-name="${d.name}"]`).attr("number");
 			if (number) {
 				return `<strong>${d.name}:</strong> ${commaFormat(number)}`;

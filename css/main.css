@@ -56,8 +56,11 @@ html, body {
 }
 
 #div-parallel {
-  width: 500px;
-  height: 400px;
+  position: absolute;
+  left: 720px;
+  top: 469px;
+  width: 700px;
+  height: 347px;
   margin-bottom: 0;
 }
 
@@ -182,7 +185,7 @@ html, body {
 }
 
 /*TIP*/
-.tip .parallel-tip{
+.tip, .parallel-tip{
   background-color: hsla(0,0%,100%,.9);
   padding: 10px;
   border-radius: 5px;
@@ -249,4 +252,17 @@ g.active path{
   top: 2px;
   width: 30px;
   height: 10px;
+}
+
+.topic-select {
+  position: absolute;
+  height: 50px;
+  width: 650px;
+  left: 750px;
+  top: 410px;
+  overflow: auto;
+}
+
+.select2-container {
+  width: 650px !important;
 }

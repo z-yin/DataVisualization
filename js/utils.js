@@ -91,8 +91,6 @@ function attributeData(topics, year) {
     });
 
     rowsOfIndictors.forEach(function (row) {
-        // console.log(row);
-        // console.log(row[year])
         tmp[row["Country Name"]][row["Indicator Name"]] = +row[year];
     });
 
@@ -108,14 +106,7 @@ var t = new Set(["Agricultural methane emissions (thousand metric tons of CO2 eq
     "Final consumption expenditure (% of GDP)"
 ]);
 
-var yr = "2015";
-
-$("button").click(function () {
-    attributeData(t, yr);
-    parallel();
-});
-
-$(function () {
+$(document).ready(function () {
     var select = $(".1960-2016");
     select.append($('<option selected></option>').val(2016).html(2016));
     for (i = 2015; i >= 1960; i--) {
@@ -123,26 +114,41 @@ $(function () {
     }
 
     var topicSelect = $(".js-example-basic-multiple");
-    t.forEach(function (d){
+    t.forEach(function (d) {
         topicSelect.append($('<option selected></option>').val(d).html(d));
     });
-    
+    Promise.all([d3.json("../data/topics.json")]).then(function (value) {
+        var tps = value[0]["topics"];
+        tps.forEach(function (d) {
+            if (!t.has(d)) {
+                topicSelect.append($('<option></option>').val(d).html(d));
+            }
+        });
 
-});
+    });
 
-$(".1960-2016").on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    year = this.value;
-    displayColor();
-    makeUpdateHist();
-    yearData();
-});
+    $('.js-example-basic-multiple').select2({
+        maximumSelectionLength: 7,
+        placeholder: 'Select topics. (min. 2, max. 7)',
+        allowClear: true
+    });
 
-$(".mode").on('change', function (e) {
-    var optionSelected = $("option:selected", this);
-    projection.clipAngle(this.value);
-})
+    $(".1960-2016").on('change', function (e) {
+        var optionSelected = $("option:selected", this);
+        year = this.value;
+        displayColor();
+        makeUpdateHist();
+        yearData();
+    });
 
-$(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
+    $(".mode").on('change', function (e) {
+        var optionSelected = $("option:selected", this);
+        projection.clipAngle(this.value);
+    })
+
+    $(".js-example-basic-multiple").on('change', function (e) {
+        var values = $('.js-example-basic-multiple').val();
+        attributeData(new Set(values), year);
+        parallel();
+    })
 });

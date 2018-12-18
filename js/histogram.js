@@ -13,17 +13,24 @@ margin = {
     left: 60
 };
 
+var range;
+
 var count = 0;
 
 function makeUpdateHist() {
     color = getColorRange(minData, maxData);
+    if (minData < 0) {
+        range = [minData, maxData];
+    }
+    else {
+        range = [0, maxData];
+    }
     wdiTopic.sort((a, b) => Number(b[year] - Number(a[year])));
     var commaFormat = d3.format(",.3f");
     var tip = d3.tip()
         .attr('class', 'histogram-tip')
         .offset([-10, 0])
         .html(function (d) {
-            // console.log(d);
             var number = d[year];
             if (number != "") {
                 return `<strong>${d["Country Name"]}:</strong> ${commaFormat(Number(number))}`;
@@ -51,7 +58,7 @@ function makeHist(tip) {
         .padding(0.1);
 
     y = d3.scaleLinear()
-        .domain([0, maxData]).nice()
+        .domain(range).nice()
         .range([height - margin.bottom, margin.top]);
 
     xAxis = g => g
@@ -80,8 +87,17 @@ function makeHist(tip) {
         .attr("original-color", d => color(Number(d[year])))
         .style("mix-blend-mode", "multiply")
         .attr("x", d => x(d["Country Name"]))
-        .attr("y", d => y(Number(d[year])))
-        .attr("height", d => y(0) - y(Number(d[year])))
+        .attr("y", function(d) {
+            if (+d[year] >= 0) {
+                return y(Number(d[year] - range[0]));
+            } else {
+                return y(Number(d[year] - range[0])) + y(range[0]) - y(Number(d[year]));
+            }
+        })
+        .attr("height", function(d){
+            if (d[year] == "") return 0;
+            return y(range[0]) - y(Number(d[year]));
+        })
         .attr("width", 18)
         .attr("stroke", "#e0780f")
         .attr("stroke-width", "1px")
@@ -162,7 +178,7 @@ function updateHist(tip) {
         .padding(0.1);
 
     y = d3.scaleLinear()
-        .domain([0, maxData]).nice()
+        .domain(range).nice()
         .range([height - margin.bottom, margin.top]);
 
     xAxis = g => g
@@ -185,8 +201,18 @@ function updateHist(tip) {
         .attr("original-color", d => color(Number(d[year])))
         .style("mix-blend-mode", "multiply")
         .attr("x", d => x(d["Country Name"]))
-        .attr("y", d => y(Number(d[year])))
-        .attr("height", d => y(0) - y(Number(d[year])))
+        .attr("y", function (d) {
+            console.log(d[year])
+            if (+d[year] >= 0) {
+                return y(Number(d[year] - range[0]));
+            } else {
+                return y(Number(d[year] - range[0])) + y(range[0]) - y(Number(d[year]));
+            }
+        })
+        .attr("height", function(d){
+            if (d[year] == "") return 0;
+            return y(range[0]) - y(Number(d[year]));
+        })
         .attr("width", 18)
         .attr("stroke", "#e0780f")
         .attr("stroke-width", "1px")

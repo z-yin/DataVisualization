@@ -1,6 +1,6 @@
 function parallel() {
-    var width = 960,
-        height = +d3.select(".row1").style("height").slice(0, -2);
+    var width = +d3.select("#div-parallel").style("width").slice(0, -2),
+        height = +d3.select("#div-parallel").style("height").slice(0, -2);
         padding = 30,
         brush_width = 20;
     var filters = {};
@@ -102,16 +102,16 @@ function parallel() {
 
     var tip = d3.tip()
         .attr('class', 'parallel-tip')
-        .direction('e')
+        .direction('w')
         .html(function (d) {
             return `<strong>${d.name}:</strong>`;
         });
 
     // Main svg container
-    var pcSvg = d3.select('div.parallelCoordinates')
+    var pcSvg = d3.select('#div-parallel')
         .append('svg')
         .attr('width', width)
-        .attr('height', height);
+        .attr('height', height)
 
     pcSvg.call(tip);
 

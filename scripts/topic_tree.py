@@ -2,6 +2,7 @@ import json
 import csv
 
 topics = set()      # Original topics.
+inds = set()        # Indicators.
 topic_dict = {}     # Topic dict.
 topic_tree = {}     # Final topic tree.
 
@@ -11,6 +12,7 @@ with open('../data/WDISeries.csv', newline='') as csvfile:
     next(reader)    # Skip the header.
     for cols in reader:
         topics.add(cols[1])     # Topic column.
+        inds.add(cols[2])       # Indicator column.
 
         # Generate topic dict.
         sub_topics = cols[1].split(': ')
@@ -57,4 +59,4 @@ topic_tree = convert_to_tree("topic", topic_dict)
 #     f.write(jsonfile)
 
 with open("../data/topics.json", "w") as f:
-    f.write(json.dumps({"topics": list(topics)}))
+    f.write(json.dumps({"topics": list(inds)}))
