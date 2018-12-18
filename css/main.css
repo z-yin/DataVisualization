@@ -51,7 +51,7 @@ html, body {
 
 #div-stream {
   height: 400px;
-  width: 500px;
+  width: 700px;
   margin: 0;
 }
 
@@ -106,16 +106,6 @@ html, body {
   stroke: #fff;
   stroke-width: .5px;
 }
-
-/* .category-tip {
-  font-family: sans-serif;
-  font-size: 1em;
-  line-height: 1;
-  padding: 6px;
-  background: rgb(0, 0, 0);
-  color: lightgray;
-  border-radius: 5px;
-} */
 
 .category-tip, .map-tip {
   font-family: sans-serif;
@@ -248,6 +238,14 @@ g.active path{
 .year-selector {
   position: absolute;
   left: 300px;
+  top: 2px;
+  width: 30px;
+  height: 10px;
+}
+
+.earth-mode {
+  position: absolute;
+  left: 920px;
   top: 2px;
   width: 30px;
   height: 10px;

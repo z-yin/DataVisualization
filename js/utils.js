@@ -121,6 +121,13 @@ $(function () {
     for (i = 2015; i >= 1960; i--) {
         select.append($('<option></option>').val(String(i)).html(i));
     }
+
+    var topicSelect = $(".js-example-basic-multiple");
+    t.forEach(function (d){
+        topicSelect.append($('<option selected></option>').val(d).html(d));
+    });
+    
+
 });
 
 $(".1960-2016").on('change', function (e) {
@@ -129,4 +136,13 @@ $(".1960-2016").on('change', function (e) {
     displayColor();
     makeUpdateHist();
     yearData();
+});
+
+$(".mode").on('change', function (e) {
+    var optionSelected = $("option:selected", this);
+    projection.clipAngle(this.value);
+})
+
+$(document).ready(function() {
+    $('.js-example-basic-multiple').select2();
 });

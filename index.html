@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Data Visualization</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     <!-- Our css -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <!-- jQuery js -->
@@ -25,12 +26,25 @@
     <div class="year-selector">
         <form><select name="year" class="1960-2016"></select></form>
     </div>
+    <div class="earth-mode">
+        <form>
+            <select class="mode">
+                <option value=180 selected>hollow</option>
+                <option value=90>solid</option>
+            </select>
+        </form>
+    </div>
+    <!-- <div class="topic-select">
+        <select class="js-example-basic-multiple" multiple="multiple">
+        </select>
+    </div> -->
     <!-- <div class="parallelCoordinates"></div> -->
     <!-- d3 js -->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson@3"></script>
     <script src="https://d3js.org/d3-queue.v3.min.js"></script>
     <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
     <!-- Our js -->
     <script src="js/utils.js"></script>
     <script src="js/category.js"></script>
@@ -39,5 +53,4 @@
     <script src="js/streamgraph.js"></script>
     <script src="js/parallel.js"></script>
 </body>
-
 </html>
