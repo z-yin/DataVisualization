@@ -1,4 +1,9 @@
 /**
+ * Reference: https://bl.ocks.org/austinczarnecki/fe80afa64724c9630930
+ * We will mention it when we use copied code.
+ */
+
+ /**
  * Global variables.
  */
 var graph, x, y, xAxis, yAxis, histogram, bar, color;
@@ -13,24 +18,24 @@ margin = {
     left: 60
 };
 
-var range;
-
-var count = 0;
+var range;      // data range (min to max or 0 to max if no negative numbers)
 
 function makeUpdateHist(order) {
-    color = getColorRange(minData, maxData);
-    if (minData < 0) {
+    color = getColorRange(minData, maxData);    // get the color range
+    if (minData < 0) {  // if there are negative value
         range = [minData, maxData];
     }
-    else {
+    else { // if there is no negative value
         range = [0, maxData];
     }
+    // copied code, set the sorting mode
     switch (order) {
         case "name-ascending": wdiTopic.sort((a, b) => a["Country Name"].localeCompare(b["Country Name"])); break;
         case "value-descending": wdiTopic.sort((a, b) => Number(b[year] - Number(a[year]))); break;
     }
 
-    var commaFormat = d3.format(",.3f");
+    var commaFormat = d3.format(",.3f");    // set the format for displaying the number
+    // d3-tip, used for showing the country name and the corresponding value
     var tip = d3.tip()
         .attr('class', 'histogram-tip')
         .offset([-10, 0])
@@ -42,16 +47,10 @@ function makeUpdateHist(order) {
             return `<strong>${d["Country Name"]}:</strong> <i>Unknown</i>`;
         });
 
-    if (graph) {
+    if (graph) { // if the histogram doesn't exist
         updateHist(tip);
-    } else {
+    } else {    // if the histogram already exist
         makeHist(tip);
-    }
-
-    if (count === 2) {
-        count = 0;
-    } else {
-        count += 1;
     }
 }
 
@@ -86,19 +85,19 @@ function makeHist(tip) {
         .data(wdiTopic)
         .enter()
         .append("rect")
-        .attr("hist-country-name", d => d["Country Name"])
-        .attr("fill", d => color(Number(d[year])))
-        .attr("original-color", d => color(Number(d[year])))
+        .attr("hist-country-name", d => d["Country Name"])  // set the hist-country-name attribute used by map
+        .attr("fill", d => color(Number(d[year])))          // set the color of countries based on their value
+        .attr("original-color", d => color(Number(d[year])))    // store the original color for restoring color
         .style("mix-blend-mode", "multiply")
         .attr("x", d => x(d["Country Name"]))
-        .attr("y", function(d) {
-            if (+d[year] >= 0) {
+        .attr("y", function(d) {    
+            if (+d[year] >= 0) {    // if the value is not negative
                 return y(Number(d[year] - range[0]));
-            } else {
+            } else {    // if the value is negative, set it below 0
                 return y(Number(d[year] - range[0])) + y(range[0]) - y(Number(d[year]));
             }
         })
-        .attr("height", function(d){
+        .attr("height", function(d){   
             if (d[year] == "") return 0;
             return y(range[0]) - y(Number(d[year]));
         })
@@ -106,20 +105,24 @@ function makeHist(tip) {
         .attr("stroke", "#e0780f")
         .attr("stroke-width", "1px")
         .on("mouseover", function (d) {
-            tip.show(d);
+            tip.show(d);    // show country name and responding value
+            // when mouseover, add stroke to the country in the histogram
             d3.select(`[data-country-name="${d["Country Name"]}"]`)
                 .attr("stroke", "#ce3f46")
                 .attr("stroke-width", 2);
 
         })
         .on("mouseout", function (d) {
-            tip.hide(d);
+            tip.hide(d);    // hide country name and responding value
+            // when mouseout, hide stroke
             d3.select(`[data-country-name="${d["Country Name"]}"]`)
                 .attr("stroke-width", 0);
         })
         .on("click", function (d) {
+            // restore the original color
             d3.select(".histogram-hover").attr("fill", d => d3.select(".histogram-hover").attr("original-color"));
             d3.select(".histogram-clicked").attr("fill", d => d3.select(".histogram-clicked").attr("original-color"));
+            
             d3.select(this).attr("fill", "#7fbc41");
 
             d3.selectAll(".histogram-hover")
@@ -128,7 +131,7 @@ function makeHist(tip) {
                 .classed("histogram-clicked", false);
             d3.select(this)
                 .classed("histogram-clicked", true);
-
+            // center to the clicked country
             var offset = d3.select(this).attr("x") +
                 d3.select(this).attr("width") / 2 -
                 Number($("#div-histogram").css("width").slice(0, -2)) / 2;
@@ -138,7 +141,7 @@ function makeHist(tip) {
 
             rotateEarth(d["Country Name"]);
         });
-
+    // add x axis
     var gx = histogram.append("g")
         .attr("class", "x-axis")
         .call(xAxis)
@@ -146,8 +149,8 @@ function makeHist(tip) {
         .style("text-anchor", "start")
         .attr("dx", "0")
         .attr("dy", ".15em")
-        .attr("transform", "rotate(45)");
-
+        .attr("transform", "rotate(45)");   // rotate for better visualization
+    // add y axis
     var gy = histogram.append("g")
         .attr("class", "y-axis")
         .call(yAxis)
@@ -155,8 +158,8 @@ function makeHist(tip) {
         .style("text-anchor", "end")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
-        .attr("transform", "rotate(-45)");
-
+        .attr("transform", "rotate(-45)");  // rotate for better visualization
+    // copied code
     svg.node().update = () => {
         const t = histogram.transition()
             .duration(750);
@@ -175,6 +178,7 @@ function makeHist(tip) {
     graph = true;
 }
 
+// update the histogram with transition, same as the makeHist()
 function updateHist(tip) {
     x = d3.scaleBand()
         .domain(wdiTopic.map(d => d["Country Name"]))

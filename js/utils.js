@@ -1,7 +1,7 @@
 /**
- * 
- * @param {Number} min 
- * @param {Number} max 
+ * Get a linear color scale.
+ * @param {Number} min minimum of the data
+ * @param {Number} max maximum of the data
  */
 function getColorRange(min, max) {
     var scale = []
@@ -27,8 +27,8 @@ function getColorRange(min, max) {
 }
 
 /**
- * 
- * @param {string} name 
+ * Rotate the map.
+ * @param {string} name country name
  */
 function rotateEarth(name) {
     var element = d3.select(`[data-country-name="${name}"]`);
@@ -38,6 +38,7 @@ function rotateEarth(name) {
     element
         .classed("map-clicked", true);
 
+    // center to the country clicked on the map or histogram
     d3.select(".map-clicked").transition()
         .duration(1250)
         .tween("rotate", function () {
@@ -50,6 +51,10 @@ function rotateEarth(name) {
         });
 }
 
+/**
+ * Set formatted data for stream graph.
+ * @param {Array[String]} ctyNames array of country names
+ */
 function streamData(ctyNames) {
     var keys;
     var tmpDict = {}
@@ -77,12 +82,15 @@ function streamData(ctyNames) {
     wdiFormatted = Object.values(tmpDict);
 }
 
+/**
+ * Set the formatted data for parallel coordinates.
+ * @param {Array} topics array of topics
+ * @param {Strign} year selected year to show
+ */
 function attributeData(topics, year) {
-    // console.log(wdiData);
     var rowsOfIndictors = wdiData.filter(function (row) {
         return topics.has(row["Indicator Name"]);
     });
-    // console.log(rowsOfIndictors);
 
     var tmp = {};
 
@@ -95,85 +103,66 @@ function attributeData(topics, year) {
     rowsOfIndictors.forEach(function (row) {
         tmp[row["Country Name"]][row["Indicator Name"]] = +row[year];
     });
-
+    // generate formatted data
     wdiByIndicators = Object.values(tmp);
 }
 
-var t = new Set(["Agricultural methane emissions (thousand metric tons of CO2 equivalent)",
-    "Access to electricity (% of population)",
-    "Unemployment, total (% of total labor force) (modeled ILO estimate)",
-    "Electric power consumption (kWh per capita)",
-    "Real interest rate (%)",
-    "Exports as a capacity to import (constant LCU)",
-    "Final consumption expenditure (% of GDP)"
-]);
-
 $(document).ready(function () {
     var select = $(".1960-2016");
+    // automatically add <option> to the year selector
     select.append($('<option selected></option>').val(2016).html(2016));
     for (i = 2015; i >= 1960; i--) {
         select.append($('<option></option>').val(String(i)).html(i));
     }
-
-    var topicSelect = $("#topic-selector");
-    t.forEach(function (d) {
-        topicSelect.append($('<option selected></option>').val(d).html(d));
-    });
-    Promise.all([d3.json("../data/topics.json")]).then(function (value) {
-        var tps = value[0]["topics"];
-        tps.forEach(function (d) {
-            if (!t.has(d)) {
-                topicSelect.append($('<option></option>').val(d).html(d));
-            }
-        });
-    });
-
+    // set up the topic seletor
     $('#topic-selector').select2({
         maximumSelectionLength: 7,
         placeholder: 'Select topics. (min. 2, max. 7)',
         allowClear: true
     });
 
+    // if the year changes, generate new graphs.
     $(".1960-2016").on('change', function (e) {
         var optionSelected = $("option:selected", this);
         year = this.value;
-        displayColor();
+        generateMap(); // show new choropleth
 
         var order = $(".order option:selected").val();
-        makeUpdateHist(order);
+        makeUpdateHist(order);  // show new histogram
         var values = $('#topic-selector').val();
         if (values.length >= 2) {
             attributeData(new Set(values), year);
-            parallel(true);
+            parallel(true);     // show new parallel coordinates
         }
     });
 
     $(".mode").on('change', function (e) {
         var optionSelected = $("option:selected", this);
-        projection.clipAngle(this.value);
+        projection.clipAngle(this.value);   // change the map mode. (hollow or solid)
     })
 
     $(".order").on("change", function (e) {
         var order = $(".order option:selected").val();
-        console.log(order)
-        makeUpdateHist(order);
+        // change the position of the country based on the mode (name ascending and value descending)
+        makeUpdateHist(order);      
     })
 
+    // refresh the parallel coordinates if the topic selector changes
     $("#topic-selector").on('change', function (e) {
         var values = $('#topic-selector').val();
         if (values.length >= 2) {
-            // console.log(values)
             attributeData(new Set(values), year);
             parallel();
         }
     })
 
+    // refresh the stream graph if the country selector changes
     $("#country-selector").on('change', function (e) {
         var values = $('#country-selector').val();
-        if (values.length >= 2) {
+        if (values.length >= 2) {   // there should be at least 2 compared countries
             streamData(new Set(values));
             makeStreamGraph(false, values);
-        } else if (values.length == 0) {
+        } else if (values.length == 0) {    // if no countries are selected, use all countries.
             streamData(new Set(countryNames));
             makeStreamGraph(false, countryNames);
         }

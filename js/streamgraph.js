@@ -1,4 +1,15 @@
+/**
+ * Reference: https://blockbuilder.org/denisemauldin/8c2be5003ce705f156bc0ed1732d2694
+ * We will mention it when we use copied code.
+ */
+
+/**
+ * make a stream graph
+ * @param {boolean} isUpdating make stream graph or update stream graph
+ * @param {Set} ctryNames selected country names to compare
+ */
 function makeStreamGraph(isUpdating, ctryNames) {
+    // copied code
     var stack = d3.stack()
         .keys(ctryNames)
         .order(d3.stackOrderAscending)
@@ -6,9 +17,10 @@ function makeStreamGraph(isUpdating, ctryNames) {
 
     var series = stack(wdiFormatted);
 
+    // set the width and heigh
     var width = +d3.select("#div-stream").style("width").slice(0, -2);
         height = +d3.select("#div-stream").style("height").slice(0, -2);
-
+    // set the x axis scale
     var x = d3.scaleTime()
         .domain(d3.extent(wdiFormatted, function (d) {
             return d.year;
@@ -16,9 +28,8 @@ function makeStreamGraph(isUpdating, ctryNames) {
         .range([100, width]);
 
     // setup axis
-    var xAxis = d3.axisBottom(x)
-    // .ticks(5);
-
+    var xAxis = d3.axisBottom(x);
+    // set the y scale
     var y = d3.scaleLinear()
         .domain([0, d3.max(series, function (layer) {
             return d3.max(layer, function (d) {
@@ -31,7 +42,7 @@ function makeStreamGraph(isUpdating, ctryNames) {
     for (var i = 0; i < 9; i++) {
         colorDomain.push(i / 8);
     }
-
+    // multiple colors to select to distinguish adjacent countries 
     var color = d3.scaleLinear()
         .interpolate(d3.interpolateLab)
         .domain(colorDomain)
@@ -46,7 +57,7 @@ function makeStreamGraph(isUpdating, ctryNames) {
             d3.rgb("#f781bf"),
             d3.rgb("#999999")
         ]);
-
+    // copied code
     var area = d3.area()
         .x(function (d) {
             return x(d.data.year);
@@ -58,16 +69,16 @@ function makeStreamGraph(isUpdating, ctryNames) {
             return y(d[1]);
         })
         .curve(d3.curveBasis);
-
+    // set the d3-tip position, if it is out of the parent svg, move it into the parent svg
     function isOutOfWindow(x) {
         var svgWidth = $("#div-stream > svg").width();
         var tipWidth = $(".tip").width();
         return x + tipWidth + 15 > svgWidth ? x - 30 - tipWidth : x + 15;
     }
 
-    if (!isUpdating) {
+    if (!isUpdating) { // if the stream graph already exists
         d3.select("#div-stream").selectAll("*").remove();
-
+        // set the svg
         var svg = d3.select("#div-stream")
             .attr("width", width)
             .attr("height", height)
@@ -75,10 +86,9 @@ function makeStreamGraph(isUpdating, ctryNames) {
             .attr("id", "streamsvg")
             .attr("width", width)
             .attr("height", height);
-
-        var chartTop = $('#div-stream').offset().top;
+        // get the bottom position of div "div-stream"
         var chartBottom = $('#div-stream').offset().bottom;
-
+        // d3-tip to display the country name, year and value
         var tooltip = d3.select("#div-stream")
             .append("div")
             .attr("class", "tip")
@@ -89,6 +99,7 @@ function makeStreamGraph(isUpdating, ctryNames) {
             .style("left", "200px");
 
         // vertical line to help orient the user while exploring the streams
+        // copied code
         var vertical = d3.select("#div-stream")
             .append("div")
             .attr("class", "remove")
@@ -109,17 +120,17 @@ function makeStreamGraph(isUpdating, ctryNames) {
             .style("fill", function (d) {
                 return color(Math.random());
             })
-            .on("mouseover", function (d, i) {
+            .on("mouseover", function (d, i) {  // when mouseover, set the color of other countries 
                 svg.selectAll(".layer")
                     .attr("opacity", function (d, j) {
                         return j != i ? 0.3 : 1;
                     });
             })
-            .on("mousemove", function (d, i) {
+            .on("mousemove", function (d, i) {  
                 var color = d3.select(this).style('fill');
                 mouse = d3.mouse(this);
-                mousex = mouse[0];
-                vertical.style("left", mousex + 5 + "px");
+                mousex = mouse[0];  // get the mouse x position
+                vertical.style("left", mousex + 5 + "px");  // set position of the vertical line 
                 var invertedx = x.invert(mousex);
                 var xDate = invertedx.toString().split(' ')[3];
                 d.forEach(function (f) {
@@ -135,19 +146,19 @@ function makeStreamGraph(isUpdating, ctryNames) {
                     }
                 });
             })
-            .on("mouseout", function (d, i) {
+            .on("mouseout", function (d, i) { // when mouseout, restore the original color and hide the tip
                 svg.selectAll(".layer")
                     .attr("opacity", '1');
                 tooltip.style("visibility", "hidden");
             });
-
+        // add the x axis
         svg.append("g")
             .attr("class", "axis axis--x")
             .attr("transform", "translate(0," + (height) + ")")
             .call(xAxis);
 
         var xAxisGroup = svg.append("g").call(xAxis);
-    } else {
+    } else { // same as the above 
 
         var svg = d3.select("#streamsvg");
 
