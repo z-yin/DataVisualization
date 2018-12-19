@@ -54,9 +54,9 @@ def convert_to_tree(name, val):
 
 topic_tree = convert_to_tree("topic", topic_dict)
 
-# jsonfile = json.dumps(topic_tree)
-# with open("../data/topic_tree.json", "w") as f:
-#     f.write(jsonfile)
+jsonfile = json.dumps(topic_tree)
+with open("../data/topic_tree.json", "w") as f:
+    f.write(jsonfile)
 
 with open("../data/topics.json", "w") as f:
     f.write(json.dumps({"topics": list(inds)}))

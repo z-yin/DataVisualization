@@ -26,12 +26,23 @@ html, body {
   display: inline-block;
 }
 
+.topic-name-display {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 24px;
+  width: 305px;
+  overflow: scroll;
+  background-color: rgb(153, 243, 239);
+}
+
 #div-catagory {
-  margin-top: 0;
+  margin-bottom: 0;
+  vertical-align: bottom !important;
   margin-right: 5px;
   overflow: scroll;
   width: 310px;
-  height: 400px;
+  height: 370px;
 }
 
 #div-map {
@@ -49,19 +60,20 @@ html, body {
   height: 400px;
 }
 
-#div-stream {
-  height: 400px;
-  width: 700px;
-  margin: 0;
-}
-
-#div-parallel {
+#div-stream, #div-parallel {
   position: absolute;
-  left: 720px;
   top: 469px;
   width: 700px;
   height: 347px;
   margin-bottom: 0;
+}
+
+#div-stream {
+  left: 0;
+}
+
+#div-parallel {
+  left: 720px;
 }
 
 .node rect {
@@ -238,29 +250,39 @@ g.active path{
   stroke:#0081af;
 }
 
-.year-selector {
+.year-selector, .earth-mode, .order-mode {
   position: absolute;
-  left: 300px;
   top: 2px;
   width: 30px;
   height: 10px;
+}
+
+.year-selector {
+  left: 310px;
 }
 
 .earth-mode {
-  position: absolute;
   left: 920px;
-  top: 2px;
-  width: 30px;
-  height: 10px;
 }
 
-.topic-select {
+.order-mode {
+  left: 1300px;
+}
+
+.topic-select, .country-select{
   position: absolute;
   height: 50px;
   width: 650px;
-  left: 750px;
   top: 410px;
   overflow: auto;
+}
+
+.topic-select {
+  left: 750px;
+}
+
+.country-select {
+  left: 30px;
 }
 
 .select2-container {

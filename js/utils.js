@@ -50,7 +50,7 @@ function rotateEarth(name) {
         });
 }
 
-function yearData() {
+function streamData(ctyNames) {
     var keys;
     var tmpDict = {}
     var flag = true;
@@ -66,11 +66,13 @@ function yearData() {
             })
             flag = false;
         }
-        keys.forEach(function (e) {
-            if (e.length == 4) {
-                tmpDict[e][row["Country Name"]] = +row[e];
-            }
-        })
+        if (ctyNames.has(row["Country Name"])) {
+            keys.forEach(function (e) {
+                if (e.length == 4) {
+                    tmpDict[e][row["Country Name"]] = +row[e];
+                }
+            })
+        }
     })
     wdiFormatted = Object.values(tmpDict);
 }
@@ -113,7 +115,7 @@ $(document).ready(function () {
         select.append($('<option></option>').val(String(i)).html(i));
     }
 
-    var topicSelect = $(".js-example-basic-multiple");
+    var topicSelect = $("#topic-selector");
     t.forEach(function (d) {
         topicSelect.append($('<option selected></option>').val(d).html(d));
     });
@@ -124,10 +126,9 @@ $(document).ready(function () {
                 topicSelect.append($('<option></option>').val(d).html(d));
             }
         });
-
     });
 
-    $('.js-example-basic-multiple').select2({
+    $('#topic-selector').select2({
         maximumSelectionLength: 7,
         placeholder: 'Select topics. (min. 2, max. 7)',
         allowClear: true
@@ -137,8 +138,14 @@ $(document).ready(function () {
         var optionSelected = $("option:selected", this);
         year = this.value;
         displayColor();
-        makeUpdateHist();
-        yearData();
+
+        var order = $(".order option:selected").val();
+        makeUpdateHist(order);
+        var values = $('#topic-selector').val();
+        if (values.length >= 2) {
+            attributeData(new Set(values), year);
+            parallel(true);
+        }
     });
 
     $(".mode").on('change', function (e) {
@@ -146,9 +153,29 @@ $(document).ready(function () {
         projection.clipAngle(this.value);
     })
 
-    $(".js-example-basic-multiple").on('change', function (e) {
-        var values = $('.js-example-basic-multiple').val();
-        attributeData(new Set(values), year);
-        parallel();
+    $(".order").on("change", function (e) {
+        var order = $(".order option:selected").val();
+        console.log(order)
+        makeUpdateHist(order);
+    })
+
+    $("#topic-selector").on('change', function (e) {
+        var values = $('#topic-selector').val();
+        if (values.length >= 2) {
+            // console.log(values)
+            attributeData(new Set(values), year);
+            parallel();
+        }
+    })
+
+    $("#country-selector").on('change', function (e) {
+        var values = $('#country-selector').val();
+        if (values.length >= 2) {
+            streamData(new Set(values));
+            makeStreamGraph(false, values);
+        } else if (values.length == 0) {
+            streamData(new Set(countryNames));
+            makeStreamGraph(false, countryNames);
+        }
     })
 });

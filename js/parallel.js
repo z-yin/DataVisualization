@@ -1,6 +1,9 @@
+var prevData;
+var preFeatures;
+
 function parallel() {
     var width = +d3.select("#div-parallel").style("width").slice(0, -2),
-        height = +d3.select("#div-parallel").style("height").slice(0, -2);
+        height = +d3.select("#div-parallel").style("height").slice(0, -2),
         padding = 30,
         brush_width = 20;
     var filters = {};
@@ -100,6 +103,8 @@ function parallel() {
         return g.transition().duration(500);
     }
 
+    d3.select("#para-svg").remove();
+
     var tip = d3.tip()
         .attr('class', 'parallel-tip')
         .direction('w')
@@ -110,6 +115,7 @@ function parallel() {
     // Main svg container
     var pcSvg = d3.select('#div-parallel')
         .append('svg')
+        .attr("id", "para-svg")
         .attr('width', width)
         .attr('height', height)
 
@@ -169,12 +175,12 @@ function parallel() {
                     .attr("visibility", null);
             }));;
 
-    g.append('g')
-        .each(function (d) {
-            d3.select(this).call(yAxis[d.name]);
-        });
-
     g.each(function (d) {
+        d3.select(this)
+            .append('g')
+            .attr("class", "g-yAxis")
+            .call(yAxis[d.name]);
+
         d3.select(this)
             .append('g')
             .attr('class', 'brush')
@@ -185,7 +191,7 @@ function parallel() {
         .attr("text-anchor", "middle")
         .attr('y', padding / 2)
         .text(function (d) {
-            return d.name.length > 15 ? d.name.substring(0, 15) + "..." : d.name;
+            return d.name.length > 12 ? d.name.substring(0, 12) + "..." : d.name;
         })
         .on("mouseover", tip.show)
         .on("mouseout", tip.hide);

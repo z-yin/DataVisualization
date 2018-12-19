@@ -17,7 +17,7 @@ var range;
 
 var count = 0;
 
-function makeUpdateHist() {
+function makeUpdateHist(order) {
     color = getColorRange(minData, maxData);
     if (minData < 0) {
         range = [minData, maxData];
@@ -25,7 +25,11 @@ function makeUpdateHist() {
     else {
         range = [0, maxData];
     }
-    wdiTopic.sort((a, b) => Number(b[year] - Number(a[year])));
+    switch (order) {
+        case "name-ascending": wdiTopic.sort((a, b) => a["Country Name"].localeCompare(b["Country Name"])); break;
+        case "value-descending": wdiTopic.sort((a, b) => Number(b[year] - Number(a[year]))); break;
+    }
+
     var commaFormat = d3.format(",.3f");
     var tip = d3.tip()
         .attr('class', 'histogram-tip')
@@ -202,7 +206,7 @@ function updateHist(tip) {
         .style("mix-blend-mode", "multiply")
         .attr("x", d => x(d["Country Name"]))
         .attr("y", function (d) {
-            console.log(d[year])
+            // console.log(d[year])
             if (+d[year] >= 0) {
                 return y(Number(d[year] - range[0]));
             } else {

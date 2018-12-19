@@ -73,7 +73,7 @@ var flagStream = false;
 		wdiData = values[0];
 		// preload
 		wdiTopic = wdiData.filter(function (row) {
-			return row["Indicator Name"] == "Population, total";
+			return row["Indicator Name"] == "Cereal production (metric tons)";
 		});
 		if (flag) {
 			wdiTopic.forEach(function (e) {
@@ -81,11 +81,27 @@ var flagStream = false;
 			});
 			flag = false;
 		}
+
+		var countrySelect = $('#country-selector').select2({
+			maximumSelectionLength: countryNames.length,
+			placeholder: 'Select countries to compare. (min. 2)',
+			allowClear: true
+		});
+
+		countryNames.forEach(function (d) {
+			countrySelect.append($('<option></option>').val(d).html(d));
+		});
+
 		displayColor();
-		makeUpdateHist();
-		yearData();
-		makeStreamGraph(flagStream);
+		makeUpdateHist("value-descending");
+		streamData(new Set(countryNames));
+		makeStreamGraph(false, countryNames);
 		flagStream = true;
+		var values = $('#topic-selector').val();
+		if (values.length >= 2) {
+			attributeData(new Set(values), year);
+			parallel();
+		}
 	});
 
 	function update(source) {
@@ -235,6 +251,7 @@ var flagStream = false;
 		}
 		// If the leaf node.
 		if (!d.children && !d._children) {
+			$(".topic-name-display").html(`<strong>Topic: </strong>${d.data.name}`)
 			wdiTopic = wdiData.filter(function (row) {
 				return row["Indicator Name"] == d.data.name;
 			});
@@ -245,11 +262,17 @@ var flagStream = false;
 				flag = false;
 			}
 			displayColor();
-			makeUpdateHist();
+			var order = $(".order option:selected").val();
+			makeUpdateHist(order);
 
-			yearData();
-			makeStreamGraph(flagStream);
-			flagStream = true;
+			var values = $('#country-selector').val();
+			if (values.length >= 2) {
+				streamData(new Set(values));
+				makeStreamGraph(false, values);
+			} else if (values.length == 0) {
+				streamData(new Set(countryNames));
+				makeStreamGraph(false, countryNames);
+			}
 			return;
 		}
 

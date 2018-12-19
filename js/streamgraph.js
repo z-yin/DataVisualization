@@ -1,13 +1,13 @@
-function makeStreamGraph(isUpdating) {
+function makeStreamGraph(isUpdating, ctryNames) {
     var stack = d3.stack()
-        .keys(countryNames)
+        .keys(ctryNames)
         .order(d3.stackOrderAscending)
         .offset(d3.stackOffsetSilhouette);
 
     var series = stack(wdiFormatted);
 
     var width = +d3.select("#div-stream").style("width").slice(0, -2);
-        height = +d3.select(".row2").style("height").slice(0, -2);
+        height = +d3.select("#div-stream").style("height").slice(0, -2);
 
     var x = d3.scaleTime()
         .domain(d3.extent(wdiFormatted, function (d) {
@@ -66,6 +66,8 @@ function makeStreamGraph(isUpdating) {
     }
 
     if (!isUpdating) {
+        d3.select("#div-stream").selectAll("*").remove();
+
         var svg = d3.select("#div-stream")
             .attr("width", width)
             .attr("height", height)
@@ -83,7 +85,7 @@ function makeStreamGraph(isUpdating) {
             .style("position", "absolute")
             .style("z-index", "20")
             .style("visibility", "hidden")
-            .style("top", chartTop + 40 + "px")
+            .style("top", "10px")
             .style("left", "200px");
 
         // vertical line to help orient the user while exploring the streams
@@ -94,7 +96,7 @@ function makeStreamGraph(isUpdating) {
             .style("z-index", "0")
             .style("width", "1px")
             .style("height", height + "px")
-            .style("top", chartTop + "px")
+            .style("top",  "0px")
             .style("bottom", chartBottom + "px")
             .style("left", "200px")
             .style("background", "#fcfcfc");
@@ -146,6 +148,7 @@ function makeStreamGraph(isUpdating) {
 
         var xAxisGroup = svg.append("g").call(xAxis);
     } else {
+
         var svg = d3.select("#streamsvg");
 
         var chartTop = $('#div-stream').offset().top;

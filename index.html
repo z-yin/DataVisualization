@@ -34,12 +34,23 @@
             </select>
         </form>
     </div>
-    <div class="topic-select">
-        <select class="js-example-basic-multiple" multiple="multiple">
+    <div class="order-mode">
+        <select class="order">
+            <option value="value-descending">value descending</option>
+            <option value="name-ascending">name ascending</option>
         </select>
     </div>
+    <div class="topic-select">
+        <select class="js-example-basic-multiple" id="topic-selector" multiple="multiple">
+        </select>
+    </div>
+    <div class="country-select">
+        <select class="js-example-basic-multiple" id="country-selector" multiple="multiple">
+        </select>
+    </div>
+    <div class="topic-name-display"><strong>Topic: </strong>Cereal production (metric tons)</div>
     <!-- d3 js -->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/vendor/d3.v5.min.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
     <script src="https://d3js.org/d3-queue.v3.min.js"></script>
     <script src="https://unpkg.com/d3-tip@0.7.1/index.js"></script>
